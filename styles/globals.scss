@@ -1,0 +1,88 @@
+/* Start Global Variables */
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-green-color: #004747;
+  --sec-green-color: #c5dfdc;
+  --light-green-color:#E7EDEC;
+  --main-dark-color: #000000;
+  --main-white-color: #ffffff;
+  --sec-white-color:#FAFAFA;
+  --main-gray-color:#8D8D8D;
+
+  --font-bold: "Gilroy-Bold", sans-serif;
+  --font-heavy: "Gilroy-Heavy", sans-serif;
+  --font-light: "Gilroy-Light", sans-serif;
+  --font-medium: "Gilroy-Medium", sans-serif;
+  --font-regular: "Gilroy-Regular", sans-serif;
+  --font-sem-bold: "Gilroy-SemiBold", sans-serif;
+}
+
+body {
+  font-family: "Gilroy-Medium", sans-serif;
+  height: 1000px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Fonts
+@font-face {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-family: "Gilroy-Heavy", sans-serif;
+  font-family: "Gilroy-Light", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-family: "Gilroy-SemiBold", sans-serif;
+
+  src: url("../assets/gilroy/Gilroy-Bold.ttf");
+  src: url("../assets/gilroy/Gilroy-Heavy.ttf");
+  src: url("../assets/gilroy/Gilroy-Light.ttf");
+  src: url("../assets/gilroy/Gilroy-Medium.ttf");
+  src: url("../assets/gilroy/Gilroy-Regular.ttf");
+  src: url("../assets/gilroy/Gilroy-SemiBold.ttf");
+  src: url("../assets/gilroy/Gilroy-ExtraBold.ttf");
+  src: url("../assets/gilroy/Gilroy-Thin.ttf");
+  src: url("../assets/gilroy/Gilroy-UltraLight.ttf");
+}
+
+
+
+
+// MUI overrides classes
+.MuiOutlinedInput-notchedOutline {
+  border-color: transparent !important;
+  color:red;
+
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-width: 1px !important;
+  border-color: #004747 !important;
+
+}
+
+.MuiSelect-icon{
+  color: #000000 !important;
+  width: 14.84px;
+  height: 8.48px;
+  transition: all 0.3s ease;
+}
