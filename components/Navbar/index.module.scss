@@ -335,11 +335,11 @@
   padding-top: 18px;
   padding-bottom: 19px;
   box-shadow: 0 0 0 16%;
-  // margin-top: 80px;
+  margin-top: 80px;
 
-  // @media screen and (max-width: 1100px) {
-  //   margin-top: 67px;
-  // }
+  @media screen and (max-width: 1100px) {
+    margin-top: 67px;
+  }
 
   h2 {
     font-size: 16px;
