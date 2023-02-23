@@ -18,7 +18,7 @@ const Blogs = () => {
     post3,
     post4,
     post5,
-    author
+    author, design
   } = imgs
 
   const posts = [
@@ -90,7 +90,7 @@ const Blogs = () => {
       </Head>
       <div id={styles.blogs}>
         <div className={styles.header_container}>
-          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+          <Container className={styles.sec_container} sx={{ maxWidth: '1239px' }} maxWidth={false} >
             <div className={styles.text_container}>
               <div className={styles.guide}>
                 <h4>All blogs</h4>
@@ -106,6 +106,10 @@ const Blogs = () => {
                 </p>
 
               </div>
+            </div>
+
+            <div className={styles.img_container}>
+              <img src={design.src} alt="" />
             </div>
           </Container>
         </div>
