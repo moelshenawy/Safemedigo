@@ -10,6 +10,7 @@ import post3 from "../imgs/post3.png";
 import post4 from "../imgs/post4.png";
 import post5 from "../imgs/post5.png";
 import author from "../imgs/author.png";
+import design from "../imgs/design.png";
 import logoFooter from "../svgs/logo-footer.svg";
 import facebook from "../svgs/facebook.svg";
 import instagram from "../svgs/instagram.svg";
@@ -19,6 +20,7 @@ import twitter from "../svgs/twitter.svg";
 export default {
   logo,
   author,
+  design,
   en,
   arrowDown,
   search,

@@ -35,16 +35,14 @@ const Navbar = () => {
   ]
 
 
-  const { logo, en, arrowDown, user, search, logoFooter } = imgs
+  const { logo, en, arrowDown, user, search, design } = imgs
 
 
   return (
     <>
-
-
       <AppBar component="nav">
         <div className={styles.navbar}>
-        <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
+          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
 
             <Grid container alignItems='center' className={styles.grid__container}>
               <Grid item xs={2} sx={2}>
@@ -144,25 +142,25 @@ const Navbar = () => {
                   </Box>
                 </Box>
               </Grid>
-            <div className={styles.icons_container}>
-              <div className={styles.menu}>
-              <div className={styles.icon_container}>
-                <MenuIcon/>
-              </div>
-              </div>
-              <div className={styles.menu}>
-              <div className={styles.icon_container}>
-                <MenuIcon/>
-              </div>
-              </div>
-              <div className={styles.menu}>
-              <div className={styles.icon_container}>
-                <MenuIcon/>
-              </div>
-              </div>
+              <div className={styles.icons_container}>
+                <div className={styles.menu}>
+                  <div className={styles.icon_container}>
+                    <MenuIcon />
+                  </div>
+                </div>
+                <div className={styles.menu}>
+                  <div className={styles.icon_container}>
+                    <MenuIcon />
+                  </div>
+                </div>
+                <div className={styles.menu}>
+                  <div className={styles.icon_container}>
+                    <MenuIcon />
+                  </div>
+                </div>
 
-              
-            </div>
+
+              </div>
             </Grid>
 
 
@@ -172,10 +170,11 @@ const Navbar = () => {
 
 
       <nav id={styles.sec_nav}>
-      <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
           <h2 >
             home / Blogs
           </h2>
+
         </Container>
       </nav>
     </>

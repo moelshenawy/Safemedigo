@@ -6,11 +6,11 @@
 :root {
   --main-green-color: #004747;
   --sec-green-color: #c5dfdc;
-  --light-green-color:#E7EDEC;
+  --light-green-color: #e7edec;
   --main-dark-color: #000000;
   --main-white-color: #ffffff;
-  --sec-white-color:#FAFAFA;
-  --main-gray-color:#8D8D8D;
+  --sec-white-color: #fafafa;
+  --main-gray-color: #8d8d8d;
 
   --font-bold: "Gilroy-Bold", sans-serif;
   --font-heavy: "Gilroy-Heavy", sans-serif;
@@ -64,23 +64,18 @@ a {
   src: url("../assets/gilroy/Gilroy-UltraLight.ttf");
 }
 
-
-
-
 // MUI overrides classes
 .MuiOutlinedInput-notchedOutline {
   border-color: transparent !important;
-  color:red;
-
+  color: red;
 }
 
 .Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-width: 1px !important;
+  border-width: 1px !important;
   border-color: #004747 !important;
-
 }
 
-.MuiSelect-icon{
+.MuiSelect-icon {
   color: #000000 !important;
   width: 14.84px;
   height: 8.48px;
