@@ -1,110 +1,123 @@
-import imgs from '../../assets/constants/imgs'
-import Link from 'next/link'
-import Head from 'next/head'
-import styles from './index.module.scss'
-import { Container, Grid, Typography } from '@mui/material';
+import imgs from "../../assets/constants/imgs";
+import Link from "next/link";
+import Head from "next/head";
+import styles from "./index.module.scss";
+import { Container, Grid, Typography } from "@mui/material";
 
-import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
+import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 const Blogs = () => {
-  const { post0,
-    post1,
-    post2,
-    post3,
-    post4,
-    post5,
-    author, design
-  } = imgs
+  const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
 
   const posts = [
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post0.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 1
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post0.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 1,
     },
 
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post1.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 1
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post1.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 1,
     },
 
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post2.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 2
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post2.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 2,
     },
 
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post3.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 3
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post3.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 3,
     },
 
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post4.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 4
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post4.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 4,
     },
 
     {
-      authorName: 'Majd Khaled',
-      authorJob: 'Medical Content Writer',
-      authorImg: author.src
-      , img: post5.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 5
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
     },
-
-
-  ]
+  ];
   const tags = [
-    { tag: 'Acibadem' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-    { tag: 'treatment' },
-  ]
+    { tag: "Acibadem" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+    { tag: "treatment" },
+  ];
 
   return (
     <>
       <Head>
         <title>Blogs</title>
-        <meta name='blogs' content='blogs for doctors' />
+        <meta name="blogs" content="blogs for doctors" />
       </Head>
       <div id={styles.blogs}>
         <div className={styles.header_container}>
-          <Container className={styles.sec_container} sx={{ maxWidth: '1239px' }} maxWidth={false} >
+          <Container
+            className={styles.sec_container}
+            sx={{ maxWidth: "1239px" }}
+            maxWidth={false}
+          >
             <div className={styles.text_container}>
               <div className={styles.guide}>
                 <h4>All blogs</h4>
               </div>
 
               <div className={styles.title}>
-                <p>All Of The Latest Medical Travel And Healthcare Developments In One Place.</p>
+                <p>
+                  All Of The Latest Medical Travel And Healthcare Developments
+                  In One Place.
+                </p>
               </div>
 
               <div className={styles.review_by}>
-                <p>
-                  Reviewed by Safemedigo team, July 28, 2020
-                </p>
-
+                <p>Reviewed by Safemedigo team, July 28, 2020</p>
               </div>
             </div>
 
@@ -116,43 +129,42 @@ const Blogs = () => {
       </div>
 
       <div id={styles.tags_filter}>
-        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
-
+        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
           <div className={styles.title}>
             <Typography variant="h4">All Articles</Typography>
           </div>
 
           <div className={styles.filter}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-autowidth-label">Articles</InputLabel>
+              <InputLabel id="demo-simple-select-autowidth-label">
+                Articles
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 IconComponent={ExpandMoreOutlinedIcon}
                 label="Articles"
-                style={{ backgroundColor: "#E7EDEC", color: "#000000", fontSize: "18px", fontWeight: 'bold' }}
+                style={{
+                  backgroundColor: "#E7EDEC",
+                  color: "#000000",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
               >
-                <MenuItem value='Acibadem'>Acibadem Articles</MenuItem>
-                <MenuItem value='Acibadem'>Acibadem Articles</MenuItem>
-                <MenuItem value='Acibadem'>Acibadem Articles</MenuItem>
+                <MenuItem value="Acibadem">Acibadem Articles</MenuItem>
+                <MenuItem value="Acibadem">Acibadem Articles</MenuItem>
+                <MenuItem value="Acibadem">Acibadem Articles</MenuItem>
               </Select>
             </FormControl>
           </div>
-
-
         </Container>
       </div>
 
-
-
       <div className={styles.sections_container}>
-
         <section id={styles.blogs_sec}>
-          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+          <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
             <div className={styles.title}>
-              <Typography variant="h6">
-                Most Recent Posts
-              </Typography>
+              <Typography variant="h6">Most Recent Posts</Typography>
             </div>
 
             <div className={styles.boxes_container}>
@@ -180,7 +192,9 @@ const Blogs = () => {
                       </div>
 
                       <div className={styles.author_data}>
-                        <div className={styles.user_name}>{post.authorName}</div>
+                        <div className={styles.user_name}>
+                          {post.authorName}
+                        </div>
                         <div className={styles.user_job}>{post.authorJob}</div>
                       </div>
                     </div>
@@ -201,8 +215,7 @@ const Blogs = () => {
         </section>
 
         <section id={styles.tags}>
-          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
-
+          <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
             <div className={styles.title}>
               <Typography variant="h6">Popular Tags</Typography>
             </div>
@@ -219,13 +232,10 @@ const Blogs = () => {
               ))}
             </div>
           </Container>
-
         </section>
       </div>
-
     </>
+  );
+};
 
-  )
-}
-
-export default Blogs
+export default Blogs;
