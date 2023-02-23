@@ -145,80 +145,84 @@ const Blogs = () => {
 
 
 
-      <section id={styles.blogs_sec}>
-        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
-          <div className={styles.title}>
-            <Typography variant="h6">
-              Most Recent Posts
-            </Typography>
-          </div>
+      <div className={styles.sections_container}>
 
-          <div className={styles.boxes_container}>
-            {posts.map((post, idx) => (
-              <>
-                <div className={styles.box} key={idx}>
-                  <div className={styles.img_container}>
-                    <img
-                      src={post.img}
-                      alt="Picture of the author"
-                      width="width: 344px"
-                    />
-                  </div>
-                  <div className={styles.box_title}>
-                    <Typography variant="h5">{post.title}</Typography>
-                  </div>
+        <section id={styles.blogs_sec}>
+          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+            <div className={styles.title}>
+              <Typography variant="h6">
+                Most Recent Posts
+              </Typography>
+            </div>
 
-                  <div className={styles.desc}>
-                    <p>{post.desc}</p>
-                  </div>
-
-                  <div className={styles.author_container}>
+            <div className={styles.boxes_container}>
+              {posts.map((post, idx) => (
+                <>
+                  <div className={styles.box} key={idx}>
                     <div className={styles.img_container}>
-                      <img src={post.authorImg} alt="" />
+                      <img
+                        src={post.img}
+                        alt="Picture of the author"
+                        width="width: 344px"
+                      />
+                    </div>
+                    <div className={styles.box_title}>
+                      <Typography variant="h5">{post.title}</Typography>
                     </div>
 
-                    <div className={styles.author_data}>
-                      <div className={styles.user_name}>{post.authorName}</div>
-                      <div className={styles.user_job}>{post.authorJob}</div>
+                    <div className={styles.desc}>
+                      <p>{post.desc}</p>
+                    </div>
+
+                    <div className={styles.author_container}>
+                      <div className={styles.img_container}>
+                        <img src={post.authorImg} alt="" />
+                      </div>
+
+                      <div className={styles.author_data}>
+                        <div className={styles.user_name}>{post.authorName}</div>
+                        <div className={styles.user_job}>{post.authorJob}</div>
+                      </div>
+                    </div>
+
+                    <div className={styles.btns_container}>
+                      <div className={styles.trans_btn}>
+                        <button>Hair transplant</button>
+                      </div>
+                      <div className={styles.turk_btn}>
+                        <button>Turkey</button>
+                      </div>
                     </div>
                   </div>
+                </>
+              ))}
+            </div>
+          </Container>
+        </section>
 
-                  <div className={styles.btns_container}>
-                    <div className={styles.trans_btn}>
-                      <button>Hair transplant</button>
-                    </div>
-                    <div className={styles.turk_btn}>
-                      <button>Turkey</button>
-                    </div>
+        <section id={styles.tags}>
+          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+
+            <div className={styles.title}>
+              <Typography variant="h6">Popular Tags</Typography>
+            </div>
+
+            <div className={styles.tags_container}>
+              {tags.map((tag, idx) => (
+                <>
+                  <div className={styles.tag} key={idx}>
+                    <Link href={tag.tag}>
+                      <button>{tag.tag}</button>
+                    </Link>
                   </div>
-                </div>
-              </>
-            ))}
-          </div>
-        </Container>
-      </section>
+                </>
+              ))}
+            </div>
+          </Container>
 
-      <section id={styles.tags}>
-        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+        </section>
+      </div>
 
-          <div className={styles.title}>
-            <Typography variant="h6">Popular Tags</Typography>
-          </div>
-
-          <div className={styles.tags_container}>
-            {tags.map((tag, idx) => (
-              <>
-                <div className={styles.tag} key={idx}>
-                  <Link href={tag.tag}>
-                    <button>{tag.tag}</button>
-                  </Link>
-                </div>
-              </>
-            ))}
-          </div>
-        </Container>
-
-      </section>
     </>
 
   )
