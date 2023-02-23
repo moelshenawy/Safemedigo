@@ -22,30 +22,48 @@ const Blogs = () => {
   } = imgs
 
   const posts = [
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post0.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post1.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post2.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post3.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post4.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
-    { authorName:'Majd Khaled',
-    authorJob:'Medical Content Writer',
-    authorImg:author.src
-    ,img: post5.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery." },
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post0.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 1
+    },
+
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post1.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 1
+    },
+
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post2.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 2
+    },
+
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post3.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 3
+    },
+
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post4.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 4
+    },
+
+    {
+      authorName: 'Majd Khaled',
+      authorJob: 'Medical Content Writer',
+      authorImg: author.src
+      , img: post5.src, title: 'It Was A Good Reason To Cancel My Hair Transplant!', desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery. It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.", id: 5
+    },
+
 
   ]
   const tags = [
@@ -72,7 +90,7 @@ const Blogs = () => {
       </Head>
       <div id={styles.blogs}>
         <div className={styles.header_container}>
-        <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
+          <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
             <div className={styles.text_container}>
               <div className={styles.guide}>
                 <h4>All blogs</h4>
@@ -94,7 +112,7 @@ const Blogs = () => {
       </div>
 
       <div id={styles.tags_filter}>
-      <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
 
           <div className={styles.title}>
             <Typography variant="h4">All Articles</Typography>
@@ -102,13 +120,13 @@ const Blogs = () => {
 
           <div className={styles.filter}>
             <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-autowidth-label">Articles</InputLabel>
+              <InputLabel id="demo-simple-select-autowidth-label">Articles</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 IconComponent={ExpandMoreOutlinedIcon}
                 label="Articles"
-                style={{backgroundColor: "#E7EDEC", color:"#000000",fontSize:"18px",fontWeight:'bold'}}
+                style={{ backgroundColor: "#E7EDEC", color: "#000000", fontSize: "18px", fontWeight: 'bold' }}
               >
                 <MenuItem value='Acibadem'>Acibadem Articles</MenuItem>
                 <MenuItem value='Acibadem'>Acibadem Articles</MenuItem>
@@ -124,7 +142,7 @@ const Blogs = () => {
 
 
       <section id={styles.blogs_sec}>
-      <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
           <div className={styles.title}>
             <Typography variant="h6">
               Most Recent Posts
@@ -145,7 +163,7 @@ const Blogs = () => {
                   <div className={styles.box_title}>
                     <Typography variant="h5">{post.title}</Typography>
                   </div>
-                  
+
                   <div className={styles.desc}>
                     <p>{post.desc}</p>
                   </div>
@@ -160,7 +178,7 @@ const Blogs = () => {
                       <div className={styles.user_job}>{post.authorJob}</div>
                     </div>
                   </div>
-                  
+
                   <div className={styles.btns_container}>
                     <div className={styles.trans_btn}>
                       <button>Hair transplant</button>
@@ -177,8 +195,8 @@ const Blogs = () => {
       </section>
 
       <section id={styles.tags}>
-      <Container sx={{maxWidth:'1239px'}}  maxWidth={false} >
-          
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+
           <div className={styles.title}>
             <Typography variant="h6">Popular Tags</Typography>
           </div>
@@ -186,7 +204,7 @@ const Blogs = () => {
           <div className={styles.tags_container}>
             {tags.map((tag, idx) => (
               <>
-                <div className={styles.tag}key={idx}>
+                <div className={styles.tag} key={idx}>
                   <Link href={tag.tag}>
                     <button>{tag.tag}</button>
                   </Link>
