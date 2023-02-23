@@ -262,9 +262,9 @@ const Navbar = () => {
                             <div className={styles.category_links}>
                               {menuLniks[0].links.map((link, idx) => (
                                 <>
-                                  <Link className={window.location.pathname === link.link && styles.active} key={idx} href={link.link}>
+                                  <a className={window.location.pathname === link.link && styles.active} key={idx} href={link.link}>
                                     {link.title}
-                                  </Link>
+                                  </a>
                                 </>
                               ))}
                             </div>
@@ -280,9 +280,9 @@ const Navbar = () => {
                             <div className={styles.category_links}>
                               {menuLniks[1].links.map((link, idx) => (
                                 <>
-                                  <Link key={idx} href={link.link}>
+                                  <a key={idx} href={link.link}>
                                     {link.title}
-                                  </Link>
+                                  </a>
                                 </>
                               ))}
                             </div>
