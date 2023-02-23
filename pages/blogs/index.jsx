@@ -187,10 +187,10 @@ const Blogs = () => {
 
                     <div className={styles.btns_container}>
                       <div className={styles.trans_btn}>
-                        <button>Hair transplant</button>
+                        <button>Tag Name</button>
                       </div>
                       <div className={styles.turk_btn}>
-                        <button>Turkey</button>
+                        <button>Tag Name</button>
                       </div>
                     </div>
                   </div>

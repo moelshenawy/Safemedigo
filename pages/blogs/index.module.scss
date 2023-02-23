@@ -239,12 +239,20 @@
               font-weight: bold;
               font-size: 18px;
               letter-spacing: 0px;
+
+              @media screen and (max-width: 992px) {
+                font-size: 17px;
+              }
             }
             .user_job {
               color: var(--main-gray-color);
               font-size: 16px;
               font-weight: normal;
               letter-spacing: 0px;
+
+              @media screen and (max-width: 992px) {
+                font-size: 15px;
+              }
             }
           }
         }
@@ -257,8 +265,21 @@
           padding-right: 22px;
           padding-left: 15px;
 
+          // @media screen and (min-width: 285px) {
+          //   padding-right: 10px;
+          //   padding-left: 10px;
+          // }
+
+          // @media screen and (min-width: 400px) {
+          //   padding-left: 15px;
+          //   padding-left: 15px;
+          // }
+
           .trans_btn,
           .turk_btn {
+            @media screen and (max-width: 992px) {
+              margin-top: 31px;
+            }
             button {
               width: 122px;
               height: 40px;
@@ -320,7 +341,7 @@
 
         @media screen and (max-width: 992px) {
           margin-bottom: 11px;
-          margin-right: 0px;
+          margin-right: 12px;
         }
 
         a {
