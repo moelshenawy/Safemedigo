@@ -16,7 +16,7 @@ export default function Blogs(props) {
   // const [postsData, setPostsData] = useState()
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
 
-  // No Data in View Page source
+  // No Data in View Page source CSR
   // console.log(postsData)
   // useEffect(() => {
   //   const getData = async () => {
@@ -257,19 +257,8 @@ export default function Blogs(props) {
   );
 };
 
-// Data is in view Page Source
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
-  const data = await res.json()
-
-  return {
-    props: {
-      posts: data
-    }
-  }
-}
-
-// export async function getStaticProps() {
+// Data is in view Page Source (SSR) Great for SEO but every time user Request this page the server has to call an additional api request
+// export async function getServerSideProps() {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
 //   const data = await res.json()
 
@@ -279,3 +268,17 @@ export async function getStaticProps() {
 //     }
 //   }
 // }
+
+
+// Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
+  const data = await res.json()
+
+  return {
+    props: {
+      posts: data
+    },
+    revalidate: 10,
+  }
+}
