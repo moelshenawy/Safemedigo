@@ -10,9 +10,22 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { useEffect, useState } from 'react';
 
-const Blogs = () => {
+export default function Blogs(props) {
+  // const [postsData, setPostsData] = useState()
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
+
+  // No Data in View Page source
+  // console.log(postsData)
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
+  //     const data = await res.json()
+  //     setPostsData(data)
+  //   }
+  //   getData();
+  // }, [])
 
   const posts = [
     {
@@ -234,8 +247,35 @@ const Blogs = () => {
           </Container>
         </section>
       </div>
+
+      {props.posts.map((post, idx) => (
+        <Link href={`blogs/${post.id}`} key={idx} >
+          <h1>{post.title}</h1>
+        </Link>
+      ))}
     </>
   );
 };
 
-export default Blogs;
+// Data is in view Page Source
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
+  const data = await res.json()
+
+  return {
+    props: {
+      posts: data
+    }
+  }
+}
+
+// export async function getStaticProps() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
+//   const data = await res.json()
+
+//   return {
+//     props: {
+//       posts: data
+//     }
+//   }
+// }
