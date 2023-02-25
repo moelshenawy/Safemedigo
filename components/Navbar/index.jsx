@@ -11,8 +11,10 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
-import { BiChevronDown } from 'react-icons/bi'
-
+import { BiChevronDown, BiMenuAltRight } from 'react-icons/bi'
+import { IoIosNotifications } from 'react-icons/io'
+import { FaSearch } from 'react-icons/fa'
+import { BsFilterRight } from 'react-icons/bs'
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuLinks, setShowMenuLinks] = useState(false);
@@ -105,6 +107,7 @@ const Navbar = () => {
 
   // Toggle outside to close menu
   const menuRef = useRef();
+
   useEffect(() => {
     const closeMenu = (e) => {
       if (!menuRef.current.contains(e.target)) {
@@ -232,11 +235,23 @@ const Navbar = () => {
               </Grid>
 
               <div className={styles.icons_container} ref={menuRef}>
-                <div className={styles.menu} onClick={() => setShowMenu(true)}>
+                <div className={styles.search} >
                   <div className={styles.icon_container}>
-                    <MenuIcon />
+                    <FaSearch />
                   </div>
                 </div>
+                <div className={styles.notifications} >
+                  <div className={styles.icon_container}>
+                    <IoIosNotifications />
+                  </div>
+                </div>
+
+                <div className={styles.menu} onClick={() => setShowMenu(true)}>
+                  <div className={styles.icon_container}>
+                    <BiMenuAltRight />
+                  </div>
+                </div>
+
 
                 {showMenu && (
                   <motion.div
