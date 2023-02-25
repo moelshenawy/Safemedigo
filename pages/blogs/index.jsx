@@ -164,9 +164,7 @@ export default function Blogs() {
                       <div className={styles.trans_btn}>
                         <button>Tag Name</button>
                       </div>
-                      <div className={styles.turk_btn}>
-                        <button>Tag Name</button>
-                      </div>
+
                     </div>
                   </Link>
                 </>

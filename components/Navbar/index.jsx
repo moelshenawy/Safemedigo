@@ -118,34 +118,6 @@ const Navbar = () => {
     };
   }, [showMenu]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <>
       <AppBar style={{ background: 'transparent' }}>
