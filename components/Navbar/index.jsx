@@ -11,25 +11,32 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
+import { BiChevronDown } from 'react-icons/bi'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showMenuLinks, setShowMenuLinks] = useState(false);
   const menuLniks = [
     {
-      category: "Treatments Category",
+      category: "Procedures & Symptoms",
+      cateLink: '/procedures',
       links: [
         {
-          title: "Before And After",
-          link: "/before-and-after",
+          title: "Patients Reviews",
+          link: "/Reviews",
         },
         {
-          title: "Review",
-          link: "/review",
+          title: "Patients Stories",
+          link: "/stories",
         },
 
         {
-          title: "Patient Stories",
-          link: "/stories",
+          title: "Before & After",
+          link: "/before&after",
+        },
+        {
+          title: "Doctor Q&A",
+          link: "q&a",
         },
         {
           title: "Prices",
@@ -40,10 +47,7 @@ const Navbar = () => {
           title: "Blogs",
           link: "/blogs",
         },
-        {
-          title: "Q & A",
-          link: "q&a",
-        },
+
       ],
     },
     {
@@ -67,6 +71,8 @@ const Navbar = () => {
         },
       ],
     },
+
+
   ];
 
   const navbarLinks = [
@@ -93,6 +99,8 @@ const Navbar = () => {
       ],
     },
   ];
+
+
 
   const { logo, en, arrowDown, user, search, design } = imgs;
 
@@ -256,11 +264,10 @@ const Navbar = () => {
                           <div className={styles.category}>
                             <div className={styles.title}>
                               <Typography variant="h4">
-                                {menuLniks[0].category}
+                                <a href={menuLniks[0].cateLink}>
+                                  {menuLniks[0].category}
+                                </a>
                               </Typography>
-                              <div className={styles.icon_container}>
-                                <ExpandMoreOutlinedIcon />
-                              </div>
                             </div>
                             <div className={styles.category_links}>
                               {menuLniks[0].links.map((link, idx) => (
@@ -277,25 +284,56 @@ const Navbar = () => {
                                   </a>
                                 </>
                               ))}
+
+                              <div className={styles.special_links}>
+                                <a href="/reveiw">Start Your Review</a>
+                                <a href="q&a">Ask A Doctor</a>
+                              </div>
+
+                              <Box className={styles.lang} display='flex'>
+                                <div className={styles.img_container}>
+                                  <img
+                                    src={en.src}
+                                    alt="Picture of the author"
+                                    width="20.7px"
+                                    height="12.88px"
+                                  />
+                                </div>
+                                <div className={styles.lang_type}>
+                                  <span>EN</span>
+                                </div>
+
+                                <div className={styles.icon_container}>
+                                  <BiChevronDown />
+                                </div>
+                              </Box>
+
+
                             </div>
-                            <div className={styles.title}>
+                            <div className={`${styles.title}`} onClick={() => setShowMenuLinks((prev) => !prev)}>
                               <Typography variant="h4">
-                                {menuLniks[0].category}
+                                {menuLniks[1].category}
                               </Typography>
-                              <div className={styles.icon_container}>
-                                <ExpandMoreOutlinedIcon />
+                              <div className={`${styles.icon_container} ${showMenuLinks && styles.active}`} >
+                                <ExpandMoreOutlinedIcon color="red" />
                               </div>
                             </div>
+                            {showMenuLinks &&
+                              <motion.div
+                                animate={{ y: [100, 0] }}
+                                transition={{ duration: 0.80, ease: "easeOut" }}
 
-                            <div className={styles.category_links}>
-                              {menuLniks[1].links.map((link, idx) => (
-                                <>
-                                  <a key={idx} href={link.link}>
-                                    {link.title}
-                                  </a>
-                                </>
-                              ))}
-                            </div>
+                                className={styles.category_links}>
+                                {menuLniks[1].links.map((link, idx) => (
+                                  <>
+                                    <a key={idx} href={link.link}>
+                                      {link.title}
+                                    </a>
+                                  </>
+                                ))}
+                              </motion.div>
+
+                            }
                           </div>
                         </div>
                       </div>
