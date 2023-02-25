@@ -342,8 +342,14 @@ const Navbar = () => {
                             </div>
                             {showMenuLinks &&
                               <motion.div
-                                animate={{ y: [-100, 0] }}
+                                animate={{
+                                  y: [-40, 0],
+                                  opacity: 1
+                                }}
                                 transition={{ duration: 0.80, ease: "easeOut" }}
+
+
+                                initial={{ opacity: 0 }}
 
                                 className={styles.category_links}>
                                 {menuLniks[1].links.map((link, idx) => (
