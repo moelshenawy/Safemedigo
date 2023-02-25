@@ -256,7 +256,7 @@ export default function BolgDetails(props) {
 // it will get all Posts Id and save it as an id => if i have 10 posts and all i want is id's of the 10 posts it will get  all id's at once
 export async function getStaticProps(context) {
   const res = await fetch(
-    `http://localhost:3000/api/blogs/${context.params.id}`
+    `https://safemedigo.vercel.app/api/blogs/${context.params.id}`
   );
   const data = await res.json();
 
@@ -281,7 +281,7 @@ export async function getStaticProps(context) {
 */
 }
 export async function getStaticPaths() {
-  const res = await fetch(`http://localhost:3000/api/blogs`);
+  const res = await fetch(`https://safemedigo.vercel.app/api/blogs`);
   const data = await res.json();
 
   // here to get all paths id dynamic

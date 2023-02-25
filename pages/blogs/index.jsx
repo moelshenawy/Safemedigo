@@ -199,7 +199,7 @@ export default function Blogs(props) {
 
 // Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/blogs")
+  const res = await fetch("https://safemedigo.vercel.app/api/blogs")
   const data = await res.json()
 
   return {
