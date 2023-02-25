@@ -297,7 +297,7 @@
   box-shadow: 0 0 20px hsl(0deg 0% 66% / 15%);
   z-index: 99;
 
-  padding-top: 70px;
+  padding-top: 20px;
   padding-right: 33.5px;
   padding-left: 33.5px;
   padding-bottom: 120px;
@@ -309,7 +309,7 @@
     position: relative;
     .close {
       position: sticky;
-      top: -42px;
+      top: 0;
       right: 0;
       z-index: 200;
       display: flex;
@@ -348,7 +348,7 @@
       }
 
       .categories_container {
-        margin-top: 40px;
+        margin-top: 15px;
         .category {
           display: flex;
           flex-direction: column;
