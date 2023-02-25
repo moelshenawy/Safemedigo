@@ -300,7 +300,7 @@
   padding-top: 70px;
   padding-right: 33.5px;
   padding-left: 33.5px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
 
   max-height: calc(150vh - 50px);
   overflow-y: auto;
@@ -308,9 +308,13 @@
   .side_bar_container {
     position: relative;
     .close {
-      position: absolute;
-      top: -62px;
+      position: sticky;
+      top: -42px;
       right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: flex-start;
+      justify-content: end;
 
       svg {
         width: 30px;
@@ -439,7 +443,7 @@
               align-items: center;
               justify-content: flex-start;
               margin-top: 35px;
-              margin-bottom: 50px;
+              margin-bottom: 20px;
               .img_container {
               }
               .lang_type {
