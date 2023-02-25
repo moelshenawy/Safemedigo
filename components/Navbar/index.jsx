@@ -100,9 +100,8 @@ const Navbar = () => {
     },
   ];
 
-
-
   const { logo, en, arrowDown, user, search, design } = imgs;
+
 
   // Toggle outside to close menu
   const menuRef = useRef();
@@ -119,11 +118,37 @@ const Navbar = () => {
     };
   }, [showMenu]);
 
-  // console.log()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
-      <AppBar>
+      <AppBar style={{ background: 'transparent' }}>
         <div className={styles.navbar}>
           <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
             <Grid
@@ -161,11 +186,15 @@ const Navbar = () => {
                             <ul className={styles.menuLinks__container}>
                               {link.menuLink != null &&
                                 link.menuLink.map((links, index) => (
-                                  <li key={index}>
+                                  <motion.li
+                                    animate={{ y: [300, 0] }}
+                                    transition={{ duration: 0.80, ease: "easeOut" }}
+
+                                    key={index}>
                                     <Link href={`${links.title}`}>
                                       {links.title}
                                     </Link>
-                                  </li>
+                                  </motion.li>
                                 ))}
                             </ul>
                           </li>

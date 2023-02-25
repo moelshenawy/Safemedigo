@@ -39,11 +39,13 @@
       @media screen and (max-width: 1100px) {
         display: none;
       }
+
       .links__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        position: relative;
 
         .links {
           margin: auto;
@@ -94,6 +96,29 @@
               &:hover {
                 .menuLinks__container {
                   display: block;
+                }
+
+                &::before {
+                  content: "";
+                  width: 0%;
+                  height: 10px;
+                  background-color: red;
+                  position: absolute;
+                  bottom: -10px;
+                  left: 0;
+
+                  // opacity: 0;
+                  // transition: opacity 1.2s ease-out;
+
+                  -moz-transition: all 0.3s ease;
+                  -ms-transition: all 0.3s ease;
+                  -o-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+                }
+
+                &:hover:before {
+                  // opacity: 1;
+                  width: 50%;
                 }
               }
             }
