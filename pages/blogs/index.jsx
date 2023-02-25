@@ -13,7 +13,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useEffect, useState } from 'react';
 import { PageHeader, Tags } from './../../components/';
 
-export default function Blogs(props) {
+export default function Blogs() {
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
 
 
@@ -198,14 +198,14 @@ export default function Blogs(props) {
 
 
 // Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)
-export async function getStaticProps() {
-  const res = await fetch("https://safemedigo.vercel.app/api/blogs")
-  const data = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch("http://localhost:3000/api/blogs")
+//   const data = await res.json()
 
-  return {
-    props: {
-      posts: data
-    },
-    revalidate: 10,
-  }
-}
+//   return {
+//     props: {
+//       posts: data
+//     },
+//     revalidate: 10,
+//   }
+// }

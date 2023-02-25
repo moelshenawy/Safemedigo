@@ -254,18 +254,18 @@ export default function BolgDetails(props) {
 
 // Error: getStaticPaths is required for dynamic SSG pages and is missing for
 // it will get all Posts Id and save it as an id => if i have 10 posts and all i want is id's of the 10 posts it will get  all id's at once
-export async function getStaticProps(context) {
-  const res = await fetch(
-    `https://safemedigo.vercel.app/api/blogs/${context.params.id}`
-  );
-  const data = await res.json();
+// export async function getStaticProps(context) {
+//   const res = await fetch(
+//     `https://safemedigo.vercel.app/api/blogs/${context.params.id}`
+//   );
+//   const data = await res.json();
 
-  return {
-    props: {
-      post: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       post: data,
+//     },
+//   };
+// }
 
 {
   /*
@@ -280,18 +280,18 @@ export async function getStaticProps(context) {
 
 */
 }
-export async function getStaticPaths() {
-  const res = await fetch(`https://safemedigo.vercel.app/api/blogs`);
-  const data = await res.json();
+// export async function getStaticPaths() {
+//   const res = await fetch(`https://safemedigo.vercel.app/api/blogs`);
+//   const data = await res.json();
 
-  // here to get all paths id dynamic
-  const paths = data.map((path) => {
-    return { params: { id: `${path.id}` } };
-  });
-  return {
-    paths: paths,
+//   // here to get all paths id dynamic
+//   const paths = data.map((path) => {
+//     return { params: { id: `${path.id}` } };
+//   });
+//   return {
+//     paths: paths,
 
-    // fallback used for => if we don't have id = 50 it will throw an error
-    fallback: false,
-  };
-}
+//     // fallback used for => if we don't have id = 50 it will throw an error
+//     fallback: false,
+//   };
+// }
