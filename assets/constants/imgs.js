@@ -1,8 +1,3 @@
-import logo from "../svgs/logo.svg";
-import en from "../svgs/en.svg";
-import arrowDown from "../svgs/arrowDown.svg";
-import search from "../svgs/search.svg";
-import user from "../svgs/user.svg";
 import post0 from "../imgs/post0.png";
 import post1 from "../imgs/post1.png";
 import post2 from "../imgs/post2.png";
@@ -11,6 +6,14 @@ import post4 from "../imgs/post4.png";
 import post5 from "../imgs/post5.png";
 import author from "../imgs/author.png";
 import design from "../imgs/design.png";
+import art_vid from "../imgs/art_vid.png";
+import preparing from "../imgs/preparing.png";
+import logo from "../svgs/logo.svg";
+import en from "../svgs/en.svg";
+import arrowDown from "../svgs/arrowDown.svg";
+import search from "../svgs/search.svg";
+import user from "../svgs/user.svg";
+import blog_detail from "../imgs/blog_detail.png";
 import logoFooter from "../svgs/logo-footer.svg";
 import facebook from "../svgs/facebook.svg";
 import instagram from "../svgs/instagram.svg";
@@ -19,6 +22,9 @@ import twitter from "../svgs/twitter.svg";
 
 export default {
   logo,
+  blog_detail,
+  preparing,
+  art_vid,
   author,
   design,
   en,

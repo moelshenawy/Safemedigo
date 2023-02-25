@@ -10,7 +10,7 @@ import styles from "./index.module.scss";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
-import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
+import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -111,11 +111,11 @@ const Navbar = () => {
     };
   }, [showMenu]);
 
+  // console.log()
 
   return (
     <>
-      <AppBar >
-
+      <AppBar>
         <div className={styles.navbar}>
           <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
             <Grid
@@ -236,7 +236,10 @@ const Navbar = () => {
                     className={styles.side_bar}
                   >
                     <div className={styles.side_bar_container}>
-                      <div className={styles.close} onClick={() => setShowMenu(false)}>
+                      <div
+                        className={styles.close}
+                        onClick={() => setShowMenu(false)}
+                      >
                         <CloseIcon />
                       </div>
                       <div className={styles.links_container}>
@@ -262,7 +265,14 @@ const Navbar = () => {
                             <div className={styles.category_links}>
                               {menuLniks[0].links.map((link, idx) => (
                                 <>
-                                  <a className={window.location.pathname === link.link && styles.active} key={idx} href={link.link}>
+                                  <a
+                                    className={
+                                      window.location.pathname === link.link &&
+                                      styles.active
+                                    }
+                                    key={idx}
+                                    href={link.link}
+                                  >
                                     {link.title}
                                   </a>
                                 </>
@@ -300,7 +310,9 @@ const Navbar = () => {
 
       <nav id={styles.sec_nav}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-          <h2>home / Blogs</h2>
+
+          {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <h2>home / Signle blog</h2> : <h2>home / Blogs</h2>}
+          {console.log(window.location.pathname)}
         </Container>
       </nav>
     </>

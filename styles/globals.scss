@@ -1,3 +1,6 @@
+// Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
 /* Start Global Variables */
 * {
   margin: 0;
@@ -19,6 +22,8 @@
   --font-medium: "Gilroy-Medium", sans-serif;
   --font-regular: "Gilroy-Regular", sans-serif;
   --font-sem-bold: "Gilroy-SemiBold", sans-serif;
+
+  --open-sans-font: 'Open Sans', sans-serif;
 }
 
 body {
