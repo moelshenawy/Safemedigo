@@ -253,8 +253,19 @@
 
       .notifications {
         .icon_container {
+          position: relative;
           svg {
             font-size: 25px;
+          }
+
+          .notify {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #f32669;
+            border-radius: 50%;
+            top: 4px;
+            left: 1px;
           }
         }
       }
@@ -262,8 +273,7 @@
         .icon_container {
           svg {
             color: var(--main-dark-color);
-            font-size: 30px;
-            font-weight: bold;
+            font-size: 28px;
           }
         }
       }
@@ -366,7 +376,7 @@
                 font-size: 28px;
                 transition: all 0.3s ease;
               }
-              margin-right: 20px;
+              margin-right: 50px;
               &.active {
                 svg {
                   transform: rotate(180deg);
@@ -402,10 +412,11 @@
                 color: #000000;
                 font-family: var(--font-light);
                 font-weight: 100;
-                font-size: 17px;
+                font-size: 16px;
                 font-weight: 500;
                 letter-spacing: 0;
                 position: relative;
+
                 &.active::after {
                   content: "";
                   position: absolute;
@@ -414,6 +425,12 @@
                   background-color: var(--main-cyan-color);
                   width: 24px;
                   height: 4px;
+                }
+
+                svg {
+                  color: var(--main-dark-color);
+                  font-size: 20px;
+                  margin-left: 8px;
                 }
               }
             }

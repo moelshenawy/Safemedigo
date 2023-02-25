@@ -14,7 +14,8 @@ import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 import { BiChevronDown, BiMenuAltRight } from 'react-icons/bi'
 import { IoIosNotifications } from 'react-icons/io'
 import { FaSearch } from 'react-icons/fa'
-import { BsFilterRight } from 'react-icons/bs'
+import { HiArrowSmRight } from 'react-icons/hi'
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuLinks, setShowMenuLinks] = useState(false);
@@ -243,6 +244,7 @@ const Navbar = () => {
                 <div className={styles.notifications} >
                   <div className={styles.icon_container}>
                     <IoIosNotifications />
+                    <div className={styles.notify} />
                   </div>
                 </div>
 
@@ -302,8 +304,12 @@ const Navbar = () => {
                               ))}
 
                               <div className={styles.special_links}>
-                                <a href="/reveiw">Start Your Review</a>
-                                <a href="q&a">Ask A Doctor</a>
+                                <a href="/reveiw">Start Your Review
+                                  <HiArrowSmRight />
+                                </a>
+                                <a href="q&a">Ask A Doctor
+                                  <HiArrowSmRight />
+                                </a>
                               </div>
 
                               <Box className={styles.lang} display='flex'>
@@ -336,7 +342,7 @@ const Navbar = () => {
                             </div>
                             {showMenuLinks &&
                               <motion.div
-                                animate={{ y: [100, 0] }}
+                                animate={{ y: [-100, 0] }}
                                 transition={{ duration: 0.80, ease: "easeOut" }}
 
                                 className={styles.category_links}>
