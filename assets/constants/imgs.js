@@ -8,6 +8,11 @@ import author from "../imgs/author.png";
 import design from "../imgs/design.png";
 import art_vid from "../imgs/art_vid.png";
 import preparing from "../imgs/preparing.png";
+import Extraction from "../imgs/Extraction.png";
+import Result from "../imgs/Result.png";
+import blog_bg from "../imgs/blog_bg.png";
+import Transplanting from "../imgs/Transplanting.png";
+import openingChannel from "../imgs/openingChannel.png";
 import designMobile from "../imgs/designMobile.png";
 import logo from "../svgs/logo.svg";
 import en from "../svgs/en.svg";
@@ -28,14 +33,19 @@ export default {
   logo,
   notificationsActive,
   notifications,
+  blog_bg,
   blog_detail,
   designMobile,
+  Extraction,
   burger,
   preparing,
   art_vid,
   author,
+  openingChannel,
   design,
   en,
+  Result,
+  Transplanting,
   arrowDown,
   search,
   user,

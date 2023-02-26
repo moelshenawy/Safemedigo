@@ -1,25 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "next/link";
 import imgs from "../../assets/constants/imgs";
 import { PageHeader, Tags } from "./../../components/";
 import styles from "./[id].module.scss";
-import { Container, Typography, Rating } from "@mui/material";
+import { Container, Typography, Rating, Box } from "@mui/material";
 import { BsLink45Deg, BsTwitter } from 'react-icons/bs';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GoPlus } from 'react-icons/go'
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import Carousel from 'react-elastic-carousel'
+
+import { red, green, blue } from '@mui/material/colors';
+
+
 
 export default function BolgDetails(props) {
-  const { art_vid, preparing, blog_detail, author, post3 } = imgs;
+  const [breakPoints] = useState([
+    { width: 1, itemsToShow: 1, },
+    // { width: 1, itemsToShow: 2, pagination: false },
+    { width: 337, itemsToShow: 1, },
+
+    { width: 450, itemsToShow: 2, },
+    { width: 550, itemsToShow: 3, },
+    { width: 850, itemsToShow: 3, },
+    { width: 1150, itemsToShow: 3, itemsToScroll: 2, },
+    { width: 1450, itemsToShow: 5 },
+    { width: 1750, itemsToShow: 6 },
+  ])
+
+
+
+
+  const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
+
+  const cards = [
+    { title: 'Preparing', img: preparing.src, id: '1' },
+    { title: 'Extraction', img: Extraction.src, id: '2' },
+    { title: 'Opening Channels', img: openingChannel.src, id: '3' },
+    { title: 'Transplanting', img: Transplanting.src, id: '4' },
+    { title: 'Results', img: Result.src, id: '5' },
+  ]
+
+
+
+
 
   return (
     <>
-      <PageHeader />
+      <Box
+        sx={{
+          display: {
+            xs: "none",
+            sm: "none",
+            lg: "block"
+          }
+        }}
+      >
+        <PageHeader />
+      </Box>
 
-      {/* <h1>{props.post[0].title}</h1>
-      <p>{props.post[0].desc}</p>
-      <img src={post3.src} alt="" /> */}
+      <Box
+        sx={{
+          display: {
+            xs: "block",
+            sm: "block",
+            lg: "none"
+          }
+        }}
+        id={styles.signle_blog_header}>
+        <div className={styles.img_container}>
+          <img src={blog_bg.src} alt="" />
+        </div>
+
+        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+
+          <div className={styles.title}>
+            <Typography variant="h1">
+              I Was Suffuring From Gas Issues For 3 Years! (Blog Title)
+            </Typography>
+          </div>
+
+          <div className={styles.writer_info}>
+            <div className={styles.writer_img}>
+              <img src={author.src} alt="" />
+            </div>
+
+            <div className={styles.name}>
+              <a href="#">
+                writer name - medical content writer
+                {` `}
+              </a>
+            </div>
+
+
+          </div>
+          <div className={styles.date}>
+            November 4, 2020
+          </div>
+        </Container>
+      </Box>
 
       <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
         <div id={styles.blog_details}>
@@ -116,34 +195,28 @@ export default function BolgDetails(props) {
 
             </div>
 
+
             <div className={styles.boxes_container}>
-              <div className={styles.box}>
-                <div className={styles.box_title}>
-                  <Typography variant="h6">Preparing</Typography>
-                </div>
-                <div className={styles.img_container}>
-                  <img src={preparing.src} alt="" />
-                </div>
-              </div>
-              <div className={styles.box}>
-                <div className={styles.box_title}>
-                  <Typography variant="h6">Preparing</Typography>
-                </div>
-                <div className={styles.img_container}>
-                  <img src={preparing.src} alt="" />
-                </div>
-              </div>
-              <div className={styles.box}>
-                <div className={styles.box_title}>
-                  <Typography variant="h6">Preparing</Typography>
-                </div>
-                <div className={styles.img_container}>
-                  <img src={preparing.src} alt="" />
-                </div>
-              </div>
+              <Carousel breakPoints={breakPoints} showArrows={false}
+                pagination={false}
+              >
+
+                {cards.map((card, index) => (
+                  <>
+                    <div className={styles.box} key={index}>
+                      <div className={styles.box_title}>
+                        <Typography variant="h6">{card.id} {card.title}</Typography>
+                      </div>
+                      <div className={styles.img_container}>
+                        <img src={card.img} alt="" />
+                      </div>
+                    </div>
+
+                  </>
+                ))}
+
+              </Carousel>
             </div>
-
-
 
           </article>
 
@@ -196,6 +269,7 @@ export default function BolgDetails(props) {
                 <hr />
               </div>
               <div className={styles.card_body}>
+
                 <div className={styles.user_comment}>
                   <div className={styles.user_data}>
                     <div className={styles.img_container}>
@@ -209,7 +283,11 @@ export default function BolgDetails(props) {
 
                   </div>
                   <div className={styles.comment}>
-                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nam Viverra Euismod Odio, Gravida Pellentesque Urna Varius Vitae, Gravida Pellentesque Urna Varius Vitae. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.
+
+                    <Typography>
+                      Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nam Viverra Euismod Odio,
+                    </Typography>
+
 
                     <div className={styles.date}>
                       Dec 6, 2017 - 18:55
@@ -228,7 +306,11 @@ export default function BolgDetails(props) {
                   </div>
 
                   <div className={styles.comment}>
-                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nam Viverra Euismod Odio, Gravida Pellentesque Urna Varius Vitae, Gravida Pellentesque Urna Varius Vitae. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.
+                    <Typography>
+
+                      Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Nam Viverra Euismod
+
+                    </Typography>
 
                     <div className={styles.date}>
                       Dec 6, 2017 - 18:55

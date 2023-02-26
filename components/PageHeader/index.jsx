@@ -19,12 +19,15 @@ const PageHeader = () => {
                 Home
               </Typography>}
 
-              {window.location.pathname === '/blogs' && <Typography variant='h4' >
+              {/* {window.location.pathname === '/blogs' && <Typography variant='h4' >
                 Safemedigo Blogs
-              </Typography>}
-              {window.location.pathname === '/blogs/2' || '/blogs/1' && <Typography variant='h4' >
+              </Typography>} */}
+              {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <Typography variant='h4' >
                 acibadem Hospital (blog category)
-              </Typography>}
+              </Typography> :
+                <Typography variant='h4' >
+                  Safemedigo Blogs
+                </Typography>}
 
 
             </div>

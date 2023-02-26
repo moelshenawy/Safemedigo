@@ -15,7 +15,7 @@ const Tags = () => {
   ];
   return (
     <section id={styles.tags}>
-      <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+      <Container sx={{ maxWidth: "1239px", padding: '0px !important' }} maxWidth={false}>
         <div className={styles.title}>
           <Typography variant="h6">Popular Article Tags</Typography>
         </div>

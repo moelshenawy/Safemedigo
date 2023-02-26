@@ -381,7 +381,7 @@ const Navbar = () => {
       <nav id={styles.sec_nav}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
 
-          {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <h2>home / Signle blog</h2> : <h2>home / Blogs</h2>}
+          {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2> : <h2>home / Blogs</h2>}
           {console.log(window.location.pathname)}
         </Container>
       </nav>

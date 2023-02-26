@@ -28,6 +28,11 @@
     // justify-content: space-around;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 450px) {
+      align-items: center;
+      justify-content: center;
+    }
+
     .tag {
       margin-right: 16px;
       margin-bottom: 8px;

@@ -23,7 +23,7 @@
   --font-regular: "Gilroy-Regular", sans-serif;
   --font-sem-bold: "Gilroy-SemiBold", sans-serif;
 
-  --open-sans-font: 'Open Sans', sans-serif;
+  --open-sans-font: "Open Sans", sans-serif;
 }
 
 body {
@@ -86,4 +86,21 @@ a {
   width: 14.84px;
   height: 8.48px;
   transition: all 0.3s ease;
+}
+
+// Carsouel overrides Classes
+.rec .rec-item-wrapper {
+  overflow: unset;
+}
+.rec .rec-swipable {
+  height: 350px;
+}
+
+.rec .rec-item-wrapper {
+  width: 230px !important;
+  margin-right: 14px;
+}
+
+.rec .rec-slider-container {
+  margin: 0 !important;
 }
