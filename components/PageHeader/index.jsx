@@ -2,8 +2,12 @@ import React from "react";
 import styles from "./index.module.scss";
 import imgs from "../../assets/constants/imgs";
 import { Container, Typography, Box } from "@mui/material";
+import { useRouter } from "next/router";
 
 const PageHeader = () => {
+  const router = useRouter();
+  const { pathname } = router;
+
   const { design, designMobile, author } = imgs;
   return (
     <div id={styles.blogs}>
@@ -15,43 +19,53 @@ const PageHeader = () => {
         >
           <div className={styles.text_container}>
             <div className={styles.guide}>
-              {window.location.pathname === '/' && <Typography variant='h4' >
-                Home
-              </Typography>}
 
 
-              {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <Typography variant='h4' >
-                acibadem Hospital (blog category)
-              </Typography> :
+              {pathname === ('/') &&
+                <Typography variant='h4'>Home</Typography>
+              }
+
+
+
+
+              {pathname.includes('/blogs/') &&
                 <Typography variant='h4' >
-                  Safemedigo Blogs
-                </Typography>}
+                  acibadem Hospital (blog category)
+                </Typography>
+              }
+
+
+
+
 
 
             </div>
 
             <div className={styles.title}>
-              {(window.location.pathname === "/blogs/1") |
-                "/blogs/2" |
-                "/blogs/3" |
-                "/blogs/4" |
-                "/blogs/5" |
-                "/blogs/6" ? (
-                <Typography variant='h2' className={styles.blog_h2} >
+              {pathname === ('/blogs') &&
+                <>
+                  <Typography variant='h4' >
+                    Safemedigo Blogs
+                  </Typography>
+                  <Typography variant='h2'>
+                    All Of The Latest Medical Travel And Healthcare Developments
+                    In One Place.
+                  </Typography>
+                </>
+              }
+
+              {pathname.includes('/blogs/') &&
+                <Typography variant='h4' >
                   I Was Suffuring From Gas Issues For 3 Years! (Blog Title)
                 </Typography>
-              ) : (
-                <Typography variant='h2'>
-                  All Of The Latest Medical Travel And Healthcare Developments
-                  In One Place.
-                </Typography>
-              )}
-
+              }
 
             </div>
 
 
-            {window.location.pathname !== '/blogs' &&
+
+
+            {pathname.includes('/blogs/') &&
 
               <Box display='flex' className={styles.review_by}>
                 <div className={styles.author_img}>
