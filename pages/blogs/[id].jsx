@@ -73,7 +73,6 @@ export default function BolgDetails(props) {
         </div>
 
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-
           <div className={styles.title}>
             <Typography variant="h1">
               I Was Suffuring From Gas Issues For 3 Years! (Blog Title)
@@ -87,9 +86,10 @@ export default function BolgDetails(props) {
 
             <div className={styles.name}>
               <a href="#">
-                writer name - medical content writer
+                writer name
                 {` `}
               </a>
+              - medical content writer
             </div>
 
 
