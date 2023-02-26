@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import imgs from "../../assets/constants/imgs";
-import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -11,9 +10,7 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
-import { BiChevronDown, BiMenuAltRight } from 'react-icons/bi'
-import { IoIosNotifications } from 'react-icons/io'
-import { FaSearch } from 'react-icons/fa'
+import { BiChevronDown, } from 'react-icons/bi'
 import { HiArrowSmRight } from 'react-icons/hi'
 
 const Navbar = () => {
@@ -106,7 +103,7 @@ const Navbar = () => {
     },
   ];
 
-  const { logo, en, arrowDown, user, search, design } = imgs;
+  const { logo, en, arrowDown, user, search, notifications, notificationsActive, burger } = imgs;
 
 
   // Toggle outside to close menu
@@ -245,19 +242,19 @@ const Navbar = () => {
               <div className={styles.icons_container} ref={menuRef}>
                 <div className={styles.search} >
                   <div className={styles.icon_container}>
-                    <FaSearch />
+                    <img src={search.src} alt="" />
                   </div>
                 </div>
                 <div className={styles.notifications} >
                   <div className={styles.icon_container}>
-                    <IoIosNotifications />
+                    <img src={notificationsActive.src} alt="" />
                     <div className={styles.notify} />
                   </div>
                 </div>
 
                 <div className={styles.menu} onClick={() => setShowMenu(true)}>
                   <div className={styles.icon_container}>
-                    <BiMenuAltRight />
+                    <img src={burger.src} alt="" />
                   </div>
                 </div>
 

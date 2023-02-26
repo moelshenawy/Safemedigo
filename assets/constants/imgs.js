@@ -8,10 +8,14 @@ import author from "../imgs/author.png";
 import design from "../imgs/design.png";
 import art_vid from "../imgs/art_vid.png";
 import preparing from "../imgs/preparing.png";
+import designMobile from "../imgs/designMobile.png";
 import logo from "../svgs/logo.svg";
 import en from "../svgs/en.svg";
 import arrowDown from "../svgs/arrowDown.svg";
 import search from "../svgs/search.svg";
+import notificationsActive from "../svgs/notificationsActive.svg";
+import burger from "../svgs/burger.svg";
+import notifications from "../svgs/notifications.svg";
 import user from "../svgs/user.svg";
 import blog_detail from "../imgs/blog_detail.png";
 import logoFooter from "../svgs/logo-footer.svg";
@@ -22,7 +26,11 @@ import twitter from "../svgs/twitter.svg";
 
 export default {
   logo,
+  notificationsActive,
+  notifications,
   blog_detail,
+  designMobile,
+  burger,
   preparing,
   art_vid,
   author,

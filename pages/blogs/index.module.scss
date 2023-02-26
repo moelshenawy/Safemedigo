@@ -56,18 +56,22 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 992px) {
-    flex-direction: column-reverse;
-  }
   #blogs_sec {
     .title {
-      @media screen and (max-width: 992px) {
-        display: none;
-      }
       h6 {
         color: var(--main-dark-color);
         font-family: var(--font-sem-bold);
         font-size: 28px;
+
+        @media screen and (max-width: 992px) {
+          font-family: var(--font-bold);
+          font-size: 18px;
+          font-weight: bold;
+          color: #707070;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          margin-left: 80px;
+        }
       }
     }
 
@@ -96,6 +100,12 @@
         @media screen and (max-width: 992px) {
           width: 316px;
           // height: 590px;
+        }
+
+        @media screen and (max-width: 450px) {
+          &:first-child {
+            margin-top: 0px;
+          }
         }
 
         .img_container {

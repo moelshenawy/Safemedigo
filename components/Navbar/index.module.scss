@@ -3,7 +3,7 @@
   // padding: 30px 0px 24px;
   padding-top: 16.4px;
   padding-bottom: 18.4px;
-  box-shadow: 0px 3px 6px var(--main-dark-color);
+  box-shadow: 0px 3px 6px var(--main-dark-color) 0d;
   position: relative;
   .grid__container {
     @media screen and (max-width: 1100px) {
@@ -30,7 +30,8 @@
         margin: 0;
 
         @media screen and (max-width: 992px) {
-          font-size: 14px;
+          font-weight: bold;
+          font-size: 16px;
         }
       }
     }
@@ -83,7 +84,7 @@
                   left: -5px;
                   width: 242px;
                   border-radius: 5px;
-                  box-shadow: 0px 3px 2px #00000029;
+                  // box-shadow: 0px 3px 2px #00000029;
                   padding-top: 10px;
                   padding-bottom: 25px;
                   display: flex;
@@ -274,9 +275,9 @@
         }
 
         .icon_container {
-          svg {
-            color: var(--main-green-color);
-            font-size: 20px;
+          img {
+            width: 22px;
+            height: 22px;
           }
         }
       }
@@ -309,9 +310,9 @@
       }
       .menu {
         .icon_container {
-          svg {
-            color: var(--main-dark-color);
-            font-size: 28px;
+          img {
+            width: 25px;
+            height: 25px;
           }
         }
       }
