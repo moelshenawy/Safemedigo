@@ -194,13 +194,10 @@ export default function BolgDetails(props) {
               </div>
 
             </div>
-
-
             <div className={styles.boxes_container}>
               <Carousel breakPoints={breakPoints} showArrows={false}
                 pagination={false}
               >
-
                 {cards.map((card, index) => (
                   <>
                     <div className={styles.box} key={index}>
