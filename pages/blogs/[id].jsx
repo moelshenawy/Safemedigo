@@ -23,7 +23,7 @@ export default function BolgDetails(props) {
     { width: 450, itemsToShow: 2, },
     { width: 550, itemsToShow: 3, },
     { width: 850, itemsToShow: 3, },
-    { width: 1150, itemsToShow: 3, itemsToScroll: 2, },
+    { width: 1150, itemsToShow: 3, },
     { width: 1450, itemsToShow: 5 },
     { width: 1750, itemsToShow: 6 },
   ])
@@ -161,11 +161,6 @@ export default function BolgDetails(props) {
             </div>
           </div>
 
-
-
-
-
-
           <article>
             <div className={styles.title}>
               <Typography variant="h2">Article Subline</Typography>
@@ -197,6 +192,7 @@ export default function BolgDetails(props) {
             <div className={styles.boxes_container}>
               <Carousel breakPoints={breakPoints} showArrows={false}
                 pagination={false}
+                itemsToScroll={1}
               >
                 {cards.map((card, index) => (
                   <>
