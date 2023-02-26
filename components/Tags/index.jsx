@@ -4,25 +4,20 @@ import React from 'react'
 import styles from './index.module.scss'
 const Tags = () => {
   const tags = [
-    { tag: "Acibadem" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
-    { tag: "treatment" },
+    { tag: "All" },
+    { tag: "Hair Transplant" },
+    { tag: "Tag name" },
+    { tag: "Tag name" },
+    { tag: "Tag name" },
+    { tag: "Tag name" },
+    { tag: "Tag name" },
+    { tag: "Tag name" },
   ];
   return (
     <section id={styles.tags}>
       <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
         <div className={styles.title}>
-          <Typography variant="h6">Popular Tags</Typography>
+          <Typography variant="h6">Popular Article Tags</Typography>
         </div>
 
         <div className={styles.tags_container}>

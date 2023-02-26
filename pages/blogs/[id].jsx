@@ -3,14 +3,15 @@ import { Link } from "next/link";
 import imgs from "../../assets/constants/imgs";
 import { PageHeader, Tags } from "./../../components/";
 import styles from "./[id].module.scss";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Rating } from "@mui/material";
 import { BsLink45Deg, BsTwitter } from 'react-icons/bs';
 import { FaFacebookSquare } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GoPlus } from 'react-icons/go'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 export default function BolgDetails(props) {
-  const { art_vid, preparing, blog_detail, author, } = imgs;
+  const { art_vid, preparing, blog_detail, author, post3 } = imgs;
 
   return (
     <>
@@ -22,27 +23,69 @@ export default function BolgDetails(props) {
 
       <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
         <div id={styles.blog_details}>
+
           <div className={styles.headline}>
-            <div className={styles.img_container}>
-              <img src={blog_detail.src} alt="Blog Name" />
+
+            <div className={styles.headline_inner}>
+              <div className={styles.img_container}>
+                <img src={blog_detail.src} alt="Blog Name" />
+              </div>
+              <div className={styles.title}>
+                <Typography variant="h2">Headline</Typography>
+                <Typography >
+                  Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed
+                  Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna
+                  Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et
+                  Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea
+                  Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum
+                  Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed
+                  Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna
+                  Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et
+                  Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea
+                  Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum{" "}
+                </Typography>
+              </div>
             </div>
 
-            <div className={styles.title}>
-              <Typography variant="h2">Headline</Typography>
-              <Typography >
-                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed
-                Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna
-                Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et
-                Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea
-                Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum
-                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed
-                Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna
-                Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et
-                Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea
-                Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum{" "}
-              </Typography>
+            <div className={styles.blog_treatment_box}>
+              <div className={styles.box}>
+                <div className={styles.img_container}>
+                  <img src={post3.src} alt="" />
+                </div>
+
+                <div className={styles.text_container}>
+
+                  <div className={styles.treatment_title}>
+                    <Typography variant="h5">Treatment Name</Typography>
+                  </div>
+                  <div className={styles.price}>
+                    <p>Cost Start From <span>1200 	&euro;</span></p>
+                  </div>
+                  <div className={styles.starts}>
+                    <Rating name="size-medium" defaultValue={4} />
+                    <span className={styles.reviews_num}>90 Reviews</span>
+                  </div>
+                  <div className={styles.desc}>
+                    <Typography >
+                      Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd
+                    </Typography>
+                  </div>
+
+                  <div className={styles.more_btn}>
+                    <a href='/'>
+                      <button>More</button>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
+
+
+
+
+
 
           <article>
             <div className={styles.title}>
@@ -134,6 +177,11 @@ export default function BolgDetails(props) {
           </div>
         </div>
 
+
+
+
+
+
         <div id={styles.related_tags}>
           <Tags />
         </div>
@@ -219,8 +267,8 @@ export default function BolgDetails(props) {
 
                 <div className={styles.comment}>
                   <label htmlFor="">Comments <span>*</span></label>
-                  <textarea name="" rows="4" cols="50">
-                    Enter Your Comment
+                  <textarea placeholder="Enter Your Comment" name="" rows="4" cols="50">
+
                   </textarea>
                 </div>
 

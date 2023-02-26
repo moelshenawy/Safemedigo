@@ -1,18 +1,110 @@
 #blog_details {
   margin-top: 56px;
   margin-bottom: 83.25px;
-  width: 840px;
 
   .headline {
     margin-bottom: 52px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    .img_container {
-      width: 100%;
-      height: 311px;
+    .headline_inner {
+      width: 770px;
 
-      img {
+      .img_container {
         width: 100%;
-        height: 100%;
+        height: 311px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .blog_treatment_box {
+      .box {
+        background-color: red;
+        width: 344px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 0px 3px 2px #00000029;
+        background-color: var(--main-white-color);
+
+        .img_container {
+        }
+
+        .text_container {
+          padding-left: 18px;
+          padding-bottom: 24px;
+          padding-right: 23px;
+
+          .treatment_title {
+            margin-top: 16px;
+            margin-bottom: 8px;
+            h5 {
+              font-family: var(--open-sans-font);
+              font-weight: bold;
+              font-size: 18px;
+              color: var(--main-green-color);
+              letter-spacing: 0;
+            }
+          }
+
+          .price {
+            margin-bottom: 9px;
+            p {
+              font-family: var(--open-sans-font);
+              font-weight: bold;
+              font-size: 18px;
+              color: var(--main-dark-color);
+              letter-spacing: 0;
+              span {
+              }
+            }
+          }
+
+          .starts {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+
+            .reviews_num {
+              margin-left: 13px;
+              font-family: var(--font-medium);
+              font-size: 14px;
+              color: var(--main-dark-color);
+            }
+          }
+
+          .desc {
+            margin-bottom: 22px;
+            p {
+              font-family: var(--open-sans-font);
+              font-weight: 500;
+              font-size: 16px;
+              letter-spacing: 0;
+            }
+          }
+          .more_btn {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            a {
+              button {
+                background-color: transparent;
+                border: none;
+                text-decoration: underline;
+
+                color: #002845;
+                font-size: 18px;
+                font-family: var(--font-medium);
+                font-weight: 500;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -21,7 +113,7 @@
     .article_container {
       display: flex;
       align-items: flex-start;
-      justify-content: flex-start;
+      justify-content: flex-end;
       flex-direction: row-reverse;
 
       .video_container {

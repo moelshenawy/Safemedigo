@@ -20,7 +20,7 @@ const PageHeader = () => {
               </Typography>}
 
               {window.location.pathname === '/blogs' && <Typography variant='h4' >
-                All blogs
+                Safemedigo Blogs
               </Typography>}
               {window.location.pathname === '/blogs/2' || '/blogs/1' && <Typography variant='h4' >
                 acibadem Hospital (blog category)
