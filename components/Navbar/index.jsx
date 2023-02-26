@@ -85,10 +85,12 @@ const Navbar = () => {
       title: "Reviews & Photos",
       link: "/",
       menuLink: [
-        { title: "Reviews", link: "/reviews" },
-        { title: "Before & After", link: "/Before-after" },
-        { title: "Patient Stories", link: "/stories" },
+        { title: "Patients Reviews", link: "/reviews" },
+        { title: "Before & After", link: "/before-after" },
+        { title: "Patients Stories", link: "/stories" },
         { title: "Doctor Q&A", link: "/Q&A" },
+        { title: "Ask A Doctor", link: "/Q&A" },
+        { title: "Start Your Review", link: "/reviews" },
       ],
     },
     { title: "Prices", link: "/", menuLink: null },
@@ -96,7 +98,8 @@ const Navbar = () => {
     {
       title: "About Us ",
       menuLink: [
-        { title: "about Us", link: "/about-us" },
+        { title: "About Us", link: "/about-us" },
+        { title: "How It Works", link: "/about-us" },
         { title: "Safety Standards", link: "/safety" },
         { title: "Contact Us", link: "/contact-us" },
       ],
@@ -159,20 +162,24 @@ const Navbar = () => {
                           >
                             <Link href={`${link.link}`}>{link.title}</Link>
 
-                            <ul className={styles.menuLinks__container}>
+                            <div className={styles.menuLinks__container}>
                               {link.menuLink != null &&
-                                link.menuLink.map((links, index) => (
-                                  <motion.li
-                                    animate={{ y: [300, 0] }}
-                                    transition={{ duration: 0.80, ease: "easeOut" }}
+                                <motion.ul
+                                >
+                                  {link.menuLink.map((links, index) => (
+                                    <li
+                                      key={index}>
+                                      <Link href={`${links.title}`}>
+                                        {links.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </motion.ul>
+                              }
+                            </div>
 
-                                    key={index}>
-                                    <Link href={`${links.title}`}>
-                                      {links.title}
-                                    </Link>
-                                  </motion.li>
-                                ))}
-                            </ul>
+
+
                           </li>
                         ))}
                       </ul>
