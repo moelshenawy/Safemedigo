@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
 import { BiChevronDown, } from 'react-icons/bi'
 import { HiArrowSmRight } from 'react-icons/hi'
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -121,6 +122,17 @@ const Navbar = () => {
       document.removeEventListener("click", closeMenu);
     };
   }, [showMenu]);
+
+
+
+
+
+
+
+
+  // Get routes to make dynamic data
+  const router = useRouter();
+  const { pathname } = router;
 
   return (
     <>
@@ -381,8 +393,16 @@ const Navbar = () => {
       <nav id={styles.sec_nav}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
 
-          {window.location.pathname === '/blogs/1' | '/blogs/2' | '/blogs/3' | '/blogs/4' | '/blogs/5' | '/blogs/6' ? <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2> : <h2>home / Blogs</h2>}
-          {console.log(window.location.pathname)}
+          {pathname === ('/') &&
+            <h2>Home</h2>
+          }
+          {pathname === ('/blogs') &&
+            <h2>Home / All Blogs</h2>
+          }
+          {pathname.includes('/blogs/') &&
+            <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2>
+          }
+
         </Container>
       </nav>
     </>
