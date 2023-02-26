@@ -52,15 +52,20 @@ const PageHeader = () => {
 
             </div>
 
-            <Box display='flex' className={styles.review_by}>
-              <div className={styles.author_img}>
-                <img src={author.src} alt="" />
-              </div>
-              <div className={styles.info}>
-                <p>Andrew Mackay, Medical Content Writer</p>
-                <p className={styles.date}> Posted Apr 28, 2021,</p>
-              </div>
-            </Box>
+
+            {window.location.pathname !== '/blogs' &&
+
+              <Box display='flex' className={styles.review_by}>
+                <div className={styles.author_img}>
+                  <img src={author.src} alt="" />
+                </div>
+                <div className={styles.info}>
+                  <p>Andrew Mackay, Medical Content Writer</p>
+                  <p className={styles.date}> Posted Apr 28, 2021,</p>
+                </div>
+              </Box>
+            }
+
           </div>
 
           <div className={styles.img_container}>
