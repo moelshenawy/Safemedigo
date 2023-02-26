@@ -164,7 +164,7 @@ const Navbar = () => {
 
                             <div className={styles.menuLinks__container}>
                               {link.menuLink != null &&
-                                <motion.ul
+                                <ul
                                 >
                                   {link.menuLink.map((links, index) => (
                                     <li
@@ -174,7 +174,7 @@ const Navbar = () => {
                                       </Link>
                                     </li>
                                   ))}
-                                </motion.ul>
+                                </ul>
                               }
                             </div>
 
