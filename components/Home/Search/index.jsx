@@ -6,8 +6,9 @@ import Carousel from 'react-elastic-carousel';
 
 const Search = () => {
   const [breakPoints] = useState([
-    { width: 1, itemsToShow: 3, },
-    // { width: 1, itemsToShow: 2, pagination: false },
+    { width: 1, itemsToShow: 1 },
+    { width: 300, itemsToShow: 2.5 },
+    { width: 400, itemsToShow: 3 },
   ])
 
   const tags = [
