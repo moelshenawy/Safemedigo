@@ -79,11 +79,12 @@ nav#navbar_search {
   height: 100vh;
   #search_wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     .text_container {
       width: 300px;
       margin-right: 17px;
+      margin-top: 80px;
       p {
         color: var(--sec-cyan-color);
         font-size: 34px;
