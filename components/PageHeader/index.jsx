@@ -19,25 +19,15 @@ const PageHeader = () => {
         >
           <div className={styles.text_container}>
             <div className={styles.guide}>
-
-
               {pathname === ('/') &&
                 <Typography variant='h4'>Home</Typography>
               }
-
-
-
 
               {pathname.includes('/blogs/') &&
                 <Typography variant='h4' >
                   acibadem Hospital (blog category)
                 </Typography>
               }
-
-
-
-
-
 
             </div>
 

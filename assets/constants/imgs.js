@@ -28,9 +28,11 @@ import facebook from "../svgs/facebook.svg";
 import instagram from "../svgs/instagram.svg";
 import youtube from "../svgs/youtube.svg";
 import twitter from "../svgs/twitter.svg";
+import NavSearch from "../svgs/NavSearch.svg";
 
 export default {
   logo,
+  NavSearch,
   notificationsActive,
   notifications,
   blog_bg,

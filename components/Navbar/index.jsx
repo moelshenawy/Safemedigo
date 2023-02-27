@@ -104,7 +104,7 @@ const Navbar = () => {
     },
   ];
 
-  const { logo, en, arrowDown, user, search, notifications, notificationsActive, burger } = imgs;
+  const { logo, NavSearch, en, arrowDown, user, search, notifications, notificationsActive, burger } = imgs;
 
 
   // Toggle outside to close menu
@@ -220,10 +220,10 @@ const Navbar = () => {
                       </div>
 
                       <div className={styles.search_btn}>
-                        <Link href="/">
+                        <Link href="/search">
                           <div className={styles.icon_container}>
                             <img
-                              src={search.src}
+                              src={NavSearch.src}
                               alt="Picture of the author"
                               width="18.89px"
                               height="19px"

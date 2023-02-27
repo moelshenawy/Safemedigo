@@ -219,6 +219,7 @@
               text-decoration: none;
               color: var(--main-dark-color);
               display: flex;
+              cursor: pointer;
 
               .icon_container {
                 margin-right: 7.2px;
@@ -239,6 +240,7 @@
                 font-family: var(--gilroy-font-medium);
                 color: var(--main-dark-color);
                 transition: all 0.3s ease-in-out;
+                cursor: pointer;
               }
 
               &:hover {
