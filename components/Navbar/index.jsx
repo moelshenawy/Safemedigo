@@ -391,21 +391,21 @@ const Navbar = () => {
         </div>
       </AppBar>
 
-      <nav id={styles.sec_nav}>
-        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
 
-          {pathname === ('/') &&
-            <h2>Home</h2>
-          }
-          {pathname === ('/blogs') &&
-            <h2>Home / All Blogs</h2>
-          }
-          {pathname.includes('/blogs/') &&
-            <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2>
-          }
 
-        </Container>
-      </nav>
+      {pathname !== '/' &&
+        <nav id={styles.sec_nav}>
+          <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+            {pathname === ('/blogs') &&
+              <h2>Home / All Blogs</h2>
+            }
+            {pathname.includes('/blogs/') &&
+              <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2>
+            }
+
+          </Container>
+        </nav>
+      }
     </>
   );
 };

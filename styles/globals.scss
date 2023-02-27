@@ -90,22 +90,56 @@ a {
 }
 
 // Carsouel overrides Classes
-.rec .rec-item-wrapper {
-  overflow: unset;
-}
-.rec .rec-swipable {
-  height: 350px;
+article {
+  .rec .rec-item-wrapper {
+    overflow: unset;
+  }
+  .rec .rec-swipable {
+    height: 350px;
+  }
+
+  .rec .rec-item-wrapper {
+    width: 230px !important;
+    margin-right: 14px;
+  }
+
+  .rec .rec-slider-container {
+    margin: 0 !important;
+  }
 }
 
-.rec .rec-item-wrapper {
-  width: 230px !important;
-  margin-right: 14px;
+/* square buttons */
+.rec.rec-arrow {
+  border-radius: 0;
+  border-radius: 50%;
+  background-color: var(--main-white-color);
+  color: var(--main-dark-color);
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+  background-color: var(--main-white-color) !important;
+  color: var(--main-dark-color) !important;
 }
 
-.rec .rec-slider-container {
-  margin: 0 !important;
+.rec-arrow-right {
+  position: absolute;
+  right: 8px;
 }
-
+.rec-arrow-left {
+  position: absolute;
+  left: 8px;
+  z-index: 11;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
 // Scroll bar
 ::-webkit-scrollbar {
   width: 7px;
@@ -118,5 +152,5 @@ a {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  background: #8d8d8d;
+  background: var(--main-green-color);
 }

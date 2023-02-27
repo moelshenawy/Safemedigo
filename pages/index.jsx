@@ -6,7 +6,18 @@ import { Share } from "@capacitor/share";
 // import { IonHeader, IonToolbar, IonTitle } from "@ionic/react";
 import Button from "@mui/material/Button";
 import Navbar from "../components/Navbar/index";
-
+import {
+  ContactDetails,
+  Help,
+  Hero,
+  MostPopular,
+  PatientStories,
+  Safty,
+  Search,
+  TreatmentCategory,
+  WhySafemedigo,
+  WhyTurkey
+} from '../components/Home'
 export default function Home() {
   return (
     <>
@@ -20,11 +31,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Home Page</h1>
-      <h1>Home Page</h1>
-      <h1>Home Page</h1>
-      <h1>Home Page</h1>
-      <h1>Home Page</h1>
+      {/* Home Page Sections  */}
+      <Hero />
+      <Search />
+      <Help />
+      <WhySafemedigo />
+      <TreatmentCategory />
+      <MostPopular />
+      <PatientStories />
+      <Safty />
+      <WhyTurkey />
+      <ContactDetails />
+
     </>
   );
 }

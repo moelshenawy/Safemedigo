@@ -10,7 +10,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { GoPlus } from 'react-icons/go'
 import Carousel from 'react-elastic-carousel'
 
-import { red, green, blue } from '@mui/material/colors';
 
 
 
