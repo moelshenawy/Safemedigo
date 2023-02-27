@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* Home Page Sections  */}
       <Hero />
-      <Search />
+      {/* <Search /> */}
       <Help />
       <WhySafemedigo />
       <TreatmentCategory />

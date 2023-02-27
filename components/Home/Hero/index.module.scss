@@ -1,32 +1,55 @@
 section#hero {
   margin-top: 80px;
   background-color: var(--main-green-color);
-
+  position: relative;
+  @media screen and (max-width: 992px) {
+    margin-top: 22px;
+    padding-bottom: 80px;
+  }
   .hero_container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     // flex-wrap: wrap;
     padding-top: 65px;
-    padding-bottom: 100px;
+    padding-bottom: 213px;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
 
     .text_container {
       .title {
         margin-bottom: 24px;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 22px;
+        }
+
         h1 {
-          font-size: 48px;
+          font-size: 44px;
           color: var(--sec-cyan-color);
           font-family: var(--font-bold);
           // font-weight: bold;
           font-weight: 800;
+
+          @media screen and (max-width: 992px) {
+            font-size: 24px;
+            color: var(--main-white-color);
+            line-height: 1.5;
+          }
         }
       }
 
       .advantages {
         margin-bottom: 25px;
+        @media screen and (max-width: 992px) {
+          margin-bottom: 21px;
+        }
         .advantage {
           display: flex;
           align-items: center;
+          margin-bottom: 11px;
 
           svg {
             margin-right: 13.2px;
@@ -51,7 +74,12 @@ section#hero {
             margin-right: 13.56px;
             color: var(--sec-cyan-color);
             font-size: 35px;
+
+            @media screen and (max-width: 992px) {
+              color: var(--main-white-color);
+            }
           }
+
           button {
             background: transparent;
             border: none;
@@ -60,6 +88,13 @@ section#hero {
             font-size: 24px;
             font-weight: bold;
             font-family: var(--font-bold);
+            cursor: pointer;
+
+            @media screen and (max-width: 992px) {
+              color: var(--main-white-color);
+              text-decoration: underline;
+              font-size: 18px;
+            }
           }
         }
       }
@@ -67,7 +102,9 @@ section#hero {
       .start {
         display: flex;
         align-items: center;
-
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
         .get_started_btn {
           margin-right: 34px;
           a {
@@ -107,7 +144,15 @@ section#hero {
     .slider_container {
       width: 465px;
       position: relative;
-
+      // overflow-y: visible;
+      // overflow-x: visible;
+      @media screen and (max-width: 992px) {
+        position: absolute;
+        bottom: -85px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 418px;
+      }
       .box {
         width: 400px;
         background-color: var(--main-white-color);
@@ -115,6 +160,14 @@ section#hero {
         border-radius: 8px;
         padding: 24px;
         margin: 0 15px;
+
+        @media screen and (max-width: 992px) {
+          width: 333px;
+          padding-bottom: 11px;
+          padding-right: 15px;
+          padding-left: 29px;
+          padding-top: 19px;
+        }
 
         .box_header {
           display: flex;
@@ -124,10 +177,19 @@ section#hero {
           justify-content: flex-start;
           margin-bottom: 18px;
 
+          @media screen and (max-width: 992px) {
+            margin-bottom: 9px;
+          }
+
           .img_container {
             width: 95px;
             height: 95px;
             margin-right: 20px;
+
+            @media screen and (max-width: 992px) {
+              margin-right: 10px;
+              height: 92px;
+            }
 
             img {
               width: 100%;
@@ -143,12 +205,16 @@ section#hero {
               font-family: var(--font-bold);
 
               color: var(--main-dark-color);
+              @media screen and (max-width: 992px) {
+                font-size: 16px;
+              }
             }
 
             .rating {
               margin-top: 9px;
               display: flex;
               align-items: center;
+
               .reviews_num {
                 margin-left: 10px;
                 color: var(--main-dark-color);
@@ -158,6 +224,9 @@ section#hero {
               }
               span:not(.reviews_num) {
                 font-size: 20px;
+                @media screen and (max-width: 992px) {
+                  font-size: 16px;
+                }
               }
             }
 
@@ -170,6 +239,10 @@ section#hero {
                 font-size: 16px;
                 font-family: var(--font-medium);
                 font-weight: 600;
+
+                @media screen and (max-width: 992px) {
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -182,6 +255,10 @@ section#hero {
             font-weight: 500;
             color: var(--main-dark-color);
             letter-spacing: 0;
+
+            @media screen and (max-width: 992px) {
+              font-size: 15px;
+            }
           }
         }
       }

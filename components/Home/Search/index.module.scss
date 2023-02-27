@@ -1,0 +1,182 @@
+#search {
+  background-color: var(--main-white-color);
+  position: absolute;
+  bottom: -170px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+
+  width: 1207px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  @media screen and (max-width: 992px) {
+    // display: none;
+    width: 100%;
+    background-color: transparent;
+    bottom: 12%;
+    left: 0;
+    transform: translateX(0);
+    box-shadow: none;
+  }
+
+  .searc_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 992px) {
+      align-items: flex-start;
+    }
+
+    .searc_input {
+      margin-bottom: 56px;
+
+      @media screen and (max-width: 992px) {
+        margin-bottom: 20px;
+      }
+
+      a {
+        cursor: pointer;
+
+        @media screen and (max-width: 992px) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        label {
+          margin-right: 17px;
+
+          font-size: 28px;
+          font-weight: 400;
+          font-family: var(--font-sem-bold);
+          color: var(--main-dark-color);
+
+          @media screen and (max-width: 992px) {
+            color: var(--main-white-color);
+            margin-bottom: 11px;
+          }
+        }
+
+        input {
+          border: none;
+          background-color: #8d8d8d1a;
+          width: 472px;
+          height: 56px;
+
+          padding-top: 16px;
+          padding-bottom: 16px;
+          padding-left: 32px;
+
+          border: none;
+          border-radius: 40px;
+          cursor: pointer;
+
+          @media screen and (max-width: 992px) {
+            background-color: var(--main-white-color);
+            width: 333px;
+            height: 48px;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .tags {
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+      .title {
+        margin-bottom: 40px;
+        p {
+          text-align: center;
+          color: var(--main-dark-color);
+          font-size: 20px;
+          font-family: var(--font-medium);
+          font-weight: 400;
+        }
+      }
+
+      .tags_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          &:not(:last-child) {
+            margin-right: 17px;
+          }
+          button {
+            height: 40px;
+
+            padding-top: 9px;
+            padding-bottom: 10px;
+            padding-left: 26px;
+            padding-right: 26px;
+
+            background-color: var(--light-green-color);
+            border: 2px solid var(--main-green-color);
+            border-radius: 22px;
+
+            text-align: center;
+            color: var(--main-dark-color);
+            font-size: 16px;
+            font-family: var(--font-sem-bold);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--main-green-color);
+              color: var(--main-white-color);
+            }
+          }
+        }
+      }
+    }
+
+    .tags_slider {
+      width: 100%;
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
+
+      a {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        button {
+          width: 131px;
+          height: 48px;
+
+          // padding-top: 9px;
+          // padding-bottom: 10px;
+          // padding-left: 26px;
+          // padding-right: 26px;
+
+          background-color: var(--light-green-color);
+          border: 2px solid var(--main-green-color);
+          border-radius: 22px;
+
+          text-align: center;
+          color: var(--main-dark-color);
+          font-size: 16px;
+          font-family: var(--font-sem-bold);
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--main-green-color);
+            color: var(--main-white-color);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
+import React, { Children, useState } from 'react';
 import styles from './index.module.scss';
-import { Container, Typography, Rating, Box } from '@mui/material';
+import { Container, Typography, Rating, } from '@mui/material';
 import { BsCheckLg } from 'react-icons/bs';
 import { HiPlay } from 'react-icons/hi';
 import Link from 'next/link';
 import Carousel from 'react-elastic-carousel';
 import imgs from "../../../assets/constants/imgs";
-import { motion } from "framer-motion";
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { consts } from 'react-elastic-carousel';
-
+import Search from '../Search/index'
 const Hero = () => {
   const [breakPoints] = useState([
-    { width: 1, itemsToShow: 1, },
-    // { width: 1, itemsToShow: 2, pagination: false },
+    { width: 1, pagination: true, showArrows: false },
+    { width: 300, pagination: true, showArrows: false },
+    { width: 400, pagination: false },
 
   ])
 
   const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
 
   const cards = [
-    { title: 'Mhd Kh, Istanbul/Turkey', img: author.src, id: '1', desc: ' Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. ' },
-    { title: 'Mhd Kh, Istanbul/Turkey', img: author.src, id: '2', desc: ' Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. ' },
+    { title: 'Patient name', img: author.src, id: '1', desc: ' Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy  ' },
+    { title: 'Patient name', img: author.src, id: '2', desc: ' Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy  ' },
 
   ]
 
 
 
 
-
+  // Change Arrow in react-elastic-carousel Lirbrary
   function myArrow({ type, onClick, isEdge }) {
     const pointer = type === consts.PREV ?
       <div className='left_arrow'>
@@ -48,7 +48,7 @@ const Hero = () => {
     );
   }
 
-
+  console.log(breakPoints)
 
   return (
     <section id={styles.hero}>
@@ -107,8 +107,8 @@ const Hero = () => {
 
           <div className={styles.slider_container}>
 
-            <Carousel breakPoints={breakPoints}
-              pagination={false}
+            <Carousel
+              breakPoints={breakPoints}
               itemsToScroll={1}
               renderArrow={myArrow}
             >
@@ -160,6 +160,8 @@ const Hero = () => {
         </div>
 
       </Container>
+
+      <Search />
     </section>
   )
 }
