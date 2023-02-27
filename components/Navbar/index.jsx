@@ -252,11 +252,12 @@ const Navbar = () => {
               </Grid>
 
               <div className={styles.icons_container} ref={menuRef}>
-                <div className={styles.search} >
+                <Link href={'/search'} className={styles.search} >
                   <div className={styles.icon_container}>
                     <img src={search.src} alt="" />
                   </div>
-                </div>
+                </Link>
+
                 <div className={styles.notifications} >
                   <div className={styles.icon_container}>
                     <img src={notificationsActive.src} alt="" />

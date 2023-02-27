@@ -79,9 +79,9 @@ const Search = () => {
 
             <div className={styles.input_container}>
               <input type="text" placeholder='Treatment, Doctor, Clinic, Diseases' />
-              <div className={styles.close_icon}>
+              <Link href={'/'} className={styles.close_icon}>
                 <CloseIcon />
-              </div>
+              </Link>
             </div>
 
           </nav>
