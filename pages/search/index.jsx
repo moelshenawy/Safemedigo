@@ -10,18 +10,8 @@ import { FiChevronLeft } from 'react-icons/fi'
 const Search = () => {
   const { logo, NavSearch, en, arrowDown, user, search, notifications, notificationsActive, burger } = imgs;
 
+
   const mostSearches = [
-    {
-      title: 'Treatment',
-      name: 'Treatment Name',
-
-      link: '/treatment'
-    },
-    { title: 'Doctors', name: 'Doctor Name', link: '/doctors' },
-    { title: 'Clinic', name: 'Clinic Name', link: '/clinics' },
-  ]
-
-  const sss = [
     {
       title: 'Treatment', menuNames: [
         { name: "Treatment Name", link: "/" },
@@ -69,7 +59,10 @@ const Search = () => {
           }
         }}>
 
-        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+        <Container sx={{
+          maxWidth: "1239px",
+
+        }} maxWidth={false}>
           <nav id={styles.navbar_search}>
             <div className={styles.logo}>
               <Link href='/'>
@@ -96,23 +89,30 @@ const Search = () => {
       </AppBar>
 
       <div className={styles.search_bg}>
-        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+        <Container sx={{
+          maxWidth: "1239px",
+          padding: {
+            xs: '0',
+            sm: '0',
+
+          }
+        }} maxWidth={false}>
           <div id={styles.search_wrapper}>
 
-            <div className={styles.text_container}>
+            {/* <div className={styles.text_container}>
               <Typography>
                 Find <br /> The Right & Safe <br /> Treatment <br /> For You In Turkey
               </Typography>
-            </div>
+            </div> */}
 
             <div className={styles.results_card}>
               <div className={styles.card_header}>
                 <Typography>Most Treatment Searched Right Now</Typography>
               </div>
               <div className={styles.card_inner}>
-                {sss.map((search, index) =>
+                {mostSearches.map((search, index) =>
                   <>
-                    <div className={styles.box}>
+                    <div className={styles.box} key={index}>
                       <div className={styles.title}>
                         <Typography variant='h4'>{search.title}</Typography>
                       </div>

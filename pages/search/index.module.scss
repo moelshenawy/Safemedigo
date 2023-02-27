@@ -124,23 +124,23 @@ nav#navbar_search {
   #search_wrapper {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    .text_container {
-      width: 300px;
-      margin-right: 17px;
-      margin-top: 80px;
-      @media screen and (max-width: 992px) {
-        display: none;
-      }
+    justify-content: flex-end;
+    // .text_container {
+    //   width: 300px;
+    //   margin-right: 17px;
+    //   margin-top: 80px;
+    //   @media screen and (max-width: 992px) {
+    //     display: none;
+    //   }
 
-      p {
-        color: var(--sec-cyan-color);
-        font-size: 34px;
-        font-family: var(--font-sem-bold);
-        letter-spacing: 0px;
-        font-weight: normal;
-      }
-    }
+    //   p {
+    //     color: var(--sec-cyan-color);
+    //     font-size: 34px;
+    //     font-family: var(--font-sem-bold);
+    //     letter-spacing: 0px;
+    //     font-weight: normal;
+    //   }
+    // }
 
     .results_card {
       width: 930px;
@@ -153,19 +153,34 @@ nav#navbar_search {
       overflow: hidden;
       overflow-y: scroll;
 
+      @media screen and (max-width: 992px) {
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
       .card_header {
-        margin-left: 38px;
+        padding-left: 38px;
         position: sticky;
         top: 0;
         left: 0;
         padding-top: 33px;
         background-color: var(--main-white-color);
 
+        @media screen and (max-width: 992px) {
+          padding-left: 30px;
+          padding-top: 0;
+        }
+
         p {
           color: var(--main-dark-color);
           font-size: 18px;
           font-family: var(--font-sem-bold);
           font-weight: 600;
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+            font-weight: 400;
+          }
         }
       }
 
@@ -178,11 +193,21 @@ nav#navbar_search {
           .title {
             margin-left: 31px;
             margin-bottom: 11px;
+
+            @media screen and (max-width: 992px) {
+              margin-left: 30px;
+              margin-top: 30px;
+            }
+
             h4 {
               color: var(--main-green-color);
               font-size: 20px;
               font-family: var(--open-sans-font);
               font-weight: bold;
+              @media screen and (max-width: 992px) {
+                color: var(--main-cyan-color);
+                font-size: 16px;
+              }
             }
           }
 
@@ -193,6 +218,11 @@ nav#navbar_search {
               margin-left: 41px;
               margin-right: 39px;
               border-bottom: 1px solid #c5dfdc;
+              margin-bottom: 12px;
+              @media screen and (max-width: 992px) {
+                margin-right: 35px;
+                margin-left: 35px;
+              }
               p {
                 font-size: 18px;
                 color: var(--main-dark-color);
