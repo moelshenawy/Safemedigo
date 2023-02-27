@@ -2,12 +2,16 @@ nav#navbar_search {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   box-shadow: 0px 3px 6px #0000000d;
-
+  @media screen and (min-width: 992px) {
+    align-items: flex-start;
+  }
   .logo {
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
     a {
       display: flex;
       align-items: center;
@@ -26,8 +30,24 @@ nav#navbar_search {
     }
   }
 
+  .back_btn {
+    margin-bottom: -6px;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+
+    svg {
+      color: var(--main-dark-color);
+      font-size: 25px;
+    }
+  }
+
   .input_container {
     position: relative;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+
     input {
       width: 926px;
       height: 56px;
@@ -45,17 +65,34 @@ nav#navbar_search {
       font-size: 18px;
       font-family: var(--open-sans-font);
       font-weight: 600;
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+
+        padding-top: 17px;
+        padding-bottom: 20px;
+        padding-left: 12px;
+      }
 
       &::placeholder {
         color: var(--main-dark-color);
         font-size: 18px;
         font-family: var(--open-sans-font);
         font-weight: 600;
+
+        @media screen and (max-width: 992px) {
+          font-size: 16px;
+        }
       }
 
       &:focus {
         border: none;
         outline: none;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        border: none;
+        border-radius: 0%;
       }
     }
 
@@ -64,10 +101,18 @@ nav#navbar_search {
       top: 10px;
       right: 22px;
       z-index: 1;
+      @media screen and (max-width: 992px) {
+        top: 15px;
+        right: 0;
+      }
       svg {
         color: var(--main-dark-color);
         font-size: 31.2px;
         font-weight: bold;
+
+        @media screen and (max-width: 992px) {
+          font-size: 25px;
+        }
       }
     }
   }
@@ -75,7 +120,6 @@ nav#navbar_search {
 
 .search_bg {
   background-color: var(--main-green-color);
-  margin-top: 80px;
   height: 100vh;
   #search_wrapper {
     display: flex;
@@ -85,6 +129,10 @@ nav#navbar_search {
       width: 300px;
       margin-right: 17px;
       margin-top: 80px;
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+
       p {
         color: var(--sec-cyan-color);
         font-size: 34px;
@@ -98,13 +146,21 @@ nav#navbar_search {
       width: 930px;
       box-shadow: 0px 3px 20px #00000029;
       border-radius: 8px;
-      padding-top: 33px;
       background-color: var(--main-white-color);
       margin-top: 10px;
-      padding-bottom: 100px;
+
+      height: 665px;
+      overflow: hidden;
+      overflow-y: scroll;
 
       .card_header {
         margin-left: 38px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 33px;
+        background-color: var(--main-white-color);
+
         p {
           color: var(--main-dark-color);
           font-size: 18px;
@@ -114,23 +170,24 @@ nav#navbar_search {
       }
 
       .card_inner {
-        margin-top: 36px;
-        a {
-          text-decoration: none;
+        margin-top: 19px;
 
-          .box {
-            margin-top: 44px;
+        .box {
+          margin-top: 12px;
 
-            .title {
-              margin-left: 31px;
-              margin-bottom: 18px;
-              h4 {
-                color: var(--main-green-color);
-                font-size: 20px;
-                font-family: var(--open-sans-font);
-                font-weight: bold;
-              }
+          .title {
+            margin-left: 31px;
+            margin-bottom: 11px;
+            h4 {
+              color: var(--main-green-color);
+              font-size: 20px;
+              font-family: var(--open-sans-font);
+              font-weight: bold;
             }
+          }
+
+          a {
+            text-decoration: none;
 
             .name {
               margin-left: 41px;
@@ -152,7 +209,7 @@ nav#navbar_search {
 
                 p {
                   font-size: 14px;
-                  color: var(--main-dark-color);
+                  color: #a1a1a1;
                   font-family: var(--open-sans-font);
                   font-weight: normal;
                 }

@@ -5,19 +5,70 @@ import Link from 'next/link';
 import { Typography, AppBar, Container } from '@mui/material';
 import CloseIcon from "@mui/icons-material/Close";
 import { HiArrowSmRight } from 'react-icons/hi'
+import { FiChevronLeft } from 'react-icons/fi'
 
 const Search = () => {
   const { logo, NavSearch, en, arrowDown, user, search, notifications, notificationsActive, burger } = imgs;
 
   const mostSearches = [
-    { title: 'Treatment', name: 'Treatment Name', link: '/treatment' },
+    {
+      title: 'Treatment',
+      name: 'Treatment Name',
+
+      link: '/treatment'
+    },
     { title: 'Doctors', name: 'Doctor Name', link: '/doctors' },
     { title: 'Clinic', name: 'Clinic Name', link: '/clinics' },
   ]
 
+  const sss = [
+    {
+      title: 'Treatment', menuNames: [
+        { name: "Treatment Name", link: "/" },
+        { name: "Treatment Name", link: "/" },
+        { name: "Treatment Name", link: "/" },
+        { name: "Treatment Name", link: "/" },
+      ],
+    },
+    {
+      title: 'Doctors', menuNames: [
+        { name: "Doctor Name", link: "/" },
+        { name: "Doctor Name", link: "/" },
+        { name: "Doctor Name", link: "/" },
+        { name: "Doctor Name", link: "/" },
+      ],
+    },
+    {
+      title: 'Clinics & Hospitals', menuNames: [
+        { name: "Hospitals Name", link: "/" },
+        { name: "Hospitals Name", link: "/" },
+        { name: "Hospitals Name", link: "/" },
+        { name: "Hospitals Name", link: "/" },
+      ],
+    },
+    {
+      title: 'Blogs', menuNames: [
+        { name: "Blog title", link: "/" },
+        { name: "Blog title", link: "/" },
+        { name: "Blog title", link: "/" },
+        { name: "Blog title", link: "/" },
+      ],
+    },
+  ]
+
+
   return (
     <>
-      <AppBar style={{ background: '#00F3BB' }}>
+      <AppBar position={'static'}
+        sx={{
+          background: {
+            xs: "transparent",
+            sm: "transparent",
+            md: "transparent",
+            lg: "#00f3bb"
+          }
+        }}>
+
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
           <nav id={styles.navbar_search}>
             <div className={styles.logo}>
@@ -27,8 +78,14 @@ const Search = () => {
               </Link>
             </div>
 
+            <div className={styles.back_btn}>
+              <a href="/" >
+                <FiChevronLeft />
+              </a>
+            </div>
+
             <div className={styles.input_container}>
-              <input type="text" placeholder='Searching Treatment, Doctor, Clinic, Diseases' />
+              <input type="text" placeholder='Treatment, Doctor, Clinic, Diseases' />
               <div className={styles.close_icon}>
                 <CloseIcon />
               </div>
@@ -53,29 +110,36 @@ const Search = () => {
                 <Typography>Most Treatment Searched Right Now</Typography>
               </div>
               <div className={styles.card_inner}>
-                {mostSearches.map((search, index) =>
+                {sss.map((search, index) =>
                   <>
-                    <Link href={search.link} key={index}>
-                      <div className={styles.box}>
-                        <div className={styles.title}>
-                          <Typography variant='h4'>{search.title}</Typography>
-                        </div>
+                    <div className={styles.box}>
+                      <div className={styles.title}>
+                        <Typography variant='h4'>{search.title}</Typography>
+                      </div>
 
-                        <div className={styles.name}>
-                          <Typography>
-                            {search.name}
-                          </Typography>
-                          <div className={styles.page}>
+                      {search.menuNames.map((links, idx) => (
+                        <Link href={'/'} key={idx}>
+
+                          <div className={styles.name} key={idx}>
                             <Typography>
-                              To Treatment Page
+                              {links.name}
                             </Typography>
-                            <div className={styles.icon_container}>
-                              <HiArrowSmRight />
+                            <div className={styles.page}>
+                              <Typography>
+                                Condition
+                              </Typography>
+                              <div className={styles.icon_container}>
+                                <HiArrowSmRight />
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </Link>
+
+                        </Link>
+
+                      ))}
+                    </div>
+
+
                   </>
                 )}
               </div>
