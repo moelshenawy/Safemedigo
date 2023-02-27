@@ -8,6 +8,11 @@ nav#navbar_search {
   @media screen and (min-width: 992px) {
     align-items: flex-start;
   }
+
+  @media screen and (max-width: 992px) {
+    box-shadow: none !important;
+  }
+
   .logo {
     @media screen and (max-width: 992px) {
       display: none;
