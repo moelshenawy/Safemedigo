@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss';
-import { Container, Typography, Rating } from '@mui/material';
+import { Container, Typography, Rating, Box } from '@mui/material';
 import { BsCheckLg } from 'react-icons/bs';
 import { HiPlay } from 'react-icons/hi';
 import Link from 'next/link';
 import Carousel from 'react-elastic-carousel';
 import imgs from "../../../assets/constants/imgs";
 import { motion } from "framer-motion";
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
+import { consts } from 'react-elastic-carousel';
 
 const Hero = () => {
   const [breakPoints] = useState([
@@ -24,6 +26,27 @@ const Hero = () => {
   ]
 
 
+
+
+
+  function myArrow({ type, onClick, isEdge }) {
+    const pointer = type === consts.PREV ?
+      <div className='left_arrow'>
+        <HiChevronLeft />
+      </div>
+
+      :
+      <div className='right_arrow'>
+        <  HiChevronRight />
+      </div>
+
+      ;
+    return (
+      <button className='main_btn' onClick={onClick} disabled={isEdge}>
+        {pointer}
+      </button>
+    );
+  }
 
 
 
@@ -87,6 +110,7 @@ const Hero = () => {
             <Carousel breakPoints={breakPoints}
               pagination={false}
               itemsToScroll={1}
+              renderArrow={myArrow}
             >
               {cards.map((card, index) => (
                 <>
