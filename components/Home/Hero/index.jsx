@@ -158,7 +158,6 @@ const Hero = () => {
 
           </div>
         </div>
-
       </Container>
 
       <Search />

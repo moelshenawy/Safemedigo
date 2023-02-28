@@ -1,0 +1,213 @@
+section#treatment_category {
+  padding-top: 52px;
+  padding-bottom: 42px;
+  .section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (max-width: 992px) {
+      align-items: flex-start;
+    }
+    .sec_title {
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: left;
+
+      @media screen and (max-width: 992px) {
+        margin-bottom: 30px;
+      }
+      h2 {
+        color: var(--main-dark-color);
+        font-size: 34px;
+        font-weight: 500;
+
+        @media screen and (max-width: 992px) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .boxes_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 79px;
+      grid-row-gap: 20px;
+
+      width: 100%;
+      @media screen and (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+      }
+
+      .box {
+        // width: 100px;
+        display: flex;
+        align-items: center;
+        // margin-right: 90px;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+
+        &:not(:last-child) {
+          // margin-right: 85px;
+          @media screen and (max-width: 992px) {
+            margin-right: 0;
+          }
+        }
+
+        &:not(:first-child) {
+          @media screen and (max-width: 992px) {
+            // margin-top: 36px;
+          }
+        }
+        .img_container {
+          width: 87px;
+          height: 87px;
+          margin-bottom: 15px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: none;
+          margin-right: 16px;
+          @media screen and (max-width: 992px) {
+            width: 50px;
+            height: 50px;
+          }
+
+          &:hover {
+            border: 1px solid var(--main-green-color);
+            transition: all 0.3s ease;
+
+            svg {
+              g {
+                &:last-child {
+                  path {
+                    &:last-child {
+                      fill: var(--sec-white-color) !important;
+                    }
+                    &:nth-child(2) {
+                      fill: var(--main-green-color);
+                    }
+                  }
+                }
+
+                &:first-child {
+                  background-color: red;
+                }
+                fill: var(--main-green-color);
+                path {
+                  fill: var(--sec-white-color);
+                  &:first-child {
+                    fill: var(--sec-white-color);
+                  }
+
+                  &:last-child {
+                    // fill: var(--sec-cyan-color);
+                  }
+                }
+              }
+            }
+
+            svg[data-name="LaserEyeSurgery"] {
+              g[data-name="LaserEyeSurgery"] {
+                g {
+                  &:last-child {
+                    path {
+                      fill: var(--main-green-color) !important;
+                      &:last-child {
+                        fill: var(--sec-white-color) !important;
+                      }
+                    }
+
+                    g {
+                      g {
+                        path {
+                          &:last-child {
+                            fill: var(--main-green-color) !important;
+                          }
+                        }
+                      }
+                    }
+
+                    path {
+                      // fill: red !important;
+                    }
+                  }
+                }
+              }
+
+              path {
+                fill: var(--sec-white-color) !important;
+              }
+            }
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+
+            g {
+              path {
+                // fill: white;
+                &:first-child {
+                }
+
+                &:last-child {
+                }
+              }
+            }
+          }
+        }
+
+        .title {
+          margin-bottom: 6px;
+          max-width: 127px;
+
+          @media screen and (max-width: 992px) {
+            max-width: 90px;
+          }
+
+          h6 {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--main-dark-color);
+
+            @media screen and (max-width: 992px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .btn_contianer {
+      align-self: flex-end;
+      margin-top: -26px;
+      margin-right: 17px;
+
+      @media screen and (max-width: 992px) {
+        margin-top: -7px;
+        margin-right: 17px;
+      }
+
+      button {
+        color: var(--sec-cyan-color);
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: underline;
+
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
