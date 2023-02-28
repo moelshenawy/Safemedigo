@@ -29,15 +29,25 @@ import instagram from "../svgs/instagram.svg";
 import youtube from "../svgs/youtube.svg";
 import twitter from "../svgs/twitter.svg";
 import NavSearch from "../svgs/NavSearch.svg";
+import GetQuote from "../svgs/GetQuote.svg";
+import TravelAssist from "../svgs/TravelAssist.svg";
+import OnGuide from "../svgs/OnGuide.svg";
+import QualityGuarantee from "../svgs/QualityGuarantee.svg";
 
 export default {
   logo,
+  GetQuote,
+  TravelAssist,
+  OnGuide,
+  QualityGuarantee,
+
   NavSearch,
   notificationsActive,
   notifications,
   blog_bg,
   blog_detail,
   designMobile,
+
   Extraction,
   burger,
   preparing,
@@ -45,18 +55,21 @@ export default {
   author,
   openingChannel,
   design,
+
   en,
   Result,
   Transplanting,
   arrowDown,
   search,
   user,
+
   post0,
   post1,
   post2,
   post3,
   post4,
   post5,
+
   logoFooter,
   facebook,
   instagram,
