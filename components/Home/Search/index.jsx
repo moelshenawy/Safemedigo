@@ -46,27 +46,27 @@ const Search = () => {
               ))}
             </div>
           </div>
-
-          <div className={styles.tags_slider}>
-            <Carousel breakPoints={breakPoints}
-              pagination={false}
-              showArrows={false}
-              itemsToScroll={1}
-            >
-              {tags.map((tag, index) => (
-                <Link href='/' key={index}>
-                  <button>
-                    {tag.tag}
-                  </button>
-                </Link>
-              ))}
-
-
-            </Carousel>
-
-          </div>
         </div>
+
       </Container>
+      <div className={styles.tags_slider}>
+        <Carousel breakPoints={breakPoints}
+          pagination={false}
+          showArrows={false}
+          itemsToScroll={1}
+        >
+          {tags.map((tag, index) => (
+            <Link href='/' key={index}>
+              <button>
+                {tag.tag}
+              </button>
+            </Link>
+          ))}
+
+
+        </Carousel>
+
+      </div>
     </div>
   )
 }
