@@ -16,7 +16,7 @@
     // display: none;
     width: 100%;
     background-color: transparent;
-    bottom: 12%;
+    bottom: 16%;
     left: 0;
     transform: translateX(0);
     box-shadow: none;
@@ -33,14 +33,14 @@
 
     .searc_input {
       margin-bottom: 56px;
-
       @media screen and (max-width: 992px) {
         margin-bottom: 20px;
       }
-
       a {
         cursor: pointer;
-
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
         @media screen and (max-width: 992px) {
           display: flex;
           flex-direction: column;
@@ -78,6 +78,10 @@
             background-color: var(--main-white-color);
             width: 333px;
             height: 48px;
+          }
+
+          @media screen and (max-width: 450px) {
+            width: 100%;
           }
 
           &:focus {

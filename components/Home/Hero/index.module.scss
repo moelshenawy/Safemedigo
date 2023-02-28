@@ -4,7 +4,7 @@ section#hero {
   position: relative;
   @media screen and (max-width: 992px) {
     margin-top: 22px;
-    padding-bottom: 80px;
+    padding-bottom: 117px;
   }
   .hero_container {
     display: flex;
@@ -152,7 +152,9 @@ section#hero {
         left: 50%;
         transform: translateX(-50%);
         width: 378px;
+        width: 100%;
       }
+
       .box {
         width: 400px;
         background-color: var(--main-white-color);
