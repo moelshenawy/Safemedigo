@@ -108,6 +108,7 @@ section#why_safemedigo {
 
         .title {
           margin-bottom: 6px;
+
           h6 {
             font-size: 16px;
             font-weight: bold;
@@ -116,6 +117,11 @@ section#why_safemedigo {
         }
 
         .desc {
+          @media screen and (max-width: 992px) {
+            margin-top: -29px;
+            margin-left: 63px;
+          }
+
           p {
             font-size: 17px;
             font-weight: 500;
