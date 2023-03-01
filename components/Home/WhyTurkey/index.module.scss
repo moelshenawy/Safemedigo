@@ -1,0 +1,98 @@
+#why_turky {
+  background-color: #e7edec;
+  background-image: url("../../../assets/imgs/turky_bg.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  height: 536px;
+  margin-top: 56px;
+  .section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 442px;
+    padding-top: 56px;
+
+    .title {
+      margin-bottom: 20px;
+      a {
+        text-decoration: underline;
+        font-size: 33px;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: var(--main-dark-color);
+      }
+    }
+
+    .name {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        color: var(--main-dark-color);
+        font-size: 16px;
+      }
+    }
+
+    .desc {
+      margin-bottom: 20px;
+      p {
+        color: var(--main-dark-color);
+        font-size: 16px;
+      }
+    }
+
+    .writer {
+      display: flex;
+
+      .img_container {
+        margin-right: 29.5px;
+        margin-bottom: 16px;
+
+        img {
+          width: 86px;
+          height: 86px;
+        }
+      }
+
+      .text_container {
+        .name {
+          p {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--main-dark-color);
+          }
+        }
+
+        .date {
+          margin-bottom: 16px;
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--main-dark-color);
+          }
+        }
+      }
+    }
+    .tags {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      .tag {
+        a {
+          button {
+            width: 122px;
+            height: 40px;
+            background-color: var(--main-white-color);
+            border: 1px solid var(--main-dark-color);
+            border-radius: 22px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+}

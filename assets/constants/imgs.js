@@ -14,6 +14,8 @@ import blog_bg from "../imgs/blog_bg.png";
 import Transplanting from "../imgs/Transplanting.png";
 import openingChannel from "../imgs/openingChannel.png";
 import designMobile from "../imgs/designMobile.png";
+import turky_bg from "../imgs/turky_bg.png";
+
 import logo from "../svgs/logo.svg";
 import en from "../svgs/en.svg";
 import arrowDown from "../svgs/arrowDown.svg";
@@ -56,6 +58,7 @@ export default {
   right02,
   middle,
   left02,
+  turky_bg,
 
   NavSearch,
   notificationsActive,
