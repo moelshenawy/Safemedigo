@@ -2,6 +2,7 @@ import React from 'react'
 import imgs from "../../../assets/constants/imgs";
 import styles from './index.module.scss'
 import { Container, Typography } from '@mui/material';
+import Link from 'next/link';
 
 
 const Safty = () => {
@@ -30,15 +31,17 @@ const Safty = () => {
             <div className={styles.text_container}>
               <div className={styles.right_side}>
                 <Typography>
-                  Highly Reviewed Experts
+                  Satisfactory Patient Feedback
                   <img src={left01.src} className={styles.left1} alt="" />
                 </Typography>
                 <Typography>
-                  Modern Healthcare Facilities
+                  Affordable Treatment Charges
+
                   <img src={left02.src} className={styles.left2} alt="" />
                 </Typography>
                 <Typography>
-                  First-Class Medical Services</Typography>
+                  Clarity Concerning All Matters
+                </Typography>
               </div>
 
               <div className={styles.images_container}>
@@ -50,16 +53,27 @@ const Safty = () => {
               <div className={styles.left_side}>
                 <Typography>
                   <img src={right01.src} className={styles.right1} alt="" />
-                  Satisfactory Patient Feedback</Typography>
+
+                  Highly Reviewed Experts
+                </Typography>
                 <Typography>
                   <img src={right02.src} className={styles.right2} alt="" />
-                  Affordable Treatment Charges</Typography>
+                  Modern Healthcare Facilities
+                </Typography>
                 <Typography>
                   <img src={middle.src} className={styles.middle} alt="" />
-                  Clarity Concerning All Matters</Typography>
+                  First-Class Medical Services
+                </Typography>
               </div>
             </div>
+
+            <div className={styles.btn_container}>
+              <Link href='/safty'>
+                <button>Explore Our Safety Standards</button>
+              </Link>
+            </div>
           </div>
+
 
         </div>
       </Container>
