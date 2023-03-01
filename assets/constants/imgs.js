@@ -33,6 +33,14 @@ import GetQuote from "../svgs/GetQuote.svg";
 import TravelAssist from "../svgs/TravelAssist.svg";
 import OnGuide from "../svgs/OnGuide.svg";
 import QualityGuarantee from "../svgs/QualityGuarantee.svg";
+import OurSafetyStandards00 from "../svgs/OurSafetyStandards00.svg";
+import OurSafterStanders01 from "../svgs/OurSafterStanders01.svg";
+
+import left01 from "../svgs/left01.svg";
+import left02 from "../svgs/left02.svg";
+import right01 from "../svgs/right01.svg";
+import right02 from "../svgs/right02.svg";
+import middle from "../svgs/middle.svg";
 
 export default {
   logo,
@@ -40,6 +48,14 @@ export default {
   TravelAssist,
   OnGuide,
   QualityGuarantee,
+  OurSafetyStandards00,
+  OurSafterStanders01,
+
+  left01,
+  right01,
+  right02,
+  middle,
+  left02,
 
   NavSearch,
   notificationsActive,
