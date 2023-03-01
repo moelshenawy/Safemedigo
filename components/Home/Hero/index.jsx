@@ -9,6 +9,7 @@ import imgs from "../../../assets/constants/imgs";
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { consts } from 'react-elastic-carousel';
 import Search from '../Search/index'
+
 const Hero = () => {
   const [breakPoints] = useState([
     { width: 1, pagination: true, showArrows: false },
@@ -48,7 +49,6 @@ const Hero = () => {
     );
   }
 
-  console.log(breakPoints)
 
   return (
     <section id={styles.hero}>

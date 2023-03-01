@@ -126,87 +126,145 @@ article {
   background-color: var(--main-white-color) !important;
 }
 
-.rec {
-  button {
-    // opacity: 0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    &:disabled {
+// Hero section (Home Page)
+section#Hero_hero__M5nJ2 {
+  .rec {
+    button {
+      // opacity: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &:disabled {
+        visibility: hidden;
+      }
+    }
+
+    .left_arrow,
+    .right_arrow {
+      background-color: var(--main-white-color);
+      box-shadow: 0px 3px 6px #00000029;
+
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+
+      position: absolute;
+      z-index: 11;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        color: var(--main-dark-color);
+        font-size: 25px;
+      }
+    }
+
+    .left_arrow {
+      left: 6px;
+      top: 42%;
+    }
+    .right_arrow {
+      right: 6px;
+      top: 42%;
+    }
+
+    .rec-pagination {
+      .rec-dot {
+        background-color: rgba(30, 30, 30, 0.42);
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        box-shadow: none !important;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .rec-dot_active {
+        opacity: 1;
+        background-color: var(--main-green-color) !important;
+        box-shadow: none;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:hover {
+          box-sizing: none !important;
+        }
+      }
+    }
+  }
+
+  .rec-arrow-left {
+    position: absolute;
+    left: 8px;
+    z-index: 11;
+  }
+
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+section#MostPopular_most_popular__ZmWsq,
+section#PatientStories_patient_stories__oSemC {
+  .rec {
+    .rec-item-wrapper {
+      overflow: visible;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .main_btn[disabled] {
+      // background: red;
       visibility: hidden;
     }
-  }
 
-  .left_arrow,
-  .right_arrow {
-    background-color: var(--main-white-color);
-    box-shadow: 0px 3px 6px #00000029;
+    .rec-carousel {
+      position: relative;
+      height: 600px !important;
+      .left_arrow,
+      .right_arrow {
+        background-color: var(--main-white-color);
+        box-shadow: 0px 3px 6px #00000029;
 
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
 
-    position: absolute;
-    z-index: 11;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    svg {
-      color: var(--main-dark-color);
-      font-size: 25px;
-    }
-  }
+        svg {
+          color: #8d8d8d;
+          font-size: 25px;
+        }
+      }
 
-  .left_arrow {
-    left: 6px;
-    top: 42%;
-  }
-  .right_arrow {
-    right: 6px;
-    top: 42%;
-  }
-
-  .rec-pagination {
-    .rec-dot {
-      background-color: rgba(30, 30, 30, 0.42);
-      width: 8px;
-      height: 8px;
-      margin-right: 8px;
-      box-shadow: none !important;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .rec-dot_active {
-      opacity: 1;
-      background-color: var(--main-green-color) !important;
-      box-shadow: none;
-      margin-top: 0;
-      margin-bottom: 0;
-
-      &:hover {
-        box-sizing: none !important;
+      .right_arrow {
+        right: -12px;
+        // top: 42%;
+      }
+      .left_arrow {
+        left: -12px;
+        // top: 42%;
       }
     }
   }
 }
 
-.rec-arrow-left {
-  position: absolute;
-  left: 8px;
-  z-index: 11;
-}
-
-/* hide disabled buttons */
-.rec.rec-arrow:disabled {
-  visibility: hidden;
-}
-
-.rec-carousel-item:focus {
-  outline: none;
-  box-shadow: none;
-}
 // Scroll bar
 ::-webkit-scrollbar {
   width: 7px;
