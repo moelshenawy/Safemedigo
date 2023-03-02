@@ -28,9 +28,13 @@ section#hero {
         h1 {
           font-size: 44px;
           color: var(--sec-cyan-color);
-          font-family: var(--font-bold);
+          // font-family: "Tilt Prism", "cursive";
+          // font-family: "Roboto", sans-serif;
           // font-weight: bold;
-          font-weight: 800;
+          // font-weight: 700;
+          font-family: "gilroy-light";
+
+          // font-family: "Gilroy-Bold";
 
           @media screen and (max-width: 992px) {
             font-size: 24px;
@@ -132,8 +136,8 @@ section#hero {
               color: var(--sec-white-color);
               cursor: pointer;
               font-size: 18px;
-              font-family: var(--font-sem-bold);
-              font-weight: 600;
+              font-family: "Gilroy-SemiBold";
+              // font-weight: 600;
             }
           }
         }
