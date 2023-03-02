@@ -19,7 +19,7 @@ const MostPopular = () => {
     { width: 400, pagination: false },
     { width: 400, pagination: false },
     { width: 400, pagination: false },
-    { width: 800, pagination: false, itemsToShow: 3, itemsToScroll: 2, transitionMs: 1000 },
+    { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
 
   ])
 
@@ -49,10 +49,10 @@ const MostPopular = () => {
 
 
   const treatmentData = [
-    { title: 'Treatment Name', price: '1200', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post3.src },
-    { title: 'Treatment Name', price: '1000', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post1.src },
-    { title: 'Treatment Name', price: '3700', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post2.src },
-    { title: 'Treatment Name', price: '6800', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post4.src },
+    { title: 'Treatment Name', price: '1200', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod TemAliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet  Et Ea Rebum. Stet Et Ea Rebum. Stet Et Ea Rebum. Stet Et Ea Rebum. Stet  o Duo Dolores Et Ea Rebum. Stet  Et Ea Rebum. Stet Et Ea Rebum. Stet Et Ea Rebum. Stet Et Ea Rebum. Stet ", img: post3.src },
+    { title: 'Treatment Name', price: '1000', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore E Stet Clipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore E Stet Clita Kasd", img: post1.src },
+    { title: 'Treatment Name', price: '3700', desc: "Lorebore o Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post2.src },
+    { title: 'Treatment Name', price: '6800', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et  Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et  Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et  Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post4.src },
     { title: 'Treatment Name', price: '2200', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post5.src },
     { title: 'Treatment Name', price: '2200', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post5.src },
     { title: 'Treatment Name', price: '2200', desc: "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd", img: post5.src },
@@ -112,7 +112,7 @@ const MostPopular = () => {
 
   return (
     <section id={styles.most_popular}>
-      <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+      <Container sx={{ maxWidth: '1239px', paddingLeft: 0, paddingRight: 0 }} maxWidth={false}  >
         <div className={styles.section_container}>
           <div className={styles.title}>
             <Typography variant='h2'>Most Popular</Typography>
@@ -201,6 +201,8 @@ const MostPopular = () => {
                           </div>
 
                           <div className={styles.desc}>
+
+
                             <Typography>{card.desc}</Typography>
                           </div>
 

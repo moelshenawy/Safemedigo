@@ -29,7 +29,8 @@
 }
 
 body {
-  font-family: "Gilroy-Medium", sans-serif;
+  font-family: "Gilroy-bold";
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -251,7 +252,7 @@ section#PatientStories_patient_stories__oSemC {
         display: flex;
         align-items: center;
         justify-content: center;
-        top: 31%;
+        top: 33%;
 
         svg {
           color: #8d8d8d;
@@ -260,10 +261,10 @@ section#PatientStories_patient_stories__oSemC {
       }
 
       .right_arrow {
-        right: -3px;
+        right: -23px;
       }
       .left_arrow {
-        left: -2px;
+        left: -23px;
       }
     }
   }
@@ -290,4 +291,12 @@ section#PatientStories_patient_stories__oSemC {
   color: var(--main-white-color);
 
   background: var(--main-cyan-color);
+}
+
+@media screen and (min-width: 992px) {
+  .css-16qrewc-MuiContainer-root,
+  .css-1tgy85v-MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }

@@ -1,7 +1,6 @@
 section#patient_stories {
   padding-top: 66.26px;
   padding-bottom: 68.7px;
-  overflow: hidden;
 
   .section_container {
     display: flex;
@@ -9,7 +8,7 @@ section#patient_stories {
 
     .text_container {
       width: 259px;
-      margin-right: 40px;
+      margin-right: 34px;
 
       .title {
         margin-bottom: 34.04px;
@@ -59,6 +58,7 @@ section#patient_stories {
 
     .slider_container {
       width: 910px;
+      flex: 1 1 0px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -78,16 +78,13 @@ section#patient_stories {
       .box {
         width: 344px;
         border-radius: 5px;
-        box-shadow: 0px 3px 2px #00000029;
-
+        box-shadow: 0px 3px 9px #00000029;
+        height: 518px;
         background-color: var(--main-white-color);
+        margin-right: 26px;
         display: flex;
         flex-direction: column;
-        position: relative;
-        margin: 26px;
-        margin-top: 0;
-
-        padding-bottom: 36px;
+        margin-bottom: 10px;
 
         @media screen and (max-width: 992px) {
           width: 316px;
@@ -114,7 +111,6 @@ section#patient_stories {
 
         .box_title {
           margin-top: 16px;
-          margin-bottom: 8px;
           padding-right: 22px;
           padding-left: 15px;
           h5 {
@@ -128,7 +124,17 @@ section#patient_stories {
         .desc {
           padding-right: 22px;
           padding-left: 15px;
-          margin-bottom: 22px;
+
+          margin-top: 8px;
+          margin-bottom: 16px;
+
+          flex: 1 0 auto;
+          max-height: 19%;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          white-space: pre-wrap;
           p {
             margin: 0;
             color: var(--main-dark-color);
@@ -140,8 +146,10 @@ section#patient_stories {
         .author_container {
           padding-right: 22px;
           padding-left: 15px;
+
           display: flex;
           align-items: center;
+
           margin-top: 16px;
           margin-bottom: 10px;
           .img_container {
@@ -158,7 +166,7 @@ section#patient_stories {
             .user_name {
               color: var(--main-dark-color);
               font-weight: bold;
-              font-size: 18px;
+              font-size: 16px;
               letter-spacing: 0px;
 
               @media screen and (max-width: 992px) {
@@ -183,11 +191,9 @@ section#patient_stories {
           align-items: flex-end;
           justify-content: flex-start;
           width: 100%;
-          padding-right: 22px;
           padding-left: 15px;
 
-          .trans_btn,
-          .turk_btn {
+          .trans_btn {
             @media screen and (max-width: 992px) {
               margin-top: 31px;
             }
@@ -211,9 +217,6 @@ section#patient_stories {
                 color: #fafafa;
               }
             }
-          }
-          .trans_btn {
-            margin-right: 16px;
           }
         }
       }

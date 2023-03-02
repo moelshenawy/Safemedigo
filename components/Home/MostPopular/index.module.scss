@@ -7,7 +7,7 @@ section#most_popular {
     display: flex;
     flex-direction: column;
     .title {
-      // margin-bottom: 15px;
+      margin-bottom: 15px;
 
       h2 {
         font-size: 30px;
@@ -17,7 +17,7 @@ section#most_popular {
     }
 
     .navigation {
-      margin-bottom: 15px;
+      margin-bottom: 40px;
       .header {
         display: flex;
         flex-direction: row;
@@ -93,10 +93,11 @@ section#most_popular {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      // justify-content: space-between;
+      justify-content: flex-end;
       .text_container {
-        width: 20%;
-        margin-right: 40px;
+        width: 259px;
+
+        margin-right: 34px;
 
         .desc {
           margin-bottom: 53.48px;
@@ -135,33 +136,35 @@ section#most_popular {
       }
 
       .slider_container {
-        width: 80%;
+        // width: 80%;
+        width: 1000px;
+        flex: 1 1 0px;
 
         .treatment,
         .doctors,
         .clinic {
-          // width: 100%;
-          max-width: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+
           .box {
-            width: 300px;
+            width: 344px;
             border-radius: 5px;
             box-shadow: 0px 3px 9px #00000029;
-
+            height: 518px;
             background-color: var(--main-white-color);
-            // margin-right: 20px;
+            margin-right: 26px;
             display: flex;
             flex-direction: column;
-            margin: 15px;
-            position: relative;
-            margin-top: 0;
-
+            margin-bottom: 10px;
             .img_container {
               width: 100%;
+              height: 191px;
               position: relative;
 
               img {
                 width: 100%;
-                height: 150px;
+                height: 100%;
               }
 
               .verified {
@@ -193,13 +196,18 @@ section#most_popular {
             }
 
             .box_text_container {
+              height: 100%;
+              margin-top: 16px;
+              margin-bottom: 16px;
+              padding-right: 22px;
               padding-left: 15px;
-              padding-right: 15px;
-              padding-bottom: 15px;
-              padding-top: 9px;
+
+              display: flex;
+              flex-direction: column;
 
               .title {
                 margin-bottom: 4px;
+
                 h5 {
                   font-size: 18px;
                   font-weight: bold;
@@ -210,9 +218,11 @@ section#most_popular {
               }
 
               .name {
+                margin-bottom: 4px;
+
                 h5 {
                   color: var(--main-dark-color);
-                  font-size: 16px;
+                  font-size: 18px;
                   font-weight: bold;
                   font-family: var(--font-bold);
                 }
@@ -234,7 +244,7 @@ section#most_popular {
               }
 
               .rating {
-                margin-top: 3px;
+                margin-top: 9px;
                 display: flex;
                 align-items: center;
 
@@ -246,7 +256,15 @@ section#most_popular {
               }
 
               .desc {
-                margin-top: 4px;
+                margin-top: 16px;
+                flex: 1 0 auto;
+                max-height: 43%;
+                margin-bottom: auto;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+                white-space: pre-wrap;
 
                 p {
                   font-size: 14px;
@@ -260,7 +278,7 @@ section#most_popular {
               .location {
                 display: flex;
                 align-items: center;
-                margin-top: 8px;
+                margin-top: 16px;
                 svg {
                   margin-right: 4.96px;
                   font-size: 16px;
@@ -290,6 +308,7 @@ section#most_popular {
                 margin-top: 8px;
                 width: 150px;
                 color: var(--main-dark-color);
+                flex: 1 0 auto;
 
                 p {
                   font-size: 16px;
@@ -317,7 +336,7 @@ section#most_popular {
               }
 
               .yearly_patient {
-                margin-bottom: 50px;
+                flex: 1 0 auto;
               }
 
               .founded {
@@ -353,6 +372,8 @@ section#most_popular {
 
               .btn_container {
                 text-align: right;
+                justify-self: flex-end !important;
+                align-self: flex-end;
 
                 a {
                   text-decoration: underline;

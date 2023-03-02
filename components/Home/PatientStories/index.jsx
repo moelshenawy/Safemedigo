@@ -18,7 +18,7 @@ const PatientStories = () => {
     { width: 400, pagination: false },
     { width: 400, pagination: false },
     { width: 400, pagination: false },
-    { width: 800, pagination: false, itemsToShow: "2.5" },
+    { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
 
   ])
 
@@ -32,7 +32,7 @@ const PatientStories = () => {
       authorImg: author.src,
       img: post1.src,
       title: "It Was A Good Reason To Cancel My Hair Transplant!",
-      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      desc: "6 Months Since Freddy Had A Hair Transplant In Tij6 Months Since Freddy Had A Hair Transplant In Tij6 Months Since Freddy Had A Hair Transplant In Tij6 Months Since Freddy Had A Hair Transplant In Tij",
       id: 1,
     },
 
@@ -42,7 +42,7 @@ const PatientStories = () => {
       authorImg: author.src,
       img: post1.src,
       title: "It Was A Good Reason To Cancel My Hair Transplant!",
-      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico.",
       id: 1,
     },
 
@@ -76,6 +76,60 @@ const PatientStories = () => {
       id: 4,
     },
 
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
+    },
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
+    },
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels  Like And How He His Head Looks Like And How He Feels  Like And How He Feels His Head Looks Like And How He Feels  Like And How He Feels Feels  6 Months After Surgery.",
+      id: 5,
+    },
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
+    },
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
+    },
+    {
+      authorName: "Majd Khaled",
+      authorJob: "Medical Content Writer",
+      authorImg: author.src,
+      img: post5.src,
+      title: "It Was A Good Reason To Cancel My Hair Transplant!",
+      desc: "It’s Been 6 Months Since Freddy Had A Hair Transplant In Tijuana, Mexico. He's Giving Us An Update On What His Head Looks Like And How He Feels 6 Months After Surgery.",
+      id: 5,
+    },
     {
       authorName: "Majd Khaled",
       authorJob: "Medical Content Writer",
@@ -141,6 +195,7 @@ const PatientStories = () => {
               breakPoints={breakPoints}
               itemsToScroll={2}
               renderArrow={myArrow}
+              transition={{ duration: 0.95, ease: "easeOut" }}
             >
               {posts.map((post, index) => (
                 <Link href={`/blogs/${post.id}`} className={styles.box} key={index}>

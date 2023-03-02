@@ -77,8 +77,7 @@ const Navbar = () => {
   ];
 
   const navbarLinks = [
-    { title: "Procedures", link: "/", menuLink: null },
-    { title: "How It Works", link: "/", menuLink: null },
+    { title: "Procedures & Symptoms", link: "/", menuLink: null },
     {
       title: "Reviews & Photos",
       link: "/",
@@ -136,7 +135,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar style={{ background: 'transparent' }}>
+      <AppBar style={{ background: 'transparent' }} position='static'>
         <div className={styles.navbar}>
           <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
             <Grid
