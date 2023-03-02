@@ -2,9 +2,17 @@ section#patient_stories {
   padding-top: 66.26px;
   padding-bottom: 68.7px;
 
+  @media screen and (max-width: 992px) {
+    // padding-bottom: 20px;
+    // padding-top: 20px;
+  }
+
   .section_container {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
 
     .text_container {
       width: 259px;
@@ -12,6 +20,12 @@ section#patient_stories {
 
       .title {
         margin-bottom: 34.04px;
+        @media screen and (max-width: 992px) {
+          margin-bottom: 22px;
+          h2 {
+            font-size: 24px;
+          }
+        }
         h2 {
           font-size: 34px;
           font-weight: 500;
@@ -22,6 +36,9 @@ section#patient_stories {
 
       .desc {
         margin-bottom: 53.48px;
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
         p {
           color: var(--main-dark-color);
           font-size: 17px;
@@ -31,6 +48,9 @@ section#patient_stories {
         }
       }
       .btn_container {
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
         a {
           button {
             width: 204px;
@@ -64,6 +84,10 @@ section#patient_stories {
       justify-content: space-between;
       flex-wrap: wrap;
 
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
+
       @media screen and (max-width: 1100px) {
         justify-content: space-around;
       }
@@ -87,8 +111,10 @@ section#patient_stories {
         margin-bottom: 10px;
 
         @media screen and (max-width: 992px) {
-          width: 316px;
-          // height: 590px;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+          height: 479.63px;
         }
 
         @media screen and (max-width: 450px) {
@@ -135,6 +161,14 @@ section#patient_stories {
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 4;
           white-space: pre-wrap;
+
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+            max-height: 15%;
+            -webkit-line-clamp: 3 !important;
+            -webkit-line-clamp: 3 !important;
+          }
+
           p {
             margin: 0;
             color: var(--main-dark-color);
@@ -152,6 +186,12 @@ section#patient_stories {
 
           margin-top: 16px;
           margin-bottom: 10px;
+
+          @media screen and (max-width: 992px) {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
           .img_container {
             width: 46px;
             height: 46px;
@@ -195,7 +235,7 @@ section#patient_stories {
 
           .trans_btn {
             @media screen and (max-width: 992px) {
-              margin-top: 31px;
+              margin-top: 10px;
             }
             button {
               width: 122px;

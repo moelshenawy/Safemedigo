@@ -6,6 +6,11 @@
 
   height: 536px;
   margin-top: 56px;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+
   .section_container {
     display: flex;
     flex-direction: column;

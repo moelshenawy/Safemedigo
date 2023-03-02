@@ -45,7 +45,6 @@ export default function Home() {
 
       {/* Home Page Sections  */}
       <Hero />
-      {/* <Search /> */}
       <Help />
       <WhySafemedigo />
       <TreatmentCategory />

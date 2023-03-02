@@ -13,11 +13,10 @@ const PatientStories = () => {
   const { post1, post2, post3, post4, post5, author } = imgs;
 
   const [breakPoints] = useState([
-    { width: 1, pagination: true, },
-    { width: 300, pagination: true, },
-    { width: 400, pagination: false },
-    { width: 400, pagination: false },
-    { width: 400, pagination: false },
+    { width: 1, pagination: true, showArrows: false },
+    { width: 300, pagination: true, showArrows: false },
+    { width: 400, pagination: false, showArrows: false },
+    { width: 400, pagination: false, itemsToShow: 1, itemsToScroll: 1, showArrows: false },
     { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
 
   ])

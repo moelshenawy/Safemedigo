@@ -9,7 +9,18 @@
     padding-top: 58px;
     padding-bottom: 56px;
 
+    @media screen and (max-width: 992px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 1px;
+      grid-row-gap: 0px;
+    }
+
     .talk {
+      @media screen and (max-width: 992px) {
+        margin-bottom: 35px;
+      }
       .title {
         h3 {
           font-size: 27px;
@@ -92,10 +103,19 @@
     }
 
     .personal_manger {
+      @media screen and (max-width: 992px) {
+        order: -1;
+        margin-bottom: 35px;
+      }
+
       .box {
         width: 333px;
         background-color: var(--main-green-color);
         border-radius: 5px;
+
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
 
         .img_container {
           width: 100%;

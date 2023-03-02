@@ -112,10 +112,6 @@ article {
     // width: 230px !important;
     // margin-right: 14px;
   }
-
-  .rec .rec-slider-container {
-    // margin: 0 !important;ssssssssssssssssssssssssssssssss
-  }
 }
 
 /* square buttons */
@@ -245,7 +241,7 @@ section#PatientStories_patient_stories__oSemC {
     }
 
     .rec-carousel {
-      height: 600px !important;
+      // height: 600px !important;
       position: relative;
       .left_arrow,
       .right_arrow {
@@ -276,6 +272,34 @@ section#PatientStories_patient_stories__oSemC {
         left: -23px;
       }
     }
+  }
+
+  .rec-pagination {
+    .rec-dot {
+      background-color: rgba(30, 30, 30, 0.42);
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      box-shadow: none !important;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .rec-dot_active {
+      opacity: 1;
+      background-color: var(--main-green-color) !important;
+      box-shadow: none;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &:hover {
+        box-sizing: none !important;
+      }
+    }
+  }
+
+  .rec .rec-slider-container {
+    margin: 0 !important;
   }
 }
 

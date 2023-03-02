@@ -14,11 +14,10 @@ const MostPopular = () => {
   const { post1, post2, post3, post4, post5, } = imgs;
 
   const [breakPoints] = useState([
-    { width: 1, pagination: true, },
-    { width: 300, pagination: true, },
-    { width: 400, pagination: false },
-    { width: 400, pagination: false },
-    { width: 400, pagination: false },
+    { width: 1, pagination: true, showArrows: false },
+    { width: 300, pagination: true, showArrows: false },
+    { width: 400, pagination: false, showArrows: false },
+    { width: 400, pagination: false, itemsToShow: 1, itemsToScroll: 1, showArrows: false },
     { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
 
   ])
@@ -112,7 +111,7 @@ const MostPopular = () => {
 
   return (
     <section id={styles.most_popular}>
-      <Container sx={{ maxWidth: '1239px', paddingLeft: 0, paddingRight: 0 }} maxWidth={false}  >
+      <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
         <div className={styles.section_container}>
           <div className={styles.title}>
             <Typography variant='h2'>Most Popular</Typography>

@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import imgs from "../../assets/constants/imgs";
 import Link from "next/link";
 import Head from "next/head";
@@ -11,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { PageHeader, Tags } from './../../components/';
+import { appContext } from "@/context/store";
 
 export default function Blogs() {
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
@@ -78,6 +80,9 @@ export default function Blogs() {
     },
   ];
 
+  const { name, setName } = useContext(appContext)
+
+  console.log(name)
 
   return (
     <>
