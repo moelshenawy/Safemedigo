@@ -99,12 +99,12 @@ article {
   }
 
   .rec .rec-item-wrapper {
-    width: 230px !important;
-    margin-right: 14px;
+    // width: 230px !important;
+    // margin-right: 14px;
   }
 
   .rec .rec-slider-container {
-    margin: 0 !important;
+    // margin: 0 !important;ssssssssssssssssssssssssssssssss
   }
 }
 
@@ -215,7 +215,12 @@ section#MostPopular_most_popular__ZmWsq,
 section#PatientStories_patient_stories__oSemC {
   .rec {
     .rec-item-wrapper {
-      overflow: visible;
+      // overflow-x: hidden !important;
+      // overflow: unset !important;
+    }
+
+    .rec .rec-item-wrapper {
+      // overflow: unset;
     }
 
     button {
@@ -230,8 +235,8 @@ section#PatientStories_patient_stories__oSemC {
     }
 
     .rec-carousel {
-      position: relative;
       height: 600px !important;
+      position: relative;
       .left_arrow,
       .right_arrow {
         background-color: var(--main-white-color);
@@ -246,6 +251,7 @@ section#PatientStories_patient_stories__oSemC {
         display: flex;
         align-items: center;
         justify-content: center;
+        top: 31%;
 
         svg {
           color: #8d8d8d;
@@ -254,12 +260,10 @@ section#PatientStories_patient_stories__oSemC {
       }
 
       .right_arrow {
-        right: -12px;
-        // top: 42%;
+        right: -3px;
       }
       .left_arrow {
-        left: -12px;
-        // top: 42%;
+        left: -2px;
       }
     }
   }

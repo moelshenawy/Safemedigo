@@ -19,7 +19,7 @@ const MostPopular = () => {
     { width: 400, pagination: false },
     { width: 400, pagination: false },
     { width: 400, pagination: false },
-    { width: 800, pagination: false, itemsToShow: "2.5" },
+    { width: 800, pagination: false, itemsToShow: 3, itemsToScroll: 1 },
 
   ])
 
@@ -151,7 +151,7 @@ const MostPopular = () => {
               {treatment &&
                 <motion.div
                   animate={{ x: [300, 0] }}
-                  transition={{ duration: 0.75, ease: "easeOut" }}
+                  transition={{ duration: 0.95, ease: "easeOut" }}
                   className={styles.treatment}>
                   <Carousel
                     breakPoints={breakPoints}
@@ -209,7 +209,7 @@ const MostPopular = () => {
               {doctors &&
                 <motion.div
                   animate={{ x: [300, 0] }}
-                  transition={{ duration: 0.75, ease: "easeOut" }}
+                  transition={{ duration: 0.95, ease: "easeOut" }}
 
                   className={styles.doctors}
                 >
@@ -288,7 +288,7 @@ const MostPopular = () => {
               {clinic &&
                 <motion.div
                   animate={{ x: [300, 0] }}
-                  transition={{ duration: 0.75, ease: "easeOut" }}
+                  transition={{ duration: 0.95, ease: "easeOut" }}
 
                   className={styles.clinic}>
                   <Carousel
