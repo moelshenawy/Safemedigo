@@ -7,7 +7,7 @@ import { MdLocationOn } from 'react-icons/md'
 import { consts } from 'react-elastic-carousel';
 import { Container, Typography, } from '@mui/material';
 import Link from 'next/link';
-
+import { Phone } from '../../../assets/svgs/HoverIcons'
 const ContactDetails = () => {
   const { majd } = imgs;
 
@@ -32,6 +32,7 @@ const ContactDetails = () => {
               <div className={styles.btn}>
                 <Link href="tel:(+90) 552 502 6000">
                   <button>
+                    <Phone />
                     +90 552 502 6000
                   </button>
                 </Link>

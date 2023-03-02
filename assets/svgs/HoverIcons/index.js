@@ -21,3 +21,4 @@ export { default as Lung } from "./Lung";
 export { default as Neurology } from "./Neurology";
 export { default as Analysis } from "./Analysis";
 export { default as SeeWhat } from "./SeeWhat";
+export { default as Phone } from "./Phone";
