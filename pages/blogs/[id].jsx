@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "next/link";
 import imgs from "../../assets/constants/imgs";
 import { PageHeader, Tags } from "./../../components/";
@@ -29,6 +29,24 @@ export default function BolgDetails(props) {
 
 
 
+  useEffect(() => {
+
+    // const requestOptions = {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   // body: JSON.stringify({ title: 'React Hooks POST Request Example' })
+    // };
+
+
+
+
+    // fetch(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, requestOptions)
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+
+
+
+  }, [])
 
   const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
 
@@ -363,9 +381,13 @@ export default function BolgDetails(props) {
 }
 
 // Every time that user click on the post it will call  API Request
-// export async function getServerSideProps(context) {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`)
-//   const data = await res.json()
+
+
+
+
+
+// export async function getServerSideProps() {
+
 
 //   return {
 //     props: {
@@ -376,6 +398,7 @@ export default function BolgDetails(props) {
 
 // Error: getStaticPaths is required for dynamic SSG pages and is missing for
 // it will get all Posts Id and save it as an id => if i have 10 posts and all i want is id's of the 10 posts it will get  all id's at once
+
 // export async function getStaticProps(context) {
 //   const res = await fetch(
 //     `https://safemedigo.vercel.app/api/blogs/${context.params.id}`
