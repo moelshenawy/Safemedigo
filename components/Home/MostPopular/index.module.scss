@@ -4,8 +4,8 @@ section#most_popular {
   overflow: hidden;
 
   @media screen and (max-width: 992px) {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
   }
 
   .section_container {
@@ -206,7 +206,7 @@ section#most_popular {
 
             @media screen and (max-width: 992px) {
               width: 100%;
-              margin-right: 0;
+              margin-right: 10px;
               margin-bottom: 10px;
               height: 479.63px;
             }
@@ -322,7 +322,7 @@ section#most_popular {
                 -webkit-line-clamp: 6;
                 @media screen and (max-width: 992px) {
                   font-size: 16px;
-                  max-height: 39%;
+                  max-height: 36%;
                   -webkit-line-clamp: 4 !important;
                   -webkit-line-clamp: 4 !important;
                 }

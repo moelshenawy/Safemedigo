@@ -12,12 +12,20 @@
     @media screen and (max-width: 992px) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      // grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 1px;
       grid-row-gap: 0px;
     }
 
     .talk {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (max-width: 992px) {
+        justify-content: center;
+      }
+
       @media screen and (max-width: 992px) {
         margin-bottom: 35px;
       }
@@ -32,6 +40,10 @@
 
       .sec_title {
         margin-top: 20px;
+        @media screen and (max-width: 992px) {
+          margin-bottom: 0px;
+        }
+
         a {
           font-size: 26px;
           font-weight: 500;
@@ -169,7 +181,7 @@
               button {
                 width: 100%;
                 height: 48px;
-
+                cursor: pointer;
                 background-color: var(--sec-cyan-color);
                 color: var(--main-green-color);
 
@@ -192,14 +204,23 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
+
+      @media screen and (max-width: 992px) {
+        justify-content: flex-start;
+        height: fit-content;
+      }
+
       .contact,
       .address {
         p {
+          margin-top: 20px;
+          @media screen and (max-width: 992px) {
+            margin-bottom: 0px;
+          }
         }
 
         p:first-child {
           color: var(--main-green-color);
-
           font-size: 17px;
           font-weight: bold;
         }

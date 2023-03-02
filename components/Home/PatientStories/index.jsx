@@ -3,8 +3,6 @@ import styles from './index.module.scss'
 import Carousel from 'react-elastic-carousel';
 import imgs from "../../../assets/constants/imgs";
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
-import { FaShieldAlt } from 'react-icons/fa'
-import { MdLocationOn } from 'react-icons/md'
 import { consts } from 'react-elastic-carousel';
 import { Container, Typography, Rating, } from '@mui/material';
 import Link from 'next/link';
@@ -14,8 +12,7 @@ const PatientStories = () => {
 
   const [breakPoints] = useState([
     { width: 1, pagination: true, showArrows: false },
-    { width: 300, pagination: true, showArrows: false },
-    { width: 400, pagination: false, showArrows: false },
+    { width: 300, pagination: true, showArrows: false, itemsToShow: 1.0, itemsToScroll: 1.0 },
     { width: 400, pagination: false, itemsToShow: 1, itemsToScroll: 1, showArrows: false },
     { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
 
