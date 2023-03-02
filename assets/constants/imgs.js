@@ -25,6 +25,8 @@ import burger from "../svgs/burger.svg";
 import notifications from "../svgs/notifications.svg";
 import user from "../svgs/user.svg";
 import blog_detail from "../imgs/blog_detail.png";
+import majd from "../imgs/majd.png";
+
 import logoFooter from "../svgs/logo-footer.svg";
 import facebook from "../svgs/facebook.svg";
 import instagram from "../svgs/instagram.svg";
@@ -33,6 +35,7 @@ import twitter from "../svgs/twitter.svg";
 import NavSearch from "../svgs/NavSearch.svg";
 import GetQuote from "../svgs/GetQuote.svg";
 import TravelAssist from "../svgs/TravelAssist.svg";
+
 import OnGuide from "../svgs/OnGuide.svg";
 import QualityGuarantee from "../svgs/QualityGuarantee.svg";
 import OurSafetyStandards00 from "../svgs/OurSafetyStandards00.svg";
@@ -74,6 +77,7 @@ export default {
   author,
   openingChannel,
   design,
+  majd,
 
   en,
   Result,
