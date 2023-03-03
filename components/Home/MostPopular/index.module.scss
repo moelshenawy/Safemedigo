@@ -206,7 +206,7 @@ section#most_popular {
 
             @media screen and (max-width: 992px) {
               width: 100%;
-              margin-right: 0px;
+              margin-right: 10px;
               margin-bottom: 10px;
               height: 479.63px;
             }
@@ -375,9 +375,17 @@ section#most_popular {
                 color: var(--main-dark-color);
                 flex: 1 0 auto;
 
+                @media screen and (max-width: 992px) {
+                  margin-top: 0px;
+                }
+
                 p {
                   font-size: 16px;
                   font-weight: 400;
+
+                  @media screen and (max-width: 992px) {
+                    font-size: 12px;
+                  }
                 }
 
                 span {

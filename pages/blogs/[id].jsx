@@ -31,18 +31,20 @@ export default function BolgDetails(props) {
 
   useEffect(() => {
 
-    // const requestOptions = {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   // body: JSON.stringify({ title: 'React Hooks POST Request Example' })
-    // };
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'accept': 'text/plain' },
+
+
+
+    };
 
 
 
 
-    // fetch(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, requestOptions)
-    //   .then(response => response.json())
-    //   .then(data => console.log(data));
+    fetch(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
 
 
 
