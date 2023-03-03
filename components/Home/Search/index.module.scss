@@ -51,8 +51,8 @@
           margin-right: 17px;
 
           font-size: 28px;
-          font-weight: 400;
-          font-family: var(--font-sem-bold);
+          font-family: var(--quickstand-font);
+          font-weight: var(--font-sem-bold);
           color: var(--main-dark-color);
 
           @media screen and (max-width: 992px) {
@@ -89,6 +89,11 @@
           &:focus {
             outline: none;
           }
+
+          color: var(--main-gray-color);
+          font-family: var(--open-sans-font);
+          font-weight: var(--font-regular);
+          font-size: 18px;
         }
       }
     }
@@ -103,8 +108,8 @@
           text-align: center;
           color: var(--main-dark-color);
           font-size: 20px;
-          font-family: var(--font-medium);
-          font-weight: 400;
+          font-family: var(--quickstand-font);
+          font-weight: var(--font-medium);
         }
       }
 
@@ -138,8 +143,9 @@
 
             text-align: center;
             color: var(--main-dark-color);
+            font-family: var(--quickstand-font);
             font-size: 16px;
-            font-family: var(--font-sem-bold);
+            font-weight: var(--font-sem-bold);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
 

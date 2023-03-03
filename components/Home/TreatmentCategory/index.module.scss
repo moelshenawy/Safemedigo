@@ -201,9 +201,10 @@ section#treatment_category {
         background-color: transparent;
         border: none;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: var(--font-medium);
+        font-family: var(--quickstand-font);
         text-decoration: underline;
-
+        margin-right: 5px;
         @media screen and (max-width: 992px) {
           font-size: 14px;
         }

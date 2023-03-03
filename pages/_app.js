@@ -3,13 +3,13 @@ import "@/styles/globals.scss";
 // import NoSSRWrapper from "../components/NoSSRWrapper";
 import NoSsr from "@mui/base/NoSsr";
 import CssBaseline from "@mui/material/CssBaseline";
-import { useEffect, useState } from "react";
 import { Layout } from "../components";
+
 export default function App({ Component, pageProps }) {
-  const [name, setName] = useState("second");
+  // const [name, setName] = useState("second");
 
   return (
-    <appContext.Provider value={{ name, setName }}>
+    <appContext.Provider>
       <NoSsr>
         <CssBaseline />
         <Layout>

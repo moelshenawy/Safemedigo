@@ -16,7 +16,7 @@ const WhyTurkey = () => {
             <Link href='q&a'>Why Should I Get Treatment In Turkey?</Link>
           </div>
 
-          <div className={styles.name}>
+          <div className={styles.article_name}>
             <Typography>Article Name</Typography>
           </div>
 

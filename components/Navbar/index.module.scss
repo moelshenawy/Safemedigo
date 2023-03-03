@@ -26,7 +26,7 @@
       h1 {
         color: var(--main-green-color);
         font-size: 23px;
-        font-family: var(--font-bold);
+        font-weight: var(--font-bold);
         margin: 0;
 
         @media screen and (max-width: 992px) {
@@ -403,12 +403,12 @@
             justify-content: space-between;
             h4 {
               font-size: 18px;
-              font-family: var(--font-bold);
+              font-weight: var(--font-bold);
               color: var(--main-dark-color);
               font-weight: bold;
               a {
                 font-size: 18px;
-                font-family: var(--font-bold);
+                font-weight: var(--font-bold);
                 color: var(--main-dark-color);
                 // margin-right: 56px;
                 font-weight: bold;

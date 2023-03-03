@@ -22,22 +22,26 @@
       margin-bottom: 20px;
       a {
         text-decoration: underline;
-        font-size: 33px;
-        letter-spacing: 0;
-        font-weight: 600;
+        font-size: 34px;
+        letter-spacing: -1px;
         color: var(--main-dark-color);
+
+        font-weight: var(--font-sem-bold);
+        font-family: var(--quickstand-font);
       }
     }
 
-    .name {
+    .article_name {
       margin-bottom: 20px;
 
       p {
         font-size: 16px;
-        font-weight: bold;
         letter-spacing: 0;
         color: var(--main-dark-color);
         font-size: 16px;
+
+        font-weight: var(--font-bold);
+        font-family: var(--quickstand-font);
       }
     }
 
@@ -46,6 +50,10 @@
       p {
         color: var(--main-dark-color);
         font-size: 16px;
+        letter-spacing: 0;
+
+        font-weight: var(--font-bold);
+        font-family: var(--quickstand-font);
       }
     }
 
@@ -64,20 +72,26 @@
 
       .text_container {
         .name {
+          margin-bottom: 20px;
           p {
             font-size: 18px;
             font-weight: bold;
             color: var(--main-dark-color);
+
+            font-weight: var(--font-bold);
+            font-family: var(--open-sans-font);
           }
         }
 
         .date {
-          margin-bottom: 16px;
+          margin-bottom: 10px;
 
           p {
             font-size: 18px;
-            font-weight: 400;
             color: var(--main-dark-color);
+
+            font-weight: var(--font-regular);
+            font-family: var(--open-sans-font);
           }
         }
       }
@@ -95,6 +109,16 @@
             border: 1px solid var(--main-dark-color);
             border-radius: 22px;
             margin-right: 16px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: var(--font-sem-bold);
+            font-family: var(--quickstand-font);
+
+            transition: all 0.3s ease;
+            &:hover {
+              background-color: var(--main-green-color);
+              color: var(--main-white-color);
+            }
           }
         }
       }

@@ -64,7 +64,7 @@
         font-size: 28px;
 
         @media screen and (max-width: 992px) {
-          font-family: var(--font-bold);
+          font-weight: var(--font-bold);
           font-size: 18px;
           font-weight: bold;
           color: #707070;

@@ -9,6 +9,7 @@ import { FaFacebookSquare } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GoPlus } from 'react-icons/go'
 import Carousel from 'react-elastic-carousel'
+import axios from "axios";
 
 
 
@@ -31,24 +32,55 @@ export default function BolgDetails(props) {
 
   useEffect(() => {
 
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'accept': 'text/plain' },
+
+    // const requestOptions = {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: {
+    //     lang: "en",
+    //     blogCategoryId: 0,
+    //     currentPage: 1
+    //   }
+    // };
+    // fetch('', requestOptions)
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
 
 
 
-    };
-
-
-
-
-    fetch(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, requestOptions)
-      .then(response => response.json())
-      .then(data => console.log(data));
-
-
-
+    const data = axios.post(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, {
+      body: {
+        lang: "en",
+        blogCategoryId: 0,
+        currentPage: 1
+      }
+    })
   }, [])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
 

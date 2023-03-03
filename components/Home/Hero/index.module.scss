@@ -28,13 +28,8 @@ section#hero {
         h1 {
           font-size: 44px;
           color: var(--sec-cyan-color);
-          // font-family: "Tilt Prism", "cursive";
-          // font-family: "Roboto", sans-serif;
-          // font-weight: bold;
-          // font-weight: 700;
-          font-family: "gilroy-light";
-
-          // font-family: "Gilroy-Bold";
+          font-family: var(--quickstand-font);
+          font-weight: 700;
 
           @media screen and (max-width: 992px) {
             font-size: 24px;
@@ -89,8 +84,9 @@ section#hero {
             color: var(--sec-cyan-color);
 
             font-size: 24px;
-            font-weight: bold;
-            font-family: var(--font-bold);
+            font-family: var(--quickstand-font);
+            font-weight: var(--font-bold);
+
             cursor: pointer;
 
             @media screen and (max-width: 992px) {
@@ -121,7 +117,7 @@ section#hero {
 
               font-size: 18px;
               font-weight: bold;
-              font-family: var(--font-bold);
+              font-weight: var(--font-bold);
               color: var(--main-green-color);
             }
           }
@@ -136,8 +132,8 @@ section#hero {
               color: var(--sec-white-color);
               cursor: pointer;
               font-size: 18px;
-              font-family: "Gilroy-SemiBold";
-              // font-weight: 600;
+              font-family: var(--quickstand-font);
+              font-weight: var(--font-sem-bold);
             }
           }
         }
@@ -208,7 +204,7 @@ section#hero {
             h6 {
               font-size: 18px;
               font-weight: bold;
-              font-family: var(--font-bold);
+              font-weight: var(--font-bold);
 
               color: var(--main-dark-color);
               @media screen and (max-width: 992px) {

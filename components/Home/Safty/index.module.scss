@@ -13,6 +13,9 @@
         color: var(--main-dark-color);
         font-size: 34px;
         font-weight: 500;
+
+        font-weight: var(--font-sem-bold);
+        font-family: var(--quickstand-font);
       }
     }
 
@@ -21,8 +24,10 @@
       p {
         color: var(--main-dark-color);
         font-size: 18px;
-        font-weight: 400;
         letter-spacing: 0;
+
+        font-weight: var(--font-sem-bold);
+        font-family: var(--open-sans-font);
       }
     }
 
@@ -44,6 +49,8 @@
             margin-bottom: 40px;
             transition: all 0.3s ease;
 
+            font-weight: var(--font-sem-bold);
+            font-family: var(--open-sans-font);
             &:first-child {
               margin-left: -20px;
             }
@@ -134,6 +141,8 @@
             color: #004747;
             margin-bottom: 40px;
             transition: all 0.3s ease;
+            font-weight: var(--font-sem-bold);
+            font-family: var(--open-sans-font);
 
             &:first-child {
               margin-left: 20px;
@@ -165,6 +174,10 @@
 
             font-size: 18px;
             font-weight: bold;
+
+            font-weight: var(--font-bold);
+            font-family: var(--quickstand-font);
+
             border: 1px solid var(--main-green-color);
 
             transition: all 0.3s ease;

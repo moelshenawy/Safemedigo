@@ -27,7 +27,8 @@ section#help {
       h2 {
         color: var(--main-dark-color);
         font-size: 34px;
-        font-weight: 500;
+        font-family: var(--quickstand-font);
+        font-weight: var(--font-sem-bold);
 
         @media screen and (max-width: 992px) {
           font-size: 24px;
@@ -90,15 +91,18 @@ section#help {
           margin-bottom: 6px;
           h6 {
             font-size: 18px;
-            font-weight: bold;
+            font-family: var(--open-sans-font);
+            font-weight: var(--font-bold);
+
             color: var(--main-dark-color);
           }
         }
 
         .desc {
           p {
-            font-size: 17px;
-            font-weight: 500;
+            font-size: 16px;
+            font-weight: var(--font-regular);
+            font-family: var(--open-sans-font);
             letter-spacing: 0;
           }
         }

@@ -14,22 +14,18 @@
   --main-cyan-color: #00ccb5;
   --sec-cyan-color: #00f3bb;
 
-  --font-bold: "Gilroy-Bold", sans-serif;
-  --font-heavy: "Gilroy-Heavy", sans-serif;
-  --font-light: "Gilroy-Light", sans-serif;
-  --font-medium: "Gilroy-Medium", sans-serif;
-  --font-regular: "Gilroy-Regular", sans-serif;
-  --font-sem-bold: "Gilroy-SemiBold", sans-serif;
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
+  --font-sem-bold: 600;
 
   --open-sans-font: "Open Sans", sans-serif;
+  --quickstand-font: "Quicksand", sans-serif;
 }
 
+html,
 body {
-  font-family: "gilroy-light";
-  // font-family: "Gilroy-Bold";
-  // font-family: "Tilt Prism", cursive;
-  // font-family: "Roboto", sans-serif;
-  // font-family: "Gilroy";
+  font-family: "Quicksand", sans-serif !important;
 }
 * {
   margin: 0;
@@ -53,32 +49,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-// Fonts
-@font-face {
-  font-family: "Gilroy-Bold", sans-serif;
-  font-family: "Gilroy-Heavy", sans-serif;
-  font-family: "Gilroy-Light";
-  font-family: "Gilroy-Medium", sans-serif;
-  font-family: "Gilroy-Regular", sans-serif;
-  font-family: "Gilroy-SemiBold", sans-serif;
-
-  src: url("../assets/gilroy/Gilroy-Bold.ttf");
-  src: url("../assets/gilroy/Gilroy-Heavy.ttf");
-  src: url("../assets/gilroy/Gilroy-Light.ttf");
-  src: url("../assets/gilroy/Gilroy-Medium.ttf");
-  src: url("../assets/gilroy/Gilroy-Regular.ttf");
-  src: url("../assets/gilroy/Gilroy-SemiBold.ttf");
-  src: url("../assets/gilroy/Gilroy-ExtraBold.ttf");
-  src: url("../assets/gilroy/Gilroy-Thin.ttf");
-  src: url("../assets/gilroy/Gilroy-UltraLight.ttf");
-
-  font-family: "gilroy-light";
-  src: url("../assets/gilroy/gilroy-light-webfont.woff2") format("woff2"),
-    url("../assets/gilroy/gilroy-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 // MUI overrides classes
@@ -260,7 +230,7 @@ section#PatientStories_patient_stories__oSemC {
         top: 33%;
 
         svg {
-          color: #8d8d8d;
+          color: var(--main-gray-color);
           font-size: 25px;
         }
       }

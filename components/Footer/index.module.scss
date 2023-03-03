@@ -24,8 +24,7 @@ footer#footer {
       }
       h4 {
         font-size: 28px;
-        font-family: var(--font-bold);
-        font-weight: bold;
+        font-weight: var(--font-bold);
         color: var(--sec-white-color);
         @media screen and (max-width: 992px) {
           display: none;
@@ -74,8 +73,7 @@ footer#footer {
             }
             h6 {
               font-size: 18px;
-              font-family: var(--font-bold);
-              font-weight: bold;
+              font-weight: var(--font-bold);
               color: var(--main-white-color);
               @media screen and (max-width: 992px) {
                 font-size: 21px;
@@ -120,8 +118,7 @@ footer#footer {
         h6 {
           font-size: 18px;
           color: var(--main-dark-color);
-          font-family: var(--font-bold);
-          font-weight: bold;
+          font-weight: var(--font-bold);
         }
       }
 
@@ -137,7 +134,7 @@ footer#footer {
           &::placeholder {
             font-size: 14px;
             color: #8d8d8d;
-            font-family: var(--font-bold);
+            font-weight: var(--font-bold);
             font-weight: bold;
           }
         }
@@ -150,7 +147,7 @@ footer#footer {
 
           color: #fff;
           font-size: 16px;
-          font-family: var(--font-bold);
+          font-weight: var(--font-bold);
           font-weight: bold;
           cursor: pointer;
         }
@@ -274,7 +271,7 @@ footer#footer {
           border-radius: 5px;
           background-color: transparent;
           cursor: pointer;
-          font-family: var(--font-bold);
+          font-weight: var(--font-bold);
           font-weight: bold;
           font-size: 18px;
 
