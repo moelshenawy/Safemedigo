@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import imgs from "../../assets/constants/imgs";
 import Link from "next/link";
 import Head from "next/head";
@@ -80,9 +79,6 @@ export default function Blogs() {
     },
   ];
 
-  const { name, setName } = useContext(appContext)
-
-  console.log(name)
 
   return (
     <>

@@ -31,6 +31,30 @@ export default function BolgDetails(props) {
 
 
   useEffect(() => {
+    const data = JSON.stringify({
+      "lang": "en",
+      "blogCategoryId": 0,
+      "currentPage": 1
+    });
+
+    const config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage',
+      headers: {
+        'Content-Type': 'application/json',
+        'accept': 'text/plain'
+      },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
 
     // const requestOptions = {
@@ -46,41 +70,26 @@ export default function BolgDetails(props) {
     //   .then(response => response.json())
     //   .then(data => console.log(data));
 
+    // const myData = async () => {
 
+    //   const data = await axios.post(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'accept': 'text/plain'
+    //     },
+    //     data: {
+    //       "lang": "en",
+    //       "blogCategoryId": 0,
+    //       "currentPage": 1
+    //     }
+    //   })
 
-    const data = axios.post(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, {
-      body: {
-        lang: "en",
-        blogCategoryId: 0,
-        currentPage: 1
-      }
-    })
+    //   console.log(data, "WITH MEEE")
+    // }
+    // }
+    // myData()
+
   }, [])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
 
@@ -138,7 +147,7 @@ export default function BolgDetails(props) {
             <div className={styles.name}>
               <a href="#">
                 writer name
-                {` `}
+
               </a>
               - medical content writer
             </div>

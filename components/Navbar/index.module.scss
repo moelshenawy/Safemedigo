@@ -26,11 +26,11 @@
       h1 {
         color: var(--main-green-color);
         font-size: 23px;
+        font-family: var(--quickstand-font);
         font-weight: var(--font-bold);
         margin: 0;
 
         @media screen and (max-width: 992px) {
-          font-weight: bold;
           font-size: 16px;
         }
       }
@@ -68,9 +68,11 @@
               }
               a {
                 font-size: 16px;
-                font-family: var(--font-medium);
                 color: var(--main-dark-color);
                 transition: all 0.3s ease-in-out;
+
+                font-family: var(--quickstand-font);
+                font-weight: var(--font-sem-bold);
 
                 &:hover {
                   color: var(--main-green-color);
@@ -112,10 +114,11 @@
 
                     a {
                       color: var(--main-dark-color);
-                      font-family: var(--open-sans-font);
                       font-size: 16px;
-                      font-weight: 600;
                       transition: all 0.5 ease;
+
+                      font-family: var(--quickstand-font);
+                      font-weight: var(--font-sem-bold);
                     }
 
                     &:hover {
@@ -200,7 +203,10 @@
 
               span {
                 font-size: 16px;
-                font-family: var(--gilroy-font-medium);
+
+                font-family: var(--quickstand-font);
+                font-weight: var(--font-sem-bold);
+
                 color: var(--main-dark-color);
               }
             }
@@ -235,12 +241,13 @@
               button {
                 background-color: transparent;
                 border: none;
-                color: var(--black-color);
                 font-size: 16px;
-                font-family: var(--gilroy-font-medium);
                 color: var(--main-dark-color);
                 transition: all 0.3s ease-in-out;
                 cursor: pointer;
+
+                font-family: var(--quickstand-font);
+                font-weight: var(--font-sem-bold);
               }
 
               &:hover {

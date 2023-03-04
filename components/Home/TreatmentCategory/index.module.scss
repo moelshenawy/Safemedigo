@@ -22,7 +22,8 @@ section#treatment_category {
       h2 {
         color: var(--main-dark-color);
         font-size: 34px;
-        font-weight: 500;
+        font-weight: var(--font-sem-bold);
+        font-family: var(--quickstand-font);
 
         @media screen and (max-width: 992px) {
           font-size: 24px;
@@ -167,7 +168,6 @@ section#treatment_category {
 
         .title {
           margin-bottom: 6px;
-          max-width: 127px;
 
           @media screen and (max-width: 992px) {
             max-width: 90px;
@@ -175,8 +175,10 @@ section#treatment_category {
 
           h6 {
             font-size: 16px;
-            font-weight: bold;
             color: var(--main-dark-color);
+
+            font-weight: var(--font-sem-bold);
+            font-family: var(--open-sans-font);
 
             @media screen and (max-width: 992px) {
               font-size: 12px;
@@ -189,7 +191,7 @@ section#treatment_category {
     .btn_contianer {
       align-self: flex-end;
       margin-top: -26px;
-      margin-right: 17px;
+      margin-right: 37px;
 
       @media screen and (max-width: 992px) {
         margin-right: 0px;

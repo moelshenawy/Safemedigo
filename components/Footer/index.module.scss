@@ -25,6 +25,7 @@ footer#footer {
       h4 {
         font-size: 28px;
         font-weight: var(--font-bold);
+        font-family: var(--open-sans-font);
         color: var(--sec-white-color);
         @media screen and (max-width: 992px) {
           display: none;
@@ -73,7 +74,10 @@ footer#footer {
             }
             h6 {
               font-size: 18px;
+
               font-weight: var(--font-bold);
+              font-family: var(--quickstand-font);
+
               color: var(--main-white-color);
               @media screen and (max-width: 992px) {
                 font-size: 21px;
@@ -92,8 +96,9 @@ footer#footer {
                   text-decoration: none;
                   color: var(--main-white-color);
                   font-size: 16px;
-                  font-weight: normal;
-                  font-family: sans-serif;
+
+                  font-weight: var(--font-regular);
+                  font-family: var(--open-sans-font);
                 }
               }
             }
@@ -119,6 +124,9 @@ footer#footer {
           font-size: 18px;
           color: var(--main-dark-color);
           font-weight: var(--font-bold);
+
+          font-weight: var(--font-bold);
+          font-family: var(--quickstand-font);
         }
       }
 
@@ -134,8 +142,9 @@ footer#footer {
           &::placeholder {
             font-size: 14px;
             color: #8d8d8d;
+
             font-weight: var(--font-bold);
-            font-weight: bold;
+            font-family: var(--open-sans-font);
           }
         }
         button {
@@ -148,7 +157,7 @@ footer#footer {
           color: #fff;
           font-size: 16px;
           font-weight: var(--font-bold);
-          font-weight: bold;
+          font-family: var(--quickstand-font);
           cursor: pointer;
         }
       }
@@ -177,6 +186,9 @@ footer#footer {
       h6 {
         color: var(--main-white-color);
         font-size: 18px;
+
+        font-weight: var(--font-medium);
+        font-family: var(--quickstand-font);
       }
     }
 
@@ -233,7 +245,9 @@ footer#footer {
           h6 {
             font-size: 16px;
             color: var(--main-dark-color);
-            font-family: var(--font-sem-bold);
+
+            font-weight: var(--font-medium);
+            font-family: var(--quickstand-font);
           }
         }
       }
@@ -243,7 +257,8 @@ footer#footer {
           h6 {
             font-size: 16px;
             color: var(--main-dark-color);
-            font-family: var(--font-sem-bold);
+            font-weight: var(--font-medium);
+            font-family: var(--quickstand-font);
           }
         }
       }
@@ -271,8 +286,6 @@ footer#footer {
           border-radius: 5px;
           background-color: transparent;
           cursor: pointer;
-          font-weight: var(--font-bold);
-          font-weight: bold;
           font-size: 18px;
 
           @media screen and (max-width: 600px) {
@@ -292,6 +305,9 @@ footer#footer {
         button {
           background-color: var(--main-white-color);
           color: var(--main-green-color);
+
+          font-weight: var(--font-bold);
+          font-family: var(--quickstand-font);
         }
       }
     }
@@ -302,6 +318,9 @@ footer#footer {
           background-color: var(--main-green-color);
           border: 1px solid var(--main-green-color);
           color: var(--main-white-color);
+
+          font-weight: var(--font-bold);
+          font-family: var(--quickstand-font);
         }
       }
     }

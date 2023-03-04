@@ -9,8 +9,13 @@
   border-radius: 8px;
 
   width: 1207px;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media screen and (min-width: 992px) {
+    padding-left: 58px;
+    padding-right: 61px;
+  }
 
   @media screen and (max-width: 992px) {
     // display: none;
@@ -32,7 +37,8 @@
     }
 
     .searc_input {
-      margin-bottom: 56px;
+      margin-bottom: 24px;
+
       @media screen and (max-width: 992px) {
         margin-bottom: 20px;
         width: 100%;
@@ -103,7 +109,11 @@
         display: none;
       }
       .title {
-        margin-bottom: 40px;
+        margin-bottom: 24px;
+        @media screen and (min-width: 992px) {
+          margin-left: 300px;
+        }
+
         p {
           text-align: center;
           color: var(--main-dark-color);
@@ -120,7 +130,7 @@
         justify-content: center;
         a {
           &:not(:last-child) {
-            margin-right: 17px;
+            margin-right: 7px;
             @media screen and (max-width: 992px) {
               margin-right: 0;
             }
