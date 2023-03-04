@@ -91,9 +91,7 @@ export default function Blogs() {
 
       <div id={styles.tags_filter}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-          <div className={styles.title}>
-            <Typography variant="h4">All Articles</Typography>
-          </div>
+
 
           <div className={styles.filter}>
             <FormControl fullWidth>

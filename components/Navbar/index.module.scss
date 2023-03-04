@@ -225,6 +225,7 @@
               text-decoration: none;
               color: var(--main-dark-color);
               display: flex;
+              align-items: flex-start;
               cursor: pointer;
 
               .icon_container {
@@ -532,6 +533,7 @@
   h2 {
     font-size: 16px;
     color: var(--main-white-color);
-    font-family: var(--font-regular);
+    font-weight: var(--font-regular);
+    font-family: var(--quickstand-font);
   }
 }
