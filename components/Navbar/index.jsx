@@ -163,8 +163,8 @@ const Navbar = () => {
                           >
                             <Link href={`${link.link}`}>{link.title}</Link>
 
-                            <div className={styles.menuLinks__container}>
-                              {link.menuLink != null &&
+                            {link.menuLink != null &&
+                              <div className={styles.menuLinks__container}>
                                 <ul
                                 >
                                   {link.menuLink.map((links, index) => (
@@ -176,8 +176,8 @@ const Navbar = () => {
                                     </li>
                                   ))}
                                 </ul>
-                              }
-                            </div>
+                              </div>
+                            }
 
 
 
@@ -187,6 +187,20 @@ const Navbar = () => {
                     </div>
 
                     <div className={styles.auth_methods}>
+                      <div className={styles.search_btn}>
+                        <Link href="/search">
+                          <div className={styles.icon_container}>
+                            <img
+                              src={NavSearch.src}
+                              alt="Picture of the author"
+                              width="18.89px"
+                              height="19px"
+                            />
+                          </div>
+                          <button>Search</button>
+                        </Link>
+                      </div>
+
                       <div className={styles.lang}>
                         <div className={styles.img_container}>
                           <img
@@ -211,19 +225,7 @@ const Navbar = () => {
                         </div>
                       </div>
 
-                      <div className={styles.search_btn}>
-                        <Link href="/search">
-                          <div className={styles.icon_container}>
-                            <img
-                              src={NavSearch.src}
-                              alt="Picture of the author"
-                              width="18.89px"
-                              height="19px"
-                            />
-                          </div>
-                          <button>Search</button>
-                        </Link>
-                      </div>
+
 
                       <div className={styles.login_btn}>
                         <Link href="/login">
@@ -397,7 +399,9 @@ const Navbar = () => {
 
             {pathname === '/how-it-works' &&
               <h2>Home / How It Works</h2>
-
+            }
+            {pathname === '/about-us' &&
+              <h2>Home / About Us</h2>
             }
           </Container>
         </nav>

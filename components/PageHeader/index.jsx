@@ -53,6 +53,13 @@ const PageHeader = () => {
                 </>
               }
 
+              {pathname === '/about-us' &&
+                <>
+                  <Typography variant='h4'>About Us</Typography>
+                  <Typography variant='h2'>We are your preferred healthcare partner. Get one on one assistance before, during and after your medical journey. Sourcing information on medical care has been simplified to give you a better experience.</Typography>
+                </>
+              }
+
               {pathname.includes('/blogs/') &&
                 <Typography variant='h4' >
                   I Was Suffuring From Gas Issues For 3 Years! (Blog Title)

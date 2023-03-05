@@ -14,7 +14,7 @@ const Help = () => {
   ]
 
   return (
-    <section id={styles.help}>
+    <section id={styles.help} styles={{ paddingTop: '0px', marginTop: '0px' }}>
       <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
         <div className={styles.section_container}>
           <div className={styles.sec_title}>

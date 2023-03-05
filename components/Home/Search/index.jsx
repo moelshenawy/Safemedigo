@@ -13,7 +13,7 @@ const Search = () => {
 
   const tags = [
     { tag: "All" },
-    { tag: "Hair Transplant" },
+    { tag: "Hair Treatment" },
     { tag: "Tag name" },
     { tag: "Tag name" },
     { tag: "Tag name" },

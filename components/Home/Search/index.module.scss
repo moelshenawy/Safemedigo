@@ -1,14 +1,13 @@
 #search {
   background-color: var(--main-white-color);
   position: absolute;
-  bottom: -170px;
-  left: 50%;
+  bottom: -101px;
+  left: 49%;
   transform: translateX(-50%);
-
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
   border-radius: 8px;
-
   width: 1207px;
+
   padding-top: 48px;
   padding-bottom: 48px;
 
@@ -30,7 +29,7 @@
   .searc_card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
     @media screen and (max-width: 992px) {
       align-items: flex-start;
@@ -38,7 +37,7 @@
 
     .searc_input {
       margin-bottom: 24px;
-
+      margin-left: 80px;
       @media screen and (max-width: 992px) {
         margin-bottom: 20px;
         width: 100%;
@@ -115,7 +114,8 @@
       .title {
         margin-bottom: 24px;
         @media screen and (min-width: 992px) {
-          margin-left: 300px;
+          margin-left: 50px;
+          text-align: center;
         }
 
         p {
@@ -134,19 +134,18 @@
         justify-content: center;
         a {
           &:not(:last-child) {
-            margin-right: 7px;
+            margin-right: 16px;
             @media screen and (max-width: 992px) {
               margin-right: 0;
             }
           }
 
           button {
-            height: 40px;
+            // width: 122px;
+            // height: 40px;
 
-            padding-top: 9px;
-            padding-bottom: 10px;
-            padding-left: 26px;
-            padding-right: 26px;
+            padding: 9px 20px 10px;
+
             @media screen and (max-width: 992px) {
               padding: 0;
             }
@@ -172,6 +171,7 @@
       }
     }
   }
+
   .tags_slider {
     width: 100%;
     @media screen and (max-width: 992px) {
