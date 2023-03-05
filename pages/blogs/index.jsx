@@ -12,9 +12,19 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { PageHeader, Tags } from './../../components/';
 import { appContext } from "@/context/store";
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
-export default function Blogs() {
+export default function Blogs(props) {
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
+
+  const router = useRouter();
+
+  console.log(props)
+
+  const refreshData = () => {
+    router.replace(router.asPath);
+  }
 
 
   const posts = [
@@ -79,7 +89,73 @@ export default function Blogs() {
     },
   ];
 
+  const [blogs, setBlogs] = useState(null)
+  useEffect(() => {
 
+
+    // const requestOptions = {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: {
+    //     lang: "en",
+    //     blogCategoryId: 0,
+    //     currentPage: 1
+    //   }
+    // };
+    // fetch('', requestOptions)
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+
+    // const myData = async () => {
+
+    //   const data = await axios.post(`http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage`, {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'accept': 'text/plain'
+    //     },
+    //     data: {
+    //       "lang": "en",
+    //       "blogCategoryId": 0,
+    //       "currentPage": 1
+    //     }
+    //   })
+
+    //   console.log(data, "WITH MEEE")
+    // }
+    // }
+    // myData()
+
+    const dataFun = async () => {
+
+      // const data = JSON.stringify({
+      //   "lang": "en",
+      //   "blogCategoryId": 0,
+      //   "currentPage": 1
+      // });
+
+      // const config = {
+      //   method: 'post',
+      //   maxBodyLength: Infinity,
+      //   url: 'http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'accept': 'text/plain'
+      //   },
+      //   data: data
+      // };
+
+      // const res = await axios(config)
+      // const myData = await res.json()
+
+
+
+
+    }
+
+    dataFun();
+
+
+  }, [])
   return (
     <>
       <Head>
@@ -181,16 +257,29 @@ export default function Blogs() {
 };
 
 // Data is in view Page Source (SSR) Great for SEO but every time user Request this page the server has to call an additional api request ,Up to date data
-// export async function getServerSideProps() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=100")
-//   const data = await res.json()
+export async function getServerSideProps() {
+  // console.log(context, "COntext Over hereee")
+  const res = await fetch("http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "lang": 'ar',
+      "blogCategoryId": 0,
+      "currentPage": 1
+    })
+  })
+  const data = await res.json()
 
-//   return {
-//     props: {
-//       posts: data
-//     }
-//   }
-// }
+  return {
+    props: {
+      posts: data
+    }
+  }
+}
+
 
 
 // Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)

@@ -81,6 +81,15 @@
           border-radius: 40px;
           cursor: pointer;
 
+          color: var(--main-gray-color);
+          font-family: var(--open-sans-font);
+          font-weight: var(--font-regular);
+          font-size: 18px;
+
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+          }
+
           @media screen and (max-width: 992px) {
             background-color: var(--main-white-color);
             width: 333px;
@@ -95,11 +104,6 @@
           &:focus {
             outline: none;
           }
-
-          color: var(--main-gray-color);
-          font-family: var(--open-sans-font);
-          font-weight: var(--font-regular);
-          font-size: 18px;
         }
       }
     }
@@ -170,6 +174,21 @@
   }
   .tags_slider {
     width: 100%;
+    @media screen and (max-width: 992px) {
+      margin-bottom: -24px;
+    }
+    .title {
+      h3 {
+        color: var(--main-white-color);
+        font-family: var(--quickstand-font);
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 992px) {
+        margin-bottom: 14px;
+      }
+    }
+
     @media screen and (min-width: 992px) {
       display: none;
     }
@@ -195,14 +214,20 @@
 
         text-align: center;
         color: var(--main-dark-color);
+
         font-size: 16px;
-        font-family: var(--font-sem-bold);
+        font-weight: var(--font-regular);
+        font-family: var(--quickstand-font);
+
         transition: all 0.3s ease-in-out;
         cursor: pointer;
 
         &:hover {
           background-color: var(--main-green-color);
           color: var(--main-white-color);
+        }
+
+        @media screen and (max-width: 992px) {
         }
       }
     }

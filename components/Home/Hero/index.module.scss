@@ -15,6 +15,7 @@ section#hero {
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
+      padding-top: 22px;
     }
 
     .text_container {
@@ -148,7 +149,7 @@ section#hero {
       // overflow-x: visible;
       @media screen and (max-width: 992px) {
         position: absolute;
-        bottom: -85px;
+        bottom: -150px;
         left: 50%;
         transform: translateX(-50%);
         width: 378px;
@@ -178,6 +179,8 @@ section#hero {
           padding-left: 29px;
           padding-top: 19px;
           margin-bottom: 10px;
+
+          height: 194.08px;
         }
 
         .box_header {
@@ -279,6 +282,8 @@ section#hero {
 
             @media screen and (max-width: 992px) {
               font-size: 15px;
+              -webkit-line-clamp: 3;
+              -webkit-line-clamp: 3;
             }
           }
         }

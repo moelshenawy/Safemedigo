@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './index.module.scss'
-import { Container, Typography, Rating, } from '@mui/material';
+import { Container, Typography, } from '@mui/material';
 import Link from 'next/link';
 import Carousel from 'react-elastic-carousel';
 
@@ -50,6 +50,14 @@ const Search = () => {
 
       </Container>
       <div className={styles.tags_slider}>
+
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
+          <div className={styles.title}>
+            <Typography variant='h3'>Treatment Popular</Typography>
+          </div>
+        </Container>
+
+
         <Carousel breakPoints={breakPoints}
           pagination={false}
           showArrows={false}

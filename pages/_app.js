@@ -9,13 +9,11 @@ export default function App({ Component, pageProps }) {
   // const [name, setName] = useState("second");
 
   return (
-    <appContext.Provider>
-      <NoSsr>
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </NoSsr>
-    </appContext.Provider>
+    <NoSsr>
+      <CssBaseline />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </NoSsr>
   );
 }
