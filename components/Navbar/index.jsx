@@ -96,7 +96,7 @@ const Navbar = () => {
       title: "About Us ",
       menuLink: [
         { title: "About Us", link: "/about-us" },
-        { title: "How It Works", link: "/about-us" },
+        { title: "How It Works", link: "/how-it-works" },
         { title: "Safety Standards", link: "/safety" },
         { title: "Contact Us", link: "/contact-us" },
       ],
@@ -121,13 +121,6 @@ const Navbar = () => {
       document.removeEventListener("click", closeMenu);
     };
   }, [showMenu]);
-
-
-
-
-
-
-
 
   // Get routes to make dynamic data
   const router = useRouter();
@@ -177,7 +170,7 @@ const Navbar = () => {
                                   {link.menuLink.map((links, index) => (
                                     <li
                                       key={index}>
-                                      <Link href={`${links.title}`}>
+                                      <Link href={`${links.link}`}>
                                         {links.title}
                                       </Link>
                                     </li>
@@ -402,6 +395,10 @@ const Navbar = () => {
               <h2>Home / Blog / I Was Suffuring From Gas Issues For 3 Years!</h2>
             }
 
+            {pathname === '/how-it-works' &&
+              <h2>Home / How It Works</h2>
+
+            }
           </Container>
         </nav>
       }

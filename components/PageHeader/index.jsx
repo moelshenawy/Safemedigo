@@ -23,6 +23,8 @@ const PageHeader = () => {
                 <Typography variant='h4'>Home</Typography>
               }
 
+
+
               {pathname.includes('/blogs/') &&
                 <Typography variant='h4' >
                   acibadem Hospital (blog category)
@@ -41,6 +43,13 @@ const PageHeader = () => {
                     All Of The Latest Medical Travel And Healthcare Developments
                     In One Place.
                   </Typography>
+                </>
+              }
+
+              {pathname === '/how-it-works' &&
+                <>
+                  <Typography variant='h4'>How It Works</Typography>
+                  <Typography variant='h2'>Get a breakdown of how we go through the complex process of matching the patient with the best suited healthcare facility for them.</Typography>
                 </>
               }
 

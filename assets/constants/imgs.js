@@ -26,6 +26,7 @@ import notifications from "../svgs/notifications.svg";
 import user from "../svgs/user.svg";
 import blog_detail from "../imgs/blog_detail.png";
 import majd from "../imgs/majd.png";
+import howItIworks_search from "../imgs/howItIworks_search.png";
 
 import logoFooter from "../svgs/logo-footer.svg";
 import facebook from "../svgs/facebook.svg";
@@ -55,6 +56,7 @@ export default {
   QualityGuarantee,
   OurSafetyStandards00,
   OurSafterStanders01,
+  howItIworks_search,
 
   left01,
   right01,
