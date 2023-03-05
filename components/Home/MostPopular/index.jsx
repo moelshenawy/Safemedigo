@@ -166,6 +166,9 @@ const MostPopular = () => {
                   animate={{ x: [300, 0] }}
                   transition={{ duration: 0.95, ease: "easeOut" }}
                   className={styles.treatment}>
+
+                  <div className={styles.shadow_box} />
+
                   <Carousel
                     breakPoints={breakPoints}
                     itemsToScroll={2}
@@ -228,6 +231,8 @@ const MostPopular = () => {
 
                   className={styles.doctors}
                 >
+                  <div className={styles.shadow_box} />
+
                   <Carousel
                     breakPoints={breakPoints}
                     itemsToScroll={1}
@@ -306,6 +311,8 @@ const MostPopular = () => {
                   transition={{ duration: 0.95, ease: "easeOut" }}
 
                   className={styles.clinic}>
+                  <div className={styles.shadow_box} />
+
                   <Carousel
                     breakPoints={breakPoints}
                     itemsToScroll={1}
@@ -376,12 +383,17 @@ const MostPopular = () => {
 
                       </div>
                     ))}
+
+
                   </Carousel>
                 </motion.div>
               }
 
 
             </div>
+
+
+
 
           </div>
         </div>

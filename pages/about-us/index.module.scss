@@ -1,7 +1,6 @@
 #about_us {
   // margin-top: 56px;
-  background: #fafafa;
-  padding-bottom: 56px;
+  // background: #fafafa;
 
   .boxes_container {
     display: flex;
@@ -14,7 +13,6 @@
     .AllInclusiveCare {
       display: flex;
       align-items: flex-start;
-      justify-content: center;
 
       margin-top: 95px;
 
@@ -69,6 +67,155 @@
     .StressFreeTreatment {
       .text_container {
         margin-right: 50px;
+      }
+    }
+  }
+}
+
+#who_is_safemedigo,
+#founders,
+#medical_councilors,
+#team,
+#patient_mangers {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .section_container {
+    .title {
+      margin-bottom: 16px;
+      text-align: center;
+
+      h2 {
+        font-size: 34px;
+        font-weight: var(--font-sem-bold);
+        font-family: var(--quickstand-font);
+
+        color: var(--main-dark-color);
+      }
+
+      p {
+        color: var(--main-dark-color);
+
+        font-size: 18px;
+        font-weight: var(--font-sem-bold);
+        font-family: var(--open-sans-font);
+      }
+    }
+
+    .desc {
+      margin-bottom: 25px;
+      text-align: center;
+
+      p {
+        color: var(--main-dark-color);
+
+        letter-spacing: 0.3px;
+        font-size: 18px;
+        font-weight: var(--font-sem-bold);
+        font-family: var(--open-sans-font);
+      }
+    }
+
+    .boxes_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 46px;
+      .box,
+      .founder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img_container {
+          width: 120px;
+          height: 120px;
+
+          margin-bottom: 16px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .name {
+          margin-bottom: 8px;
+          p {
+            color: var(--main-dark-color);
+
+            font-weight: var(--font-bold);
+            font-family: var(--open-sans-font);
+            font-size: 18px;
+          }
+        }
+
+        .job {
+          p {
+            color: var(--main-dark-color);
+
+            font-weight: var(--font-regular);
+            font-family: var(--open-sans-font);
+            font-size: 16px;
+          }
+        }
+
+        .desc {
+          p {
+            color: var(--main-dark-color);
+
+            font-size: 16px;
+            font-weight: var(--font-regular);
+            font-family: var(--open-sans-font);
+          }
+        }
+      }
+    }
+  }
+}
+
+#medical_councilors,
+#patient_mangers {
+  background-color: #ebf2f2;
+}
+
+#patient_mangers,
+#team {
+  .section_container {
+    .title {
+      margin-bottom: 52px;
+    }
+
+    .boxes_container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 90px;
+      grid-row-gap: 0px;
+    }
+  }
+}
+
+#who_is_safemedigo {
+  .section_container {
+    background-color: #c5dfdc33;
+    padding: 59px 24px;
+  }
+}
+
+#medical_councilors {
+  .boxes_container {
+    justify-content: space-between !important;
+    // align-items: flex-end !important;
+    .box {
+      align-items: flex-start !important;
+      width: 250px;
+
+      .desc {
+        p {
+          text-align: left;
+        }
       }
     }
   }

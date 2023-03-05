@@ -9,15 +9,20 @@ import styles from "./index.module.scss";
 
 const HowItWorks = () => {
 
-  const { howItIworks_search } = imgs;
+  const { checkAfterTreatment,
+    getInTouch,
+    iDidIt,
+    readyToGo,
+    reaserch,
+    safteyTreatment, } = imgs;
 
   const howItWorksData = [
-    { id: 1, title: 'Research', desc: 'Having done extensive research, our database contains information on the leading healthcare facilities, doctors and treatment methods available in Turkey. Gain access to doctors in Turkey, all carefully vetted and judged to have achieved our safety standards. Making a choice has never been easy but thanks to our system, you will at least find it less stressful.', img: howItIworks_search.src },
-    { id: 2, title: 'Get In Touch', desc: 'Are you still in doubt about treatment? Hesitant on which healthcare provider to pick? Not sure whether the procedure is covered by insurance or not? Worry not. As your healthcare partner, we will break down all this information to the simplest form and leave you with a clear picture to make a choice. Not to mention, no charges will be applied. See before and after pictures for cosmetic procedures, read reviews, get treatment or doctor information and later proceed to get a treatment appointment through our people.', img: howItIworks_search.src },
-    { id: 3, title: 'Ready To Go', desc: 'Found a doctor in your area? Prefer traveling elsewhere? We cater for all. We will coordinate your departure plans. Our team will be on stand by and are well equipped to deal with any bump you may experience along the ride. Call or message us through the various platforms Tel, WhatsApp, Instagram, Twitter, Email, or Facebook for enquiries. We are available 24/7.', img: howItIworks_search.src },
-    { id: 4, title: 'Safety Treatment', desc: 'Its D day! We`ll be next to you throughout the process to limit any misunderstandings. Leaving you to focus on your treatment and recovery process to come.', img: howItIworks_search.src },
-    { id: 5, title: 'Check After Treatmen', desc: 'The same urgency we put during your treatment period is the same we will put during your recovery. We will be constantly checking up to support and encourage you.', img: howItIworks_search.src },
-    { id: 6, title: 'I Did It', desc: 'Results. Achieving this fate is always our goal and we thrive on patient satisfaction. Your feedback will be crucial at this and any point of the process. For safer, better, and affordable healthcare and reconstructive surgeries.', img: howItIworks_search.src },
+    { id: 1, title: 'Research', desc: 'Having done extensive research, our database contains information on the leading healthcare facilities, doctors and treatment methods available in Turkey. Gain access to doctors in Turkey, all carefully vetted and judged to have achieved our safety standards. Making a choice has never been easy but thanks to our system, you will at least find it less stressful.', img: reaserch.src },
+    { id: 2, title: 'Get In Touch', desc: 'Are you still in doubt about treatment? Hesitant on which healthcare provider to pick? Not sure whether the procedure is covered by insurance or not? Worry not. As your healthcare partner, we will break down all this information to the simplest form and leave you with a clear picture to make a choice. Not to mention, no charges will be applied. See before and after pictures for cosmetic procedures, read reviews, get treatment or doctor information and later proceed to get a treatment appointment through our people.', img: getInTouch.src },
+    { id: 3, title: 'Ready To Go', desc: 'Found a doctor in your area? Prefer traveling elsewhere? We cater for all. We will coordinate your departure plans. Our team will be on stand by and are well equipped to deal with any bump you may experience along the ride. Call or message us through the various platforms Tel, WhatsApp, Instagram, Twitter, Email, or Facebook for enquiries. We are available 24/7.', img: readyToGo.src },
+    { id: 4, title: 'Safety Treatment', desc: 'Its D day! We`ll be next to you throughout the process to limit any misunderstandings. Leaving you to focus on your treatment and recovery process to come.', img: safteyTreatment.src },
+    { id: 5, title: 'Check After Treatmen', desc: 'The same urgency we put during your treatment period is the same we will put during your recovery. We will be constantly checking up to support and encourage you.', img: iDidIt.src },
+    { id: 6, title: 'I Did It', desc: 'Results. Achieving this fate is always our goal and we thrive on patient satisfaction. Your feedback will be crucial at this and any point of the process. For safer, better, and affordable healthcare and reconstructive surgeries.', img: checkAfterTreatment.src },
   ]
 
 

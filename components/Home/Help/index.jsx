@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './index.module.scss'
-import { Container, Typography, } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import imgs from "../../../assets/constants/imgs";
 
 const Help = () => {
@@ -13,8 +13,12 @@ const Help = () => {
     { title: 'Quality Guarantee', desc: "We promise best service and unlimited support; if not, we'll cover the cost of a follow-up procedure or provide a full refund.", img: QualityGuarantee.src },
   ]
 
+
   return (
-    <section id={styles.help} styles={{ paddingTop: '0px', marginTop: '0px' }}>
+    <Box id={styles.help}
+      sx={window.location.pathname === '/' ? { paddingTop: "148px", backgroundColor: '#e7edec4d' } : { paddingTop: "0px", }}
+
+    >
       <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
         <div className={styles.section_container}>
           <div className={styles.sec_title}>
@@ -36,10 +40,11 @@ const Help = () => {
               </div>
             ))}
           </div>
+
         </div>
       </Container>
 
-    </section >
+    </Box >
   )
 }
 

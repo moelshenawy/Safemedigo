@@ -84,6 +84,27 @@ section#patient_stories {
       justify-content: space-between;
       flex-wrap: wrap;
 
+      position: relative;
+
+      .shadow_box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 59px;
+        height: 100%;
+
+        background: transparent
+          linear-gradient(
+            268deg,
+            rgba(238, 245, 245, 1) 0%,
+            rgba(238, 245, 245, 0) 81%,
+            rgba(238, 245, 245, 0) 100%
+          );
+        opacity: 1;
+
+        z-index: 1;
+      }
+
       @media screen and (max-width: 992px) {
         width: 100%;
       }

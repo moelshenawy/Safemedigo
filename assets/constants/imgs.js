@@ -37,6 +37,18 @@ import NavSearch from "../svgs/NavSearch.svg";
 import GetQuote from "../svgs/GetQuote.svg";
 import TravelAssist from "../svgs/TravelAssist.svg";
 
+import checkAfterTreatment from "../svgs/checkAfterTreatment.svg";
+import getInTouch from "../svgs/getInTouch.svg";
+import iDidIt from "../svgs/iDidIt.svg";
+import readyToGo from "../svgs/readyToGo.svg";
+import reaserch from "../svgs/reaserch.svg";
+import safteyTreatment from "../svgs/safteyTreatment.svg";
+
+import youComeFirst from "../svgs/youComeFirst.svg";
+import safeHealthcare from "../svgs/safeHealthcare.svg";
+import allInclusiveCare from "../svgs/allInclusiveCare.svg";
+import stressFreeTreatment from "../svgs/stressFreeTreatment.svg";
+
 import OnGuide from "../svgs/OnGuide.svg";
 import QualityGuarantee from "../svgs/QualityGuarantee.svg";
 import OurSafetyStandards00 from "../svgs/OurSafetyStandards00.svg";
@@ -64,6 +76,18 @@ export default {
   middle,
   left02,
   turky_bg,
+
+  checkAfterTreatment,
+  getInTouch,
+  iDidIt,
+  readyToGo,
+  reaserch,
+  safteyTreatment,
+
+  youComeFirst,
+  safeHealthcare,
+  allInclusiveCare,
+  stressFreeTreatment,
 
   NavSearch,
   notificationsActive,

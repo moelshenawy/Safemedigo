@@ -51,6 +51,8 @@ section#treatment_category {
         display: flex;
         align-items: center;
         // margin-right: 90px;
+        cursor: default;
+        transition: all 0.3s ease;
         @media screen and (max-width: 992px) {
           width: 100%;
         }
@@ -184,6 +186,13 @@ section#treatment_category {
               font-size: 12px;
             }
           }
+        }
+
+        &:hover {
+          background: transparent
+            linear-gradient(270deg, #fafafa 0%, #fafafa00 100%) 0% 0% no-repeat
+            padding-box;
+          border-radius: 22px;
         }
       }
     }

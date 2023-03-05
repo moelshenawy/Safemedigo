@@ -186,6 +186,7 @@ const PatientStories = () => {
 
 
           <div className={styles.slider_container}>
+            <div className={styles.shadow_box} />
 
             <Carousel
               breakPoints={breakPoints}
