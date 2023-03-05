@@ -13,18 +13,40 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { PageHeader, Tags } from './../../components/';
 import { appContext } from "@/context/store";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+
+
+
+
+export async function getServerSideProps(context) {
+  console.log(context.query, "COntext Over hereee")
+
+  const res = await fetch("http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "lang": 'ar',
+      "blogCategoryId": 0,
+      "currentPage": 1
+    })
+  })
+  const data = await res.json()
+
+  return {
+    props: {
+      blogs: data
+    }
+  }
+}
 
 export default function Blogs(props) {
   const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
 
-  const router = useRouter();
 
-  console.log(props)
+  // console.log(props)
 
-  const refreshData = () => {
-    router.replace(router.asPath);
-  }
 
 
   const posts = [
@@ -89,7 +111,6 @@ export default function Blogs(props) {
     },
   ];
 
-  const [blogs, setBlogs] = useState(null)
   useEffect(() => {
 
 
@@ -257,28 +278,7 @@ export default function Blogs(props) {
 };
 
 // Data is in view Page Source (SSR) Great for SEO but every time user Request this page the server has to call an additional api request ,Up to date data
-export async function getServerSideProps() {
-  // console.log(context, "COntext Over hereee")
-  const res = await fetch("http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage", {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      "lang": 'ar',
-      "blogCategoryId": 0,
-      "currentPage": 1
-    })
-  })
-  const data = await res.json()
 
-  return {
-    props: {
-      posts: data
-    }
-  }
-}
 
 
 

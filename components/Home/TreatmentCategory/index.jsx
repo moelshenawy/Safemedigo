@@ -53,9 +53,9 @@ const TreatmentCategory = () => {
               </div>
             ))}
           </div>
-          <div className={styles.btn_contianer}>
+          {/* <div className={styles.btn_contianer}>
             <button>Find Out More</button>
-          </div>
+          </div> */}
         </div>
       </Container>
 
