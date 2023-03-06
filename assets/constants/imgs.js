@@ -60,6 +60,13 @@ import right01 from "../svgs/right01.svg";
 import right02 from "../svgs/right02.svg";
 import middle from "../svgs/middle.svg";
 
+import patientFeedback_img from "../svgs/patientFeedback.svg";
+import clarityConcerning_img from "../svgs/clarityConcerning.svg";
+import firstClassMedical_img from "../svgs/firstClassMedical.svg";
+import modernHealthcare_img from "../svgs/modernHealthcare.svg";
+import reviewedExperts_img from "../svgs/reviewedExperts.svg";
+import treatmentCharges_img from "../svgs/treatmentCharges.svg";
+
 export default {
   logo,
   GetQuote,
@@ -83,6 +90,13 @@ export default {
   readyToGo,
   reaserch,
   safteyTreatment,
+
+  patientFeedback_img,
+  clarityConcerning_img,
+  firstClassMedical_img,
+  modernHealthcare_img,
+  reviewedExperts_img,
+  treatmentCharges_img,
 
   youComeFirst,
   safeHealthcare,

@@ -1,9 +1,8 @@
 import React from 'react'
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { PageHeader } from '@/components';
 import { ContactDetails, Help, WhySafemedigo } from '@/components/Home';
 import imgs from "../../assets/constants/imgs";
-import { motion } from "framer-motion";
 import styles from "./index.module.scss";
 // import '../../styles/'
 
@@ -14,8 +13,8 @@ const AboutUs = () => {
     allInclusiveCare,
     stressFreeTreatment, } = imgs;
 
-  const howItWorksData = [
-    { id: 1, title: 'Safe Healthcare', desc: 'At safemedigo, we aim to ensure patient safety and satisfaction. Be exposed to reliable information on different medical conditions and procedures through our platform; choose from any of the highly evaluated doctors, clinics and hospitals. By being your trusted healthcare assistant, Safemedigo will be right by your side throughout your experience. Get access to quality healthcare.', img: safeHealthcare.src },
+  const aboutUs = [
+    { id: 1, title: 'Safe Healthcare', desc: 'Health Care Is Not Cheap. Quality Health Care Is Even More Expensive, But With Us As Your Entrusted Healthcare Guider, We Will Find You The Most Affordable And Flexible Rate To Your Fondness. We Are Aware With The Many Exploitation Schemes Going On In The Healthcare Provision Field And Would Want Our Patients To Avoid Getting Duped Into Either Paying False Figures Or Getting Below Par Treatment', img: safeHealthcare.src },
 
     { id: 2, title: 'You Come First', desc: 'We have identified the following safety elements to ensure the patient gets the kind of treatment they deserve: Highly reviewed experts, Modern healthcare facilities, First-class medical services, Satisfactory patient feedback, Affordable treatment charges and Clarity concerning all matters.', img: youComeFirst.src },
 
@@ -27,10 +26,10 @@ const AboutUs = () => {
   ]
 
 
-  const SafeHealthcare = howItWorksData.filter((item) => item.title === 'Safe Healthcare')
-  const YouComeFirst = howItWorksData.filter((item) => item.title === 'You Come First')
-  const StressFreeTreatment = howItWorksData.filter((item) => item.title === 'Stress Free Treatment')
-  const AllInclusiveCare = howItWorksData.filter((item) => item.title === 'All Inclusive Care')
+  const SafeHealthcare = aboutUs.filter((item) => item.title === 'Safe Healthcare')
+  const YouComeFirst = aboutUs.filter((item) => item.title === 'You Come First')
+  const StressFreeTreatment = aboutUs.filter((item) => item.title === 'Stress Free Treatment')
+  const AllInclusiveCare = aboutUs.filter((item) => item.title === 'All Inclusive Care')
 
   const doctors = [
     { name: 'Dr Majd Khaled', desc: 'Head Physician & Managing Director, Special Clinic For Plastic Surgery', img: author.src },

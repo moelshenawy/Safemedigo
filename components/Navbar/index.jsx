@@ -95,7 +95,7 @@ const Navbar = (props) => {
       links: [
         {
           title: "Safety Standards",
-          link: "/safety",
+          link: "/safety-standards",
         },
         {
           title: "About Us",
@@ -136,7 +136,7 @@ const Navbar = (props) => {
       menuLink: [
         { title: "About Us", link: "/about-us" },
         { title: "How It Works", link: "/how-it-works" },
-        { title: "Safety Standards", link: "/safety" },
+        { title: "Safety Standards", link: "/safety-standards" },
         { title: "Contact Us", link: "/contact-us" },
       ],
     },
@@ -170,272 +170,270 @@ const Navbar = (props) => {
 
   return (
     <>
-      <React.Fragment>
-        <CssBaseline />
-        <HideOnScroll {...props}>
+      <CssBaseline />
+      <HideOnScroll {...props}>
 
 
-          <AppBar style={{ background: 'transparent' }} >
-            <div className={styles.navbar}>
-              <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-                <Grid
-                  container
-                  alignItems="center"
-                  className={styles.grid__container}
-                >
-                  <Grid item xs={2} sx={2}>
-                    <Link href="/" className={styles.navbar__logo}>
-                      <Box display="flex" alignItems="center">
-                        <img
-                          src={logo.src}
-                          alt="Picture of the author"
-                          width="51.34px"
-                          height="45px"
-                        />
-                        <h1>Safemedigo</h1>
-                      </Box>
-                    </Link>
-                  </Grid>
+        <AppBar style={{ background: 'transparent' }} >
+          <div className={styles.navbar}>
+            <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+              <Grid
+                container
+                alignItems="center"
+                className={styles.grid__container}
+              >
+                <Grid item xs={2} sx={2}>
+                  <Link href="/" className={styles.navbar__logo}>
+                    <Box display="flex" alignItems="center">
+                      <img
+                        src={logo.src}
+                        alt="Picture of the author"
+                        width="51.34px"
+                        height="45px"
+                      />
+                      <h1>Safemedigo</h1>
+                    </Box>
+                  </Link>
+                </Grid>
 
-                  <Grid item xs={10} className={styles.navbar__links}>
-                    <Box>
-                      <Box className={styles.links__container}>
-                        <div className={styles.links}>
-                          <ul>
-                            {navbarLinks.map((link, index) => (
-                              // ${styles.active}
-                              <li
-                                key={index}
-                                className={`${styles.link__item} ${styles.active}`}
-                              >
-                                <Link href={`${link.link}`}>{link.title}</Link>
+                <Grid item xs={10} className={styles.navbar__links}>
+                  <Box>
+                    <Box className={styles.links__container}>
+                      <div className={styles.links}>
+                        <ul>
+                          {navbarLinks.map((link, index) => (
+                            // ${styles.active}
+                            <li
+                              key={index}
+                              className={`${styles.link__item} ${styles.active}`}
+                            >
+                              <Link href={`${link.link}`}>{link.title}</Link>
 
-                                {link.menuLink != null &&
-                                  <div className={styles.menuLinks__container}>
-                                    <ul
-                                    >
-                                      {link.menuLink.map((links, index) => (
-                                        <li
-                                          key={index}>
-                                          <Link href={`${links.link}`}>
-                                            {links.title}
-                                          </Link>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                }
+                              {link.menuLink != null &&
+                                <div className={styles.menuLinks__container}>
+                                  <ul
+                                  >
+                                    {link.menuLink.map((links, index) => (
+                                      <li
+                                        key={index}>
+                                        <Link href={`${links.link}`}>
+                                          {links.title}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              }
 
 
 
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-                        <div className={styles.auth_methods}>
-                          <div className={styles.search_btn}>
-                            <Link href="/search">
-                              <div className={styles.icon_container}>
-                                <img
-                                  src={NavSearch.src}
-                                  alt="Picture of the author"
-                                  width="18.89px"
-                                  height="19px"
-                                />
-                              </div>
-                              <button>Search</button>
-                            </Link>
-                          </div>
-
-                          <div className={styles.lang}>
-                            <div className={styles.img_container}>
-                              <img
-                                src={en.src}
-                                alt="Picture of the author"
-                                width="20.7px"
-                                height="12.88px"
-                              />
-                            </div>
-
-                            <div className={styles.lang_type}>
-                              <span>EN</span>
-                            </div>
-
+                      <div className={styles.auth_methods}>
+                        <div className={styles.search_btn}>
+                          <Link href="/search">
                             <div className={styles.icon_container}>
                               <img
-                                src={arrowDown.src}
+                                src={NavSearch.src}
                                 alt="Picture of the author"
-                                width="14.84px"
-                                height="8.49px"
+                                width="18.89px"
+                                height="19px"
                               />
                             </div>
+                            <button>Search</button>
+                          </Link>
+                        </div>
+
+                        <div className={styles.lang}>
+                          <div className={styles.img_container}>
+                            <img
+                              src={en.src}
+                              alt="Picture of the author"
+                              width="20.7px"
+                              height="12.88px"
+                            />
                           </div>
 
+                          <div className={styles.lang_type}>
+                            <span>EN</span>
+                          </div>
 
-
-                          <div className={styles.login_btn}>
-                            <Link href="/login">
-                              <div className={styles.icon_container}>
-                                <img
-                                  src={user.src}
-                                  alt="Picture of the author"
-                                  width="18.13px"
-                                  height="19.5px"
-                                />
-                              </div>
-                              <button>Sign In</button>
-                            </Link>
+                          <div className={styles.icon_container}>
+                            <img
+                              src={arrowDown.src}
+                              alt="Picture of the author"
+                              width="14.84px"
+                              height="8.49px"
+                            />
                           </div>
                         </div>
-                      </Box>
+
+
+
+                        <div className={styles.login_btn}>
+                          <Link href="/login">
+                            <div className={styles.icon_container}>
+                              <img
+                                src={user.src}
+                                alt="Picture of the author"
+                                width="18.13px"
+                                height="19.5px"
+                              />
+                            </div>
+                            <button>Sign In</button>
+                          </Link>
+                        </div>
+                      </div>
                     </Box>
-                  </Grid>
+                  </Box>
+                </Grid>
 
-                  <div className={styles.icons_container} ref={menuRef}>
-                    <Link href={'/search'} className={styles.search} >
-                      <div className={styles.icon_container}>
-                        <img src={search.src} alt="" />
-                      </div>
-                    </Link>
-
-                    <div className={styles.notifications} >
-                      <div className={styles.icon_container}>
-                        <img src={notificationsActive.src} alt="" />
-                        <div className={styles.notify} />
-                      </div>
+                <div className={styles.icons_container} ref={menuRef}>
+                  <Link href={'/search'} className={styles.search} >
+                    <div className={styles.icon_container}>
+                      <img src={search.src} alt="" />
                     </div>
+                  </Link>
 
-                    <div className={styles.menu} onClick={() => setShowMenu(true)}>
-                      <div className={styles.icon_container}>
-                        <img src={burger.src} alt="" />
-                      </div>
+                  <div className={styles.notifications} >
+                    <div className={styles.icon_container}>
+                      <img src={notificationsActive.src} alt="" />
+                      <div className={styles.notify} />
                     </div>
+                  </div>
+
+                  <div className={styles.menu} onClick={() => setShowMenu(true)}>
+                    <div className={styles.icon_container}>
+                      <img src={burger.src} alt="" />
+                    </div>
+                  </div>
 
 
-                    {showMenu && (
-                      <motion.div
-                        animate={{ x: [300, 0] }}
-                        transition={{ duration: 0.85, ease: "easeOut" }}
-                        className={styles.side_bar}
-                      >
-                        <div className={styles.side_bar_container}>
-                          <div
-                            className={styles.close}
-                            onClick={() => setShowMenu(false)}
-                          >
-                            <CloseIcon />
-                          </div>
-                          <div className={styles.links_container}>
-                            <Link className="link" href="/login">
-                              <div className={styles.icon_container}>
-                                <PersonRoundedIcon />
+                  {showMenu && (
+                    <motion.div
+                      animate={{ x: [300, 0] }}
+                      transition={{ duration: 0.85, ease: "easeOut" }}
+                      className={styles.side_bar}
+                    >
+                      <div className={styles.side_bar_container}>
+                        <div
+                          className={styles.close}
+                          onClick={() => setShowMenu(false)}
+                        >
+                          <CloseIcon />
+                        </div>
+                        <div className={styles.links_container}>
+                          <Link className="link" href="/login">
+                            <div className={styles.icon_container}>
+                              <PersonRoundedIcon />
+                            </div>
+                            <div className={styles.btn_container}>
+                              <Typography>Sign In</Typography>
+                            </div>
+                          </Link>
+
+                          <div className={styles.categories_container}>
+                            <div className={styles.category}>
+                              <div className={styles.title}>
+                                <Typography variant="h4">
+                                  <a href={menuLniks[0].cateLink}>
+                                    {menuLniks[0].category}
+                                  </a>
+                                </Typography>
                               </div>
-                              <div className={styles.btn_container}>
-                                <Typography>Sign In</Typography>
-                              </div>
-                            </Link>
-
-                            <div className={styles.categories_container}>
-                              <div className={styles.category}>
-                                <div className={styles.title}>
-                                  <Typography variant="h4">
-                                    <a href={menuLniks[0].cateLink}>
-                                      {menuLniks[0].category}
+                              <div className={styles.category_links}>
+                                {menuLniks[0].links.map((link, idx) => (
+                                  <>
+                                    <a
+                                      className={
+                                        window.location.pathname === link.link &&
+                                        styles.active
+                                      }
+                                      key={idx}
+                                      href={link.link}
+                                    >
+                                      {link.title}
                                     </a>
-                                  </Typography>
+                                  </>
+                                ))}
+
+                                <div className={styles.special_links}>
+                                  <a href="/reveiw">Start Your Review
+                                    <HiArrowSmRight />
+                                  </a>
+                                  <a href="q&a">Ask A Doctor
+                                    <HiArrowSmRight />
+                                  </a>
                                 </div>
-                                <div className={styles.category_links}>
-                                  {menuLniks[0].links.map((link, idx) => (
+
+                                <Box className={styles.lang} display='flex'>
+                                  <div className={styles.img_container}>
+                                    <img
+                                      src={en.src}
+                                      alt="Picture of the author"
+                                      width="20.7px"
+                                      height="12.88px"
+                                    />
+                                  </div>
+                                  <div className={styles.lang_type}>
+                                    <span>EN</span>
+                                  </div>
+
+                                  <div className={styles.icon_container}>
+                                    <BiChevronDown />
+                                  </div>
+                                </Box>
+
+
+                              </div>
+                              <div className={`${styles.title}`} onClick={() => setShowMenuLinks((prev) => !prev)}>
+                                <Typography variant="h4">
+                                  {menuLniks[1].category}
+                                </Typography>
+                                <div className={`${styles.icon_container} ${showMenuLinks && styles.active}`} >
+                                  <ExpandMoreOutlinedIcon color="red" />
+                                </div>
+                              </div>
+                              {showMenuLinks &&
+                                <motion.div
+                                  animate={{
+                                    y: [-40, 0],
+                                    opacity: 1
+                                  }}
+                                  transition={{ duration: 0.80, ease: "easeOut" }}
+
+
+                                  initial={{ opacity: 0 }}
+
+                                  className={styles.category_links}>
+                                  {menuLniks[1].links.map((link, idx) => (
                                     <>
-                                      <a
-                                        className={
-                                          window.location.pathname === link.link &&
-                                          styles.active
-                                        }
-                                        key={idx}
-                                        href={link.link}
-                                      >
+                                      <a key={idx} href={link.link}>
                                         {link.title}
                                       </a>
                                     </>
                                   ))}
+                                </motion.div>
 
-                                  <div className={styles.special_links}>
-                                    <a href="/reveiw">Start Your Review
-                                      <HiArrowSmRight />
-                                    </a>
-                                    <a href="q&a">Ask A Doctor
-                                      <HiArrowSmRight />
-                                    </a>
-                                  </div>
-
-                                  <Box className={styles.lang} display='flex'>
-                                    <div className={styles.img_container}>
-                                      <img
-                                        src={en.src}
-                                        alt="Picture of the author"
-                                        width="20.7px"
-                                        height="12.88px"
-                                      />
-                                    </div>
-                                    <div className={styles.lang_type}>
-                                      <span>EN</span>
-                                    </div>
-
-                                    <div className={styles.icon_container}>
-                                      <BiChevronDown />
-                                    </div>
-                                  </Box>
-
-
-                                </div>
-                                <div className={`${styles.title}`} onClick={() => setShowMenuLinks((prev) => !prev)}>
-                                  <Typography variant="h4">
-                                    {menuLniks[1].category}
-                                  </Typography>
-                                  <div className={`${styles.icon_container} ${showMenuLinks && styles.active}`} >
-                                    <ExpandMoreOutlinedIcon color="red" />
-                                  </div>
-                                </div>
-                                {showMenuLinks &&
-                                  <motion.div
-                                    animate={{
-                                      y: [-40, 0],
-                                      opacity: 1
-                                    }}
-                                    transition={{ duration: 0.80, ease: "easeOut" }}
-
-
-                                    initial={{ opacity: 0 }}
-
-                                    className={styles.category_links}>
-                                    {menuLniks[1].links.map((link, idx) => (
-                                      <>
-                                        <a key={idx} href={link.link}>
-                                          {link.title}
-                                        </a>
-                                      </>
-                                    ))}
-                                  </motion.div>
-
-                                }
-                              </div>
+                              }
                             </div>
                           </div>
                         </div>
-                      </motion.div>
-                    )}
-                  </div>
-                </Grid>
-              </Container>
-            </div>
-          </AppBar>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+              </Grid>
+            </Container>
+          </div>
+        </AppBar>
 
-        </HideOnScroll>
-        <Toolbar />
+      </HideOnScroll>
+      <Toolbar />
 
-      </React.Fragment>
 
 
 
@@ -453,8 +451,12 @@ const Navbar = (props) => {
             {pathname === '/how-it-works' &&
               <h2>Home / How It Works</h2>
             }
+
             {pathname === '/about-us' &&
               <h2>Home / About Us</h2>
+            }
+            {pathname === '/safety-standards' &&
+              <h2>Home / Safety Standards</h2>
             }
           </Container>
         </nav>

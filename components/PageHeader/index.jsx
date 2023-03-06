@@ -23,8 +23,6 @@ const PageHeader = () => {
                 <Typography variant='h4'>Home</Typography>
               }
 
-
-
               {pathname.includes('/blogs/') &&
                 <Typography variant='h4' >
                   acibadem Hospital (blog category)
@@ -57,6 +55,13 @@ const PageHeader = () => {
                 <>
                   <Typography variant='h4'>About Us</Typography>
                   <Typography variant='h2'>We are your preferred healthcare partner. Get one on one assistance before, during and after your medical journey. Sourcing information on medical care has been simplified to give you a better experience.</Typography>
+                </>
+              }
+
+              {pathname === '/safety-standards' &&
+                <>
+                  <Typography variant='h4'>Safety Standards</Typography>
+                  <Typography variant='h2'>We strictly work with healthcare facilities which are fully compliant with the international health providers standards. A step by step vetting process is conducted every year by our experienced team.</Typography>
                 </>
               }
 
