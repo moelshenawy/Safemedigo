@@ -222,7 +222,7 @@ footer#footer {
 
   position: fixed;
   bottom: 0px;
-  z-index: 99;
+  z-index: -1;
 
   .patient {
     .img_container {

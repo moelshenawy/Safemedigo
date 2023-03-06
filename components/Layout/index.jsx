@@ -17,7 +17,8 @@ export default function Layout({ children }) {
           <main>{children}</main>
           <Footer />
         </> : <>
-          <main>{children}</main>
+          <main>{children}
+          </main>
         </>
 
       }
