@@ -88,15 +88,13 @@ section#patient_stories {
 
       .shadow_box {
         position: absolute;
-        top: 0;
-        right: -1px;
-        width: 104px;
+        top: 0px;
+        right: 0px;
+        width: 36px;
         height: 100%;
-        background: transparent
-          linear-gradient(268deg, #eef5f5 0%, #eef5f500 81%, #eef5f500 100%) 0%
-          0%;
         opacity: 1;
         z-index: 1;
+        box-shadow: inset -20px 0px 12px 0px #ffffff;
       }
 
       @media screen and (max-width: 992px) {
