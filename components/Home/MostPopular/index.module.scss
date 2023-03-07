@@ -200,19 +200,17 @@ section#most_popular {
           .shadow_box {
             position: absolute;
             top: 0;
-            right: 0;
-            width: 59px;
+            right: -1px;
+            width: 104px;
             height: 100%;
-
             background: transparent
               linear-gradient(
                 268deg,
-                rgba(238, 245, 245, 1) 0%,
+                rgb(238, 245, 245) 0%,
                 rgba(238, 245, 245, 0) 81%,
                 rgba(238, 245, 245, 0) 100%
               );
             opacity: 1;
-
             z-index: 1;
           }
 
