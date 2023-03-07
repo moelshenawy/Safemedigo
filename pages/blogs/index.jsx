@@ -15,6 +15,8 @@ import { appContext } from "@/context/store";
 import { useEffect, useState } from "react";
 
 
+import Pagination from '@mui/material/Pagination';
+import PaginationItem from '@mui/material/PaginationItem';
 
 
 export async function getServerSideProps(context) {
@@ -42,7 +44,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function Blogs(props) {
-  const { post0, post1, post2, post3, post4, post5, author, design } = imgs;
+  const { post0, post1, post2, post3, post4, post5, author } = imgs;
 
 
   // console.log(props)
@@ -177,6 +179,9 @@ export default function Blogs(props) {
 
 
   }, [])
+
+
+
   return (
     <>
       <Head>
@@ -264,6 +269,21 @@ export default function Blogs(props) {
                   </Link>
                 </>
               ))}
+            </div>
+
+            <div className="pagination">
+              {/* <Pagination
+                page={1}
+                count={10}
+                renderItem={(item) => (
+                  <PaginationItem
+                    component={Link}
+                    to={`/inbox${item.page === 1 ? '' : `?page=${item.page}`}`}
+                    {...item}
+                  />
+                )}
+              /> */}
+
             </div>
           </Container>
         </section>

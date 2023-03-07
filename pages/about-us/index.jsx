@@ -11,14 +11,19 @@ const AboutUs = () => {
   const { author, youComeFirst,
     safeHealthcare,
     allInclusiveCare,
-    stressFreeTreatment, } = imgs;
+    stressFreeTreatment,
+
+    dash_aboutus_1,
+    dash_aboutus_2,
+    dash_aboutus_3,
+  } = imgs;
 
   const aboutUs = [
-    { id: 1, title: 'Safe Healthcare', desc: 'Health Care Is Not Cheap. Quality Health Care Is Even More Expensive, But With Us As Your Entrusted Healthcare Guider, We Will Find You The Most Affordable And Flexible Rate To Your Fondness. We Are Aware With The Many Exploitation Schemes Going On In The Healthcare Provision Field And Would Want Our Patients To Avoid Getting Duped Into Either Paying False Figures Or Getting Below Par Treatment', img: safeHealthcare.src },
+    { id: 1, title: 'Safe Healthcare', desc: 'Health Care Is Not Cheap. Quality Health Care Is Even More Expensive, But With Us As Your Entrusted Healthcare Guider, We Will Find You The Most Affordable And Flexible Rate To Your Fondness. We Are Aware With The Many Exploitation Schemes Going On In The Healthcare Provision Field And Would Want Our Patients To Avoid Getting Duped Into Either Paying False Figures Or Getting Below Par Treatment', img: safeHealthcare.src, icon: dash_aboutus_1.src },
 
-    { id: 2, title: 'You Come First', desc: 'We have identified the following safety elements to ensure the patient gets the kind of treatment they deserve: Highly reviewed experts, Modern healthcare facilities, First-class medical services, Satisfactory patient feedback, Affordable treatment charges and Clarity concerning all matters.', img: youComeFirst.src },
+    { id: 2, title: 'You Come First', desc: 'We have identified the following safety elements to ensure the patient gets the kind of treatment they deserve: Highly reviewed experts, Modern healthcare facilities, First-class medical services, Satisfactory patient feedback, Affordable treatment charges and Clarity concerning all matters.', img: youComeFirst.src, icon: dash_aboutus_2.src },
 
-    { id: 3, title: 'Stress Free Treatment', desc: 'When it comes to treatment, Safemedigo representatives strive to get you a specified fit establishment that allows you to be in your comfort zone. Safemedigo works round the clock to get timely treatment appointments for the patient; they`ll be given full decision-making authority. All in all, we will pave way for you to access the highest quality healthcare available that suits all your specifications from resources, comfort, appointment schedules, location, just to mention a few.', img: stressFreeTreatment.src },
+    { id: 3, title: 'Stress Free Treatment', desc: 'When it comes to treatment, Safemedigo representatives strive to get you a specified fit establishment that allows you to be in your comfort zone. Safemedigo works round the clock to get timely treatment appointments for the patient; they`ll be given full decision-making authority. All in all, we will pave way for you to access the highest quality healthcare available that suits all your specifications from resources, comfort, appointment schedules, location, just to mention a few.', img: stressFreeTreatment.src, icon: dash_aboutus_3.src },
 
     { id: 4, title: 'All Inclusive Care', desc: 'Our service will leave the patient with a personal feel as we will not abandon them halfway. Get all your medical information without the hustle and at no cost. Count on us for full board support that will cover all your medical needs under one umbrella, the Safemedigo umbrella.', img: allInclusiveCare.src },
 
@@ -80,6 +85,10 @@ const AboutUs = () => {
 
               <div className={styles.img_container}>
                 <img src={SafeHealthcare[0].img} alt="" />
+                <div className={styles.icon_container}>
+                  <img src={SafeHealthcare[0].icon} alt="" />
+
+                </div>
               </div>
             </div>
 
@@ -98,6 +107,10 @@ const AboutUs = () => {
               </div>
               <div className={styles.img_container}>
                 <img src={YouComeFirst[0].img} alt="" />
+                <div className={styles.icon_container}>
+                  <img src={YouComeFirst[0].icon} alt="" />
+
+                </div>
               </div>
             </div>
 
@@ -116,6 +129,10 @@ const AboutUs = () => {
               </div>
               <div className={styles.img_container}>
                 <img src={StressFreeTreatment[0].img} alt="" />
+                <div className={styles.icon_container}>
+                  <img src={StressFreeTreatment[0].icon} alt="" />
+
+                </div>
               </div>
             </div>
 

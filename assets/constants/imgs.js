@@ -67,6 +67,22 @@ import modernHealthcare_img from "../svgs/modernHealthcare.svg";
 import reviewedExperts_img from "../svgs/reviewedExperts.svg";
 import treatmentCharges_img from "../svgs/treatmentCharges.svg";
 
+import dash_1 from "../svgs/how_it_work_dashed/1.svg";
+import dash_2 from "../svgs/how_it_work_dashed/2.svg";
+import dash_3 from "../svgs/how_it_work_dashed/3.svg";
+import dash_4 from "../svgs/how_it_work_dashed/4.svg";
+import dash_5 from "../svgs/how_it_work_dashed/5.svg";
+
+import dash_aboutus_1 from "../svgs/about_us_dashed/1.svg";
+import dash_aboutus_2 from "../svgs/about_us_dashed/2.svg";
+import dash_aboutus_3 from "../svgs/about_us_dashed/3.svg";
+
+import dash_safety_1 from "../svgs/safety_standards_dashed/1.svg";
+import dash_safety_2 from "../svgs/safety_standards_dashed/2.svg";
+import dash_safety_3 from "../svgs/safety_standards_dashed/3.svg";
+import dash_safety_4 from "../svgs/safety_standards_dashed/4.svg";
+import dash_safety_5 from "../svgs/safety_standards_dashed/5.svg";
+
 export default {
   logo,
   GetQuote,
@@ -83,6 +99,22 @@ export default {
   middle,
   left02,
   turky_bg,
+
+  dash_1,
+  dash_2,
+  dash_3,
+  dash_4,
+  dash_5,
+
+  dash_safety_1,
+  dash_safety_2,
+  dash_safety_3,
+  dash_safety_4,
+  dash_safety_5,
+
+  dash_aboutus_1,
+  dash_aboutus_2,
+  dash_aboutus_3,
 
   checkAfterTreatment,
   getInTouch,

@@ -1,6 +1,6 @@
 #how_it_works {
   // margin-top: 56px;
-  background: #fafafa;
+  // background: #fafafa;
   padding-bottom: 56px;
 
   .boxes_container {
@@ -15,11 +15,11 @@
     .CheckAfterTreatmen,
     .IDidIt {
       display: flex;
-      max-width: 902px;
-      align-items: flex-start;
+      max-width: 995px;
+      align-items: center;
       justify-content: center;
 
-      margin-top: 95px;
+      margin-top: 108px;
 
       .text_container {
         .title {
@@ -67,8 +67,8 @@
       }
 
       .img_container {
-        width: 315.91px;
-        height: 212px;
+        width: 301.86px;
+        height: 202.08px;
         img {
           // width: 100%;
           // height: 100%;
@@ -81,9 +81,13 @@
     .IDidIt {
       flex-direction: row-reverse;
 
-      justify-content: space-between;
+      justify-content: flex-start;
+      max-width: 100%;
+      width: 100%;
+
       .text_container {
-        margin-left: 50px;
+        margin-left: 90px;
+        width: 506px;
       }
     }
 
@@ -91,7 +95,72 @@
     .ReadyToGo,
     .CheckAfterTreatmen {
       .text_container {
-        margin-right: 50px;
+        margin-right: 90px;
+      }
+
+      .desc {
+        width: 500px;
+      }
+    }
+
+    .research {
+      .img_container {
+        position: relative;
+        .icon_container {
+          position: absolute;
+          bottom: -211px;
+          left: -259px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .GetInTouch {
+      .img_container {
+        position: relative;
+        .icon_container {
+          position: absolute;
+          bottom: -246px;
+          left: 228px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .ReadyToGo {
+      .img_container {
+        position: relative;
+        .icon_container {
+          position: absolute;
+          bottom: -182px;
+          left: -266px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .SafetyTreatment {
+      .img_container {
+        position: relative;
+        .icon_container {
+          transform: rotate(180deg);
+          position: absolute;
+          bottom: -192px;
+          left: 284px;
+          z-index: -1;
+        }
+      }
+    }
+    .CheckAfterTreatmen {
+      .img_container {
+        position: relative;
+        .icon_container {
+          transform: rotate(180deg);
+          position: absolute;
+          bottom: -231px;
+          left: -324px;
+          z-index: -1;
+        }
       }
     }
   }

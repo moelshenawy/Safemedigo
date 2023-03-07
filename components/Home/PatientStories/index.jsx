@@ -14,7 +14,7 @@ const PatientStories = () => {
     { width: 1, pagination: true, showArrows: false },
     { width: 300, pagination: true, showArrows: false, itemsToShow: 1.0, itemsToScroll: 1.0 },
     { width: 400, pagination: false, itemsToShow: 1, itemsToScroll: 1, showArrows: false },
-    { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 2.5, transitionMs: 1000 },
+    { width: 800, pagination: false, itemsToShow: 2.5, itemsToScroll: 1, transitionMs: 1000 },
 
   ])
 
