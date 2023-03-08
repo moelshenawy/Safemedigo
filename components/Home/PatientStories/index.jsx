@@ -161,8 +161,8 @@ const PatientStories = () => {
 
   return (
     <section id={styles.patient_stories}>
-      <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
-        <div className={styles.section_container}>
+      <div className={styles.section_container}>
+        <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
 
           <div className={styles.text_container}>
             <div className={styles.title}>
@@ -183,7 +183,10 @@ const PatientStories = () => {
             </div>
           </div>
 
+        </Container>
 
+
+        <Container className='mycontainer' sx={{ maxWidth: '1239px', paddingLeft: { sm: "0px", md: "0px" }, }} maxWidth={false}  >
 
           <div className={styles.slider_container}>
             <div className={styles.shadow_box} />
@@ -235,9 +238,9 @@ const PatientStories = () => {
             </Carousel>
 
           </div>
+        </Container>
 
-        </div>
-      </Container>
+      </div>
 
     </section >
   )
