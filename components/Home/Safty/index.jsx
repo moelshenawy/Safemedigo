@@ -9,7 +9,7 @@ const Safty = () => {
   const { OurSafetyStandards00, OurSafterStanders01, left01,
     right01,
     right02,
-    middle, left02, } = imgs;
+    middle, left02, OurSafetyStandards002 } = imgs;
 
   return (
     <section id={styles.safty}>
@@ -49,6 +49,10 @@ const Safty = () => {
               <div className={styles.images_container}>
                 <img src={OurSafterStanders01.src} className={styles.logo} alt="" />
                 <img src={OurSafetyStandards00.src} className={styles.ground} alt="" />
+
+                <div className="hovered">
+                  <img src={OurSafetyStandards002.src} alt="" />
+                </div>
               </div>
 
 

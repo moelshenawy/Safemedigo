@@ -67,6 +67,8 @@ import modernHealthcare_img from "../svgs/modernHealthcare.svg";
 import reviewedExperts_img from "../svgs/reviewedExperts.svg";
 import treatmentCharges_img from "../svgs/treatmentCharges.svg";
 
+import OurSafetyStandards002 from "../svgs/OurSafetyStandards002.svg";
+
 import dash_1 from "../svgs/how_it_work_dashed/1.svg";
 import dash_2 from "../svgs/how_it_work_dashed/2.svg";
 import dash_3 from "../svgs/how_it_work_dashed/3.svg";
@@ -253,6 +255,7 @@ export default {
   Urology,
   Weight_Loss,
 
+  OurSafetyStandards002,
   Allergy_And_Immunology_1,
   Alternative_1,
   Anesthesiology_And_Reanimation_1,
