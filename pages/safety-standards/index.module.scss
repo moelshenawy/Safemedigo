@@ -1,6 +1,6 @@
 #safetyStandards {
   // margin-top: 56px;
-  // background: #fafafa;
+  background: #fafafa;
   padding-bottom: 90px;
 
   .boxes_container {
@@ -93,72 +93,6 @@
       align-self: flex-end;
       .text_container {
         // margin-right: 65px;
-      }
-    }
-
-    .reviewedExperts {
-      .img_container {
-        position: relative;
-
-        .icon_container {
-          position: absolute;
-          bottom: -211px;
-          left: -402px;
-          z-index: -1;
-        }
-      }
-    }
-
-    .modernHealthcare {
-      .img_container {
-        position: relative;
-
-        .icon_container {
-          transform: rotate(344deg);
-          position: absolute;
-          bottom: -365px;
-          right: -354px;
-          z-index: -1;
-        }
-      }
-    }
-
-    .firstClassMedicalServices {
-      .img_container {
-        position: relative;
-
-        .icon_container {
-          position: absolute;
-          bottom: -269px;
-          left: -363px;
-          z-index: -1;
-        }
-      }
-    }
-
-    .patientFeedback {
-      .img_container {
-        position: relative;
-
-        .icon_container {
-          position: absolute;
-          bottom: -445px;
-          right: -428px;
-          z-index: -1;
-        }
-      }
-    }
-
-    .treatmentCharges {
-      .img_container {
-        position: relative;
-
-        .icon_container {
-          position: absolute;
-          bottom: -343px;
-          left: -345px;
-          z-index: -1;
-        }
       }
     }
   }

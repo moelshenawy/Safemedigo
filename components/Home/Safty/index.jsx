@@ -9,10 +9,11 @@ const Safty = () => {
   const { OurSafetyStandards00, OurSafterStanders01, left01,
     right01,
     right02,
-    middle, left02 } = imgs;
+    middle, left02, } = imgs;
 
   return (
     <section id={styles.safty}>
+
       <Container sx={{ maxWidth: '1239px' }} maxWidth={false}>
         <div className={styles.section_container}>
           <div className={styles.title}>
@@ -26,6 +27,7 @@ const Safty = () => {
 
 
           <div className={styles.content}>
+
 
 
             <div className={styles.text_container}>

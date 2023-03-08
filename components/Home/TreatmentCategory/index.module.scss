@@ -53,6 +53,7 @@ section#treatment_category {
         // margin-right: 90px;
         cursor: default;
         transition: all 0.3s ease;
+        cursor: pointer;
         @media screen and (max-width: 992px) {
           width: 100%;
         }
@@ -78,93 +79,29 @@ section#treatment_category {
           transition: all 0.3s ease;
           border: none;
           margin-right: 16px;
+          transition: all 0.3s ease;
+
           @media screen and (max-width: 992px) {
             width: 50px;
             height: 50px;
           }
-
-          &:hover {
-            border: 1px solid var(--main-green-color);
+          .default_icon,
+          .hovered_icon {
+            width: 87px;
+            height: 87px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            margin-right: 16px;
             transition: all 0.3s ease;
-
-            svg {
-              g {
-                &:last-child {
-                  path {
-                    &:last-child {
-                      fill: var(--sec-white-color) !important;
-                    }
-                    &:nth-child(2) {
-                      fill: var(--main-green-color);
-                    }
-                  }
-                }
-
-                &:first-child {
-                  background-color: red;
-                }
-                fill: var(--main-green-color);
-                path {
-                  fill: var(--sec-white-color);
-                  &:first-child {
-                    fill: var(--sec-white-color);
-                  }
-
-                  &:last-child {
-                    // fill: var(--sec-cyan-color);
-                  }
-                }
-              }
-            }
-
-            svg[data-name="LaserEyeSurgery"] {
-              g[data-name="LaserEyeSurgery"] {
-                g {
-                  &:last-child {
-                    path {
-                      fill: var(--main-green-color) !important;
-                      &:last-child {
-                        fill: var(--sec-white-color) !important;
-                      }
-                    }
-
-                    g {
-                      g {
-                        path {
-                          &:last-child {
-                            fill: var(--main-green-color) !important;
-                          }
-                        }
-                      }
-                    }
-
-                    path {
-                      // fill: red !important;
-                    }
-                  }
-                }
-              }
-
-              path {
-                fill: var(--sec-white-color) !important;
-              }
-            }
+            opacity: 1;
           }
 
-          svg {
-            width: 100%;
-            height: 100%;
-
-            g {
-              path {
-                // fill: white;
-                &:first-child {
-                }
-
-                &:last-child {
-                }
-              }
-            }
+          .hovered_icon {
+            display: none;
+            transition: all 0.3s ease;
+            opacity: 0;
           }
         }
 
@@ -176,7 +113,7 @@ section#treatment_category {
           }
 
           h6 {
-            font-size: 18px;
+            font-size: 21px;
             color: var(--main-dark-color);
 
             font-weight: var(--font-bold);
@@ -193,6 +130,16 @@ section#treatment_category {
             linear-gradient(270deg, #fafafa 0%, #fafafa00 100%) 0% 0% no-repeat
             padding-box;
           border-radius: 22px;
+          .default_icon {
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+          .hovered_icon {
+            transition: all 0.3s ease;
+            opacity: 1;
+            display: block;
+          }
         }
       }
     }

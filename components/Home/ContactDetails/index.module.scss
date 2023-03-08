@@ -33,7 +33,7 @@
       }
       .title {
         h3 {
-          font-size: 28px;
+          font-size: 27px;
           color: var(--main-dark-color);
           letter-spacing: 0;
 
@@ -97,6 +97,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              transition: all 0.3s ease;
 
               border-radius: 5px;
               background-color: var(--main-green-color);
@@ -239,11 +240,10 @@
       .address {
         p {
           margin-top: 20px;
-
           font-weight: var(--font-medium);
           font-family: var(--open-sans-font);
-
           color: var(--main-dark-color);
+          font-size: 16px;
 
           @media screen and (max-width: 992px) {
             margin-bottom: 0px;

@@ -109,9 +109,9 @@ const ContactDetails = () => {
             <div className={styles.address}>
               <Typography>Address</Typography>
 
-              <Typography>Fulya, Öztürk Sk. <br />
-                Sima Apartmanı, No 4B, 3Rd Floor, Office N10 <br />
-                34394 Şişli/İstanbul</Typography>
+              <Typography>Fulya, Öztürk Sk.
+                Sima Apartmanı, No 4B, 3Rd Floor, Office N10
+                34394 <br /> Şişli/İstanbul</Typography>
             </div>
           </div>
         </div>
