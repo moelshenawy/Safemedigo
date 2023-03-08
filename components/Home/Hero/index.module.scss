@@ -174,7 +174,7 @@ section#hero {
 
         @media screen and (max-width: 992px) {
           width: 333px;
-          padding-bottom: 11px;
+          padding-bottom: 19px;
           padding-right: 15px;
           padding-left: 29px;
           padding-top: 19px;
@@ -282,8 +282,8 @@ section#hero {
 
             @media screen and (max-width: 992px) {
               font-size: 15px;
-              -webkit-line-clamp: 3;
-              -webkit-line-clamp: 3;
+              -webkit-line-clamp: 2;
+              -webkit-line-clamp: 2;
             }
           }
         }

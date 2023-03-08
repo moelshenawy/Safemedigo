@@ -57,22 +57,25 @@ const Search = () => {
           </div>
         </Container>
 
-
-        <Carousel breakPoints={breakPoints}
-          pagination={false}
-          showArrows={false}
-          itemsToScroll={1}
-        >
-          {tags.map((tag, index) => (
-            <Link href='/' key={index}>
-              <button>
-                {tag.tag}
-              </button>
-            </Link>
-          ))}
+        <Container className='mycontainer' sx={{ maxWidth: '1239px', }} maxWidth={false}  >
 
 
-        </Carousel>
+          <Carousel breakPoints={breakPoints}
+            pagination={false}
+            showArrows={false}
+            itemsToScroll={1}
+          >
+            {tags.map((tag, index) => (
+              <Link href='/' key={index}>
+                <button>
+                  {tag.tag}
+                </button>
+              </Link>
+            ))}
+
+
+          </Carousel>
+        </Container>
 
       </div>
     </div>
@@ -83,3 +86,6 @@ export default Search
 
 
 
+{/* <Container className='mycontainer' sx={{ maxWidth: '1239px', paddingLeft: { sm: "0px", md: "0px" }, }} maxWidth={false}  >
+
+</Container> */}

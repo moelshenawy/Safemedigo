@@ -28,53 +28,25 @@ const TreatmentCategory = () => {
 
 
 
-    Allergy_And_Immunology_1,
     Alternative_1,
-    Anesthesiology_And_Reanimation_1,
     Bone_Marrow_1,
     Cardiology_1,
-    Cardiovascular_Surgery_1,
-    Coronary_Intensive_Care_Unit_1,
     Dentistry_1,
-    Dermatology_1,
     Dont_See_What_1,
-    Endocrinology_And_Metabolism_Diseases_1,
-    ENT_Otolaryngology_1,
-    Gastroenterology_And_Hepatology_1,
-    General_Surgery_1,
-    Gynecology_And_Obstetrics_1,
     Hair_Transplant_1,
-    Hematology_1,
-    Infectious_Diseases_1,
-    Internal_Medicine_1,
     Ivf_ICSI_1,
-    Knee_1,
-    Language_And_Speech_Therapy_1,
     Laser_Eye_Surgery_1,
     Lung_1,
     Medical_Check_1,
-    Nephrology_1,
     Neurology_1,
-    Neurosurgery_1,
-    Nuclear_Medicine_And_Molecular_Imaging_1,
-    Nutritionist_1,
     Oncology_Surgeries_1,
-    Organ_Transplantation_1,
     Orthopedics_1,
-    Pain_Clinic_Algology_1,
-    Pediatrics_Surgeries_1,
+
     Pediatrics_1,
     Plastic_Surgeries_1,
-    Psychiatry_1,
-    Psychology_1,
-    Pulmonary_And_Thoracic_Surgery_Lung_Surgeries_1,
-    Radiation_Oncology_1,
-    Radiology_1,
-    Rheumatology_1,
+
     Rhinoplasty_1,
-    Sleep_Disorders_Unit_1,
-    Smoking_Cessation_Center_1,
-    Stem_Cells_Therapy_Center_1,
+
     Tooth_Implants_1,
     Urology_1,
     Weight_Loss_1,
@@ -113,6 +85,11 @@ const TreatmentCategory = () => {
           <div className={styles.sec_title}>
             <Typography variant='h2'>Treatment Category</Typography>
           </div>
+
+          <div className={styles.desc}>
+            <Typography>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod </Typography>
+          </div>
+
           <div className={styles.boxes_container}>
             {cards.map((card, index) => (
               <div className={styles.box} key={index}>
@@ -128,13 +105,13 @@ const TreatmentCategory = () => {
               </div>
             ))}
           </div>
-          {/* <div className={styles.btn_contianer}>
-            <button>Find Out More</button>
-          </div> */}
+          <div className={styles.btn_contianer}>
+            <button>Start Searching</button>
+          </div>
         </div>
       </Container>
 
     </section >)
 }
 
-export default TreatmentCategory
+export default TreatmentCategory 

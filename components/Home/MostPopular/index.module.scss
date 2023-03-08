@@ -42,7 +42,6 @@ section#most_popular {
         flex-direction: row;
         @media screen and (max-width: 992px) {
           align-items: center;
-          justify-content: space-between;
         }
 
         .treatment,
@@ -63,7 +62,8 @@ section#most_popular {
           }
 
           &:not(:last-child) {
-            margin-right: 32px;
+            margin-right: 48px;
+            text-align: center;
           }
 
           h6 {
@@ -348,9 +348,10 @@ section#most_popular {
                 -webkit-line-clamp: 6;
 
                 @media screen and (max-width: 992px) {
-                  max-height: 33%;
-                  -webkit-line-clamp: 4 !important;
-                  -webkit-line-clamp: 4 !important;
+                  max-height: 57%;
+
+                  -webkit-line-clamp: 7 !important;
+                  -webkit-line-clamp: 7 !important;
                 }
 
                 p {

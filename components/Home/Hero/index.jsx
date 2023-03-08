@@ -18,7 +18,7 @@ const Hero = () => {
 
   ])
 
-  const { art_vid, preparing, Result, Extraction, blog_detail, openingChannel, Transplanting, author, post3, blog_bg } = imgs;
+  const { author, } = imgs;
 
   const cards = [
     { title: 'Patient name', img: author.src, id: '1', desc: ' Lorem Ipsum Dolor Sit Amet, Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam Voluptua. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum. Stet Clita Kasd Gubergren, No Sea Takimata Sanctus Est Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Consetetur Sadipscing Elitr, Sed Diam Nonumy  ' },
@@ -64,19 +64,19 @@ const Hero = () => {
               <div className={styles.advantage}>
                 <BsCheckLg />
                 <Typography>
-                  Only Professionally Vetted Doctors
+                  24 Hours PATIENT SUPPORT
                 </Typography>
               </div>
               <div className={styles.advantage}>
                 <BsCheckLg />
                 <Typography>
-                  Personal Support Service
+                  Lorem ipsum dolor sit amet
                 </Typography>
               </div>
               <div className={styles.advantage}>
                 <BsCheckLg />
                 <Typography>
-                  100% Free Assessment And Non-Binding
+                  Lorem ipsum dolor sit amet
                 </Typography>
               </div>
             </div>
@@ -84,7 +84,7 @@ const Hero = () => {
             <div className={styles.more}>
               <Link href='/'>
                 <HiPlay />
-                <button>Know Us More!</button>
+                <button>Watch Video</button>
               </Link>
             </div>
 
