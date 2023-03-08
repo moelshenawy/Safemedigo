@@ -89,6 +89,7 @@
           position: relative;
           display: flex;
           flex-direction: column;
+
           .logo {
             width: 163.44px;
             height: 183.57px;
@@ -103,6 +104,23 @@
             height: 230px;
             z-index: -1;
             transform: translate(-50%, -50%);
+          }
+
+          .hovered {
+            display: none;
+            width: 163.44px;
+            height: 183.57px;
+            margin-bottom: 65px;
+          }
+
+          &:hover {
+            .logo {
+              display: none;
+            }
+
+            .hovered {
+              display: block;
+            }
           }
         }
 

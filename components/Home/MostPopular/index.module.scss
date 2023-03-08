@@ -206,6 +206,10 @@ section#most_popular {
             opacity: 1;
             z-index: 1;
             box-shadow: inset -20px 0px 12px #eef5f5;
+
+            @media screen and (max-width: 992px) {
+              display: none;
+            }
           }
 
           .box {
@@ -220,7 +224,7 @@ section#most_popular {
             margin-bottom: 10px;
 
             @media screen and (max-width: 992px) {
-              width: 100%;
+              width: 344px;
               margin-right: 10px;
               margin-bottom: 10px;
               height: 479.63px;

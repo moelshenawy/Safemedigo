@@ -50,7 +50,7 @@ const Safty = () => {
                 <img src={OurSafterStanders01.src} className={styles.logo} alt="" />
                 <img src={OurSafetyStandards00.src} className={styles.ground} alt="" />
 
-                <div className="hovered">
+                <div className={styles.hovered}>
                   <img src={OurSafetyStandards002.src} alt="" />
                 </div>
               </div>
