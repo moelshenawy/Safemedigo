@@ -15,8 +15,6 @@ import { appContext } from "@/context/store";
 import { useEffect, useState } from "react";
 
 
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
 
 
 export async function getServerSideProps(context) {
@@ -180,7 +178,8 @@ export default function Blogs(props) {
 
   }, [])
 
-
+  const query = new URLSearchParams(location.search);
+  const page = parseInt(query.get('page') || '1', 10);
 
   return (
     <>
@@ -291,6 +290,7 @@ export default function Blogs(props) {
         {/* Tag Component */}
         <Tags />
       </div>
+
 
 
     </>
