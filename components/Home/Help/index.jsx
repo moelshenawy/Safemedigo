@@ -16,7 +16,7 @@ const Help = () => {
 
   return (
     <Box id={styles.help}
-      sx={window.location.pathname === '/' ? { paddingTop: "148px", backgroundColor: '#e7edec4d' } : { paddingTop: "0px", }}
+      sx={window.location.pathname === '/' ? { paddingTop: { xs: "22px", sm: "22px", md: "22px", lg: "148px" }, backgroundColor: '#e7edec4d' } : { paddingTop: "0px", }}
 
     >
       <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >
