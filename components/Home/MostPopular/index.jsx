@@ -110,8 +110,9 @@ const MostPopular = () => {
 
   return (
     <section id={styles.most_popular}>
-      <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
-        <div className={styles.section_container}>
+      <div className={styles.section_container}>
+        <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
+
           <div className={styles.title}>
             <Typography variant='h2'>Most Popular</Typography>
           </div>
@@ -139,6 +140,9 @@ const MostPopular = () => {
             <hr />
 
           </div>
+        </Container>
+
+        <Container className='mycontainer' sx={{ maxWidth: '1239px', paddingLeft: { sm: "0px", md: "0px" }, }} maxWidth={false}  >
 
           <div className={styles.content}>
 
@@ -396,8 +400,9 @@ const MostPopular = () => {
 
 
           </div>
-        </div>
-      </Container>
+        </Container>
+
+      </div>
 
     </section >
   )
