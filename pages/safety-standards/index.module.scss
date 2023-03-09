@@ -28,7 +28,7 @@
         flex-direction: column-reverse;
         margin-top: 46px;
 
-        background-color: #8d8d8d1c;
+        background-color: rgba(197, 223, 220, 0.2);
         padding: 15px;
         border-radius: 5px;
       }
@@ -94,14 +94,24 @@
             margin-top: 20px;
             li {
               // background: red;
-              list-style-type: disc;
-              list-style-position: inside;
-              padding-left: 0px;
 
               font-size: 16px;
               font-weight: var(--font-regular);
               font-family: var(--open-sans-font);
               color: var(--main-dark-color);
+              position: relative;
+              margin-bottom: 5px;
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                top: 7px;
+                left: -10px;
+                background-color: var(--main-green-color);
+                border-radius: 50%;
+              }
             }
           }
         }
