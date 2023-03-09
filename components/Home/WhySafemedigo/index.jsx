@@ -3,9 +3,10 @@ import styles from './index.module.scss'
 import { Container, Typography, } from '@mui/material';
 import imgs from "../../../assets/constants/imgs";
 import { OurSafetyStanders, RealReviewsPatientStories, PatientSupport, BestTreatmentPackages } from "../../../assets/svgs/HoverIcons"
+import Link from 'next/link';
 
 const WhySafemedigo = () => {
-  const { QualityGuarantee, OnGuide, GetQuote, TravelAssist } = imgs;
+  const { } = imgs;
 
 
   const cards = [

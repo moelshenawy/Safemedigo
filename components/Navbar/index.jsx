@@ -331,9 +331,9 @@ const Navbar = (props) => {
                             <div className={styles.category}>
                               <div className={styles.title}>
                                 <Typography variant="h4">
-                                  <a href={menuLniks[0].cateLink}>
+                                  <Link href={menuLniks[0].cateLink}>
                                     {menuLniks[0].category}
-                                  </a>
+                                  </Link>
                                 </Typography>
                               </div>
 
