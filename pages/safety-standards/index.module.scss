@@ -27,6 +27,10 @@
       @media screen and (max-width: 992px) {
         flex-direction: column-reverse;
         margin-top: 46px;
+
+        background-color: #8d8d8d1c;
+        padding: 15px;
+        border-radius: 5px;
       }
 
       &:first-child {
