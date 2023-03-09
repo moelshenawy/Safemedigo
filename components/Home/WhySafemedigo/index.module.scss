@@ -1,5 +1,7 @@
 section#why_safemedigo {
-  // background-color: #e7edec;
+  @media screen and (min-width: 992px) {
+    background-color: #e7edec;
+  }
 
   padding-top: 52px;
   padding-bottom: 42px;
@@ -14,9 +16,8 @@ section#why_safemedigo {
     align-items: center;
     justify-content: center;
 
-    background: #e7edec4d;
-
     @media screen and (max-width: 992px) {
+      background: #e7edec4d;
       align-items: flex-start;
       border-radius: 5px;
       padding: 23px;

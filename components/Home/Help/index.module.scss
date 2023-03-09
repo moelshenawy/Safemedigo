@@ -13,9 +13,8 @@
     align-items: center;
     justify-content: center;
 
-    background: #e7edec4d;
-
     @media screen and (max-width: 992px) {
+      background: #e7edec4d;
       align-items: flex-start;
       border-radius: 5px;
       padding: 23px;
