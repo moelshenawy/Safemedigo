@@ -87,16 +87,19 @@ const Navbar = (props) => {
           link: "/safety-standards",
         },
         {
+          title: "How It Works",
+          link: "/how-it-works",
+
+        },
+        {
           title: "About Us",
           link: "/about-us",
         },
         {
+
           title: "Contact Us",
           link: "/contact-us",
-        },
-        {
-          title: "How It Works",
-          link: "/how-it-works",
+
         },
       ],
     },
@@ -123,9 +126,9 @@ const Navbar = (props) => {
     {
       title: "About Us ",
       menuLink: [
-        { title: "About Us", link: "/about-us" },
-        { title: "How It Works", link: "/how-it-works" },
         { title: "Safety Standards", link: "/safety-standards" },
+        { title: "How It Works", link: "/how-it-works" },
+        { title: "About Us", link: "/about-us" },
         { title: "Contact Us", link: "/contact-us" },
       ],
     },
@@ -290,7 +293,7 @@ const Navbar = (props) => {
                   <div className={styles.notifications} >
                     <div className={styles.icon_container}>
                       <img src={notificationsActive.src} alt="" />
-                      <div className={styles.notify} />
+                      {/* <div className={styles.notify} /> */}
                     </div>
                   </div>
 

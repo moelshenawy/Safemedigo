@@ -138,7 +138,6 @@
         border-radius: 5px;
 
         width: 344px;
-        height: 518px;
 
         @media screen and (max-width: 992px) {
           width: 100%;
@@ -206,9 +205,9 @@
 
                 border-radius: 5px;
                 border: none;
-                margin-bottom: 35px;
 
                 font-size: 18px;
+                margin-bottom: 20px;
 
                 font-weight: var(--font-bold);
                 font-family: var(--quickstand-font);
