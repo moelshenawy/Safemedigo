@@ -403,7 +403,7 @@ const Navbar = (props) => {
                                   className={styles.category_links}>
                                   {menuLniks[1].links.map((link, idx) => (
                                     <>
-                                      <Link onClick={() => setShowMenu(false)} key={idx} className={window.location.pathname === link.link && styles.active}
+                                      <Link onClick={() => setShowMenu(false)} key={idx} className={pathname === link.link && styles.active}
                                         href={link.link}>
                                         {link.title}
                                       </Link >

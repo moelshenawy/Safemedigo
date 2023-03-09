@@ -40,6 +40,10 @@ section#treatment_category {
 
     .desc {
       margin-bottom: 40px;
+
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
       p {
         color: var(--main-dark-color);
         font-size: 16px;
@@ -185,7 +189,9 @@ section#treatment_category {
         font-weight: var(--font-medium);
         font-family: var(--quickstand-font);
         text-decoration: underline;
-        margin-right: 5px;
+        margin-right: -30px;
+        margin-top: 16px;
+
         @media screen and (max-width: 992px) {
           font-size: 14px;
           font-weight: var(--font-medium);
