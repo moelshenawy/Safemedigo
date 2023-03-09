@@ -113,8 +113,9 @@ footer#footer {
       padding: 13px 12px 32px 15px;
       border-radius: 10px;
 
-      @media screen and (max-width: 1100px) {
-        display: none;
+      @media screen and (max-width: 992px) {
+        background-color: transparent;
+        width: 100%;
       }
 
       .title {
@@ -127,6 +128,12 @@ footer#footer {
 
           font-weight: var(--font-bold);
           font-family: var(--quickstand-font);
+
+          @media screen and (max-width: 992px) {
+            color: var(--main-white-color);
+            text-align: center;
+            font-size: 22px;
+          }
         }
       }
 
@@ -146,6 +153,12 @@ footer#footer {
             font-weight: var(--font-bold);
             font-family: var(--open-sans-font);
           }
+          @media screen and (max-width: 992px) {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            height: 48px;
+          }
         }
         button {
           width: 73.12px;
@@ -159,6 +172,15 @@ footer#footer {
           font-weight: var(--font-bold);
           font-family: var(--quickstand-font);
           cursor: pointer;
+
+          @media screen and (max-width: 992px) {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid var(--sec-white-color);
+            height: 48px;
+
+            margin-bottom: 42px;
+          }
         }
       }
     }

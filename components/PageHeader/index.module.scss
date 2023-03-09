@@ -5,7 +5,8 @@
     padding-bottom: 29px;
 
     @media screen and (max-width: 992px) {
-      padding-top: 57px;
+      // padding-top: 57px;
+      padding-top: 8px;
     }
 
     .sec_container {
@@ -110,7 +111,7 @@
         // z-index: 0;
 
         @media screen and (max-width: 992px) {
-          top: -234px;
+          top: -175px;
         }
 
         .desk_top {

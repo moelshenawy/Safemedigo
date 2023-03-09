@@ -530,6 +530,10 @@
   padding-bottom: 19px;
   margin-top: 16px;
 
+  @media screen and (max-width: 992px) {
+    margin-top: 13px;
+  }
+
   h2 {
     font-size: 16px;
     color: var(--main-white-color);

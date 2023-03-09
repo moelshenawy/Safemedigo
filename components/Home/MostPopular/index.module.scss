@@ -22,7 +22,7 @@ section#most_popular {
       h2 {
         font-size: 34px;
 
-        font-weight: var(--font-sem-bold);
+        font-weight: var(--font-bold);
         font-family: var(--quickstand-font);
 
         @media screen and (max-width: 992px) {
@@ -348,10 +348,9 @@ section#most_popular {
                 -webkit-line-clamp: 6;
 
                 @media screen and (max-width: 992px) {
-                  max-height: 57%;
-
-                  -webkit-line-clamp: 7 !important;
-                  -webkit-line-clamp: 7 !important;
+                  max-height: 45%;
+                  -webkit-line-clamp: 6 !important;
+                  -webkit-line-clamp: 6 !important;
                 }
 
                 p {

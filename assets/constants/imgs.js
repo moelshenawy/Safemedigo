@@ -14,7 +14,9 @@ import blog_bg from "../imgs/blog_bg.png";
 import Transplanting from "../imgs/Transplanting.png";
 import openingChannel from "../imgs/openingChannel.png";
 import designMobile from "../imgs/designMobile.png";
+
 import turky_bg from "../imgs/turky_bg.png";
+import why_turcky_img from "../imgs/why_turcky_img.png";
 
 import logo from "../svgs/logo.svg";
 import en from "../svgs/en.svg";
@@ -203,6 +205,7 @@ export default {
   middle,
   left02,
   turky_bg,
+  why_turcky_img,
 
   Allergy_And_Immunology,
   Alternative,

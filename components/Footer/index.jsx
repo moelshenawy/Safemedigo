@@ -26,7 +26,7 @@ const Footer = () => {
     { title: 'Contact Us', link0: 'Lorem Ipsum', link1: 'Dolor Sit', link2: 'Amet,', link3: 'Conseteur', link4: 'Sadipscing', link5: 'Elitr, Sed', link6: 'Diam', link7: 'Nonumy', },
     { title: 'Contact Us', link0: 'Lorem Ipsum', link1: 'Dolor Sit', link2: 'Amet,', link3: 'Conseteur', link4: 'Sadipscing', link5: 'Elitr, Sed', link6: 'Diam', link7: 'Nonumy', },
     { title: 'Contact Us', link0: 'Lorem Ipsum', link1: 'Dolor Sit', link2: 'Amet,', link3: 'Conseteur', link4: 'Sadipscing', link5: 'Elitr, Sed', link6: 'Diam', link7: 'Nonumy', },
-    { title: 'Contact Us', link0: 'Lorem Ipsum', link1: 'Dolor Sit', link2: 'Amet,', link3: 'Conseteur', link4: 'Sadipscing', link5: 'Elitr, Sed', link6: 'Diam', link7: 'Nonumy', },
+
   ]
   return (
     <>
