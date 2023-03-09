@@ -39,9 +39,15 @@ const WhySafemedigo = () => {
               </div>
             ))}
           </div>
-          <div className={styles.btn_contianer}>
-            <button>Find Out More</button>
-          </div>
+
+          {window.location.pathname !== '/about-us' &&
+            <div className={styles.btn_contianer}>
+              <Link href='/about-us'>
+                <button>Find Out More</button>
+              </Link>
+            </div>
+
+          }
         </div>
       </Container>
 
