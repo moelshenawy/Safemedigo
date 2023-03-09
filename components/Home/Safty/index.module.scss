@@ -128,13 +128,17 @@
 
           .hovered {
             display: none;
-            width: 163.44px;
-            height: 183.57px;
+
             margin-bottom: 65px;
 
-            @media screen and (max-width: 992px) {
-              width: 89.21px;
-              height: 100.2px;
+            img {
+              width: 163.44px;
+              height: 183.57px;
+
+              @media screen and (max-width: 992px) {
+                width: 89.21px;
+                height: 100.2px;
+              }
             }
           }
 
