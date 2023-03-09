@@ -6,7 +6,9 @@ export default function BlogPage({ page }) {
   const handleChangePage = (event, newPage) => {
     router.push(`/blogs/page/${newPage}`);
 
-    console.log(newPage);
+    if (newPage === 1) {
+      router.push(`/blogs/`);
+    }
   };
 
   return (

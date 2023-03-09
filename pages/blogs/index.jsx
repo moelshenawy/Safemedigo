@@ -14,38 +14,39 @@ import { PageHeader, Tags } from './../../components/';
 import { appContext } from "@/context/store";
 import { useEffect, useState } from "react";
 
+import { useRouter } from "next/router";
+import Pagination from "@mui/material/Pagination";
 
 
 
-export async function getServerSideProps(context) {
-  console.log(context.query, "COntext Over hereee")
+// export async function getServerSideProps(context) {
+//   console.log(context.query, "COntext Over hereee")
 
-  const res = await fetch("http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage", {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      "lang": 'ar',
-      "blogCategoryId": 0,
-      "currentPage": 1
-    })
-  })
-  const data = await res.json()
+//   const res = await fetch("http://safemedigoapi-001-site1.gtempurl.com/api/v1/Blog/GetAllBlogWithPage", {
+//     method: 'POST',
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       "lang": 'ar',
+//       "blogCategoryId": 0,
+//       "currentPage": 1
+//     })
+//   })
+//   const data = await res.json()
 
-  return {
-    props: {
-      blogs: data
-    }
-  }
-}
+//   return {
+//     props: {
+//       blogs: data
+//     }
+//   }
+// }
 
-export default function Blogs(props) {
+export default function Blogs({ page }) {
   const { post0, post1, post2, post3, post4, post5, author } = imgs;
 
 
-  // console.log(props)
 
 
 
@@ -178,8 +179,15 @@ export default function Blogs(props) {
 
   }, [])
 
-  const query = new URLSearchParams(location.search);
-  const page = parseInt(query.get('page') || '1', 10);
+  const router = useRouter();
+  const handleChangePage = (event, newPage) => {
+    router.push(`/blogs/page/${newPage}`);
+    console.log(newPage)
+    if (newPage === 1) {
+      router.push(`/blogs/`);
+    }
+  };
+
 
   return (
     <>
@@ -219,6 +227,9 @@ export default function Blogs(props) {
           </div>
         </Container>
       </div>
+
+
+
 
       <div className={styles.sections_container}>
         <section id={styles.blogs_sec}>
@@ -291,6 +302,15 @@ export default function Blogs(props) {
         <Tags />
       </div>
 
+      <div>
+        <h1>Blog Page {page}</h1>
+        <Pagination
+          count={10}
+          page={parseInt(page)}
+          onChange={handleChangePage}
+        />
+      </div>
+
 
 
     </>
@@ -300,6 +320,14 @@ export default function Blogs(props) {
 // Data is in view Page Source (SSR) Great for SEO but every time user Request this page the server has to call an additional api request ,Up to date data
 
 
+export async function getServerSideProps(context) {
+  const { params } = context;
+  return {
+    props: {
+      page: null,
+    },
+  };
+}
 
 
 // Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)

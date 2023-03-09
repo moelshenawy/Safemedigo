@@ -30,25 +30,25 @@ const ContactDetails = () => {
 
             <div className={styles.buttons_container}>
               <div className={styles.btn}>
-                <Link href="tel:(+90) 552 502 6000">
+                <a href="tel:(+90) 552 502 6000">
                   <button>
                     <Phone />
                     +90 552 502 6000
                   </button>
-                </Link>
+                </a>
               </div>
               <div className={styles.btn}>
-                <Link href="https://en.wh.ms/201100791315" target="_blank">
+                <a href="https://en.wh.ms/201100791315" target="_blank">
                   <button>Whatsapp</button>
-                </Link>
+                </a>
               </div>
               <div className={styles.btn}>
-                <Link href="www.facebook.com" target="_blank"><button>Facebook</button></Link>
+                <a href="www.facebook.com" target="_blank"><button>Facebook</button></a>
               </div>
               <div className={styles.btn}>
-                <Link href="mailto:info@safemedigo.com" >
+                <a href="mailto:info@safemedigo.com" >
                   <button>Email</button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
