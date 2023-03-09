@@ -101,18 +101,14 @@
               color: var(--main-dark-color);
               position: relative;
               margin-bottom: 5px;
-              margin-left: 10px;
+              margin-left: 18px;
 
-              &::after {
-                content: "";
-                position: absolute;
-                width: 6px;
-                height: 6px;
-                top: 7px;
-                left: -10px;
-                background-color: var(--main-green-color);
-                border-radius: 50%;
+              list-style-type: disc;
+
+              &::marker {
+                color: var(--main-green-color);
               }
+              // list-style-position: inside;
             }
           }
         }
