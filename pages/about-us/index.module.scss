@@ -70,9 +70,13 @@
         @media screen and (max-width: 992px) {
           background-color: #e7edec;
           border-radius: 5px;
-          padding: 27px 33px 14px 27px;
           margin-bottom: 16px;
           width: 100%;
+          height: 210px;
+
+          display: flex;
+          align-items: center;
+          justify-self: center;
         }
 
         img {
@@ -81,6 +85,11 @@
           @media screen and (max-width: 992px) {
             width: 270px;
             height: 170px;
+          }
+
+          @media screen and (max-width: 350px) {
+            width: 100%;
+            height: 100%;
           }
         }
 
@@ -113,6 +122,10 @@
     .StressFreeTreatment {
       .text_container {
         margin-right: 90px;
+
+        @media screen and (max-width: 992px) {
+          margin-right: 0;
+        }
       }
     }
 
@@ -260,7 +273,7 @@
             font-size: 18px;
 
             @media screen and (max-width: 992px) {
-              font-size: 15px;
+              font-size: 18px;
             }
           }
         }
@@ -272,10 +285,6 @@
             font-weight: var(--font-regular);
             font-family: var(--open-sans-font);
             font-size: 16px;
-
-            @media screen and (max-width: 992px) {
-              font-size: 12px;
-            }
           }
         }
 
@@ -286,10 +295,6 @@
             font-size: 16px;
             font-weight: var(--font-regular);
             font-family: var(--open-sans-font);
-
-            @media screen and (max-width: 992px) {
-              font-size: 12px;
-            }
           }
         }
       }
@@ -318,7 +323,7 @@
 
       @media screen and (max-width: 992px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
@@ -337,22 +342,25 @@
 
 #medical_councilors {
   .boxes_container {
-    justify-content: space-between !important;
+    justify-content: space-between;
     // align-items: flex-end !important;
     @media screen and (max-width: 992px) {
       flex-wrap: wrap;
     }
     .box {
-      align-items: flex-start !important;
+      align-items: flex-start;
       width: 250px;
 
       @media screen and (max-width: 992px) {
         width: 100%;
+
+        align-items: center;
+        justify-self: center;
       }
 
       .desc {
         p {
-          text-align: left;
+          text-align: center;
         }
       }
     }
