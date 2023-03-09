@@ -14,10 +14,6 @@ import { BiChevronDown, } from 'react-icons/bi'
 import { HiArrowSmRight } from 'react-icons/hi'
 import { useRouter } from "next/router";
 
-// import Slide from '@mui/material/Slide';
-// import useScrollTrigger from '@mui/material/useScrollTrigger';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import PropTypes from 'prop-types';
 
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
@@ -44,14 +40,7 @@ function HideOnScroll(props) {
 }
 
 
-// HideOnScroll.propTypes = {
-//   children: PropTypes.element.isRequired,
-//   /**
-//    * Injected by the documentation to work in an iframe.
-//    * You won't need it on your project.
-//    */
-//   window: PropTypes.func,
-// };;
+
 
 const Navbar = (props) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -344,14 +333,12 @@ const Navbar = (props) => {
                                   </a>
                                 </Typography>
                               </div>
+
                               <div className={styles.category_links}>
                                 {menuLniks[0].links.map((link, idx) => (
                                   <>
                                     <a
-                                      className={
-                                        window.location.pathname === link.link &&
-                                        styles.active
-                                      }
+                                      className={window.location.pathname === link.link && styles.active}
                                       key={idx}
                                       href={link.link}
                                     >
@@ -389,6 +376,7 @@ const Navbar = (props) => {
 
 
                               </div>
+
                               <div className={`${styles.title}`} onClick={() => setShowMenuLinks((prev) => !prev)}>
                                 <Typography variant="h4">
                                   {menuLniks[1].category}
@@ -397,6 +385,7 @@ const Navbar = (props) => {
                                   <ExpandMoreOutlinedIcon color="red" />
                                 </div>
                               </div>
+
                               {showMenuLinks &&
                                 <motion.div
                                   animate={{
@@ -411,7 +400,8 @@ const Navbar = (props) => {
                                   className={styles.category_links}>
                                   {menuLniks[1].links.map((link, idx) => (
                                     <>
-                                      <a key={idx} href={link.link}>
+                                      <a key={idx} className={window.location.pathname === link.link && styles.active}
+                                        href={link.link}>
                                         {link.title}
                                       </a>
                                     </>

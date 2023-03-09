@@ -21,6 +21,12 @@
         margin-top: 46px;
       }
 
+      &:first-child {
+        @media screen and (max-width: 992px) {
+          margin-top: 15px;
+        }
+      }
+
       .text_container {
         .title {
           display: flex;
@@ -33,7 +39,7 @@
             font-family: var(--quickstand-font);
 
             @media screen and (max-width: 992px) {
-              font-size: 24px;
+              font-size: 23px;
               font-weight: var(--font-bold);
             }
           }
