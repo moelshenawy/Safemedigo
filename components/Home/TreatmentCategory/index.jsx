@@ -24,10 +24,10 @@ const TreatmentCategory = () => {
     Rhinoplasty,
     Tooth_Implants,
     Urology,
-    Weight_Loss,
+    Weight_Loss, Knee,
 
 
-
+    Knee_1,
     Alternative_1,
     Bone_Marrow_1,
     Cardiology_1,
@@ -62,7 +62,7 @@ const TreatmentCategory = () => {
     { title: 'Dentistry', img: Dentistry.src, hover_icon: Dentistry_1.src },
     { title: 'Tooth Implants', img: Tooth_Implants.src, hover_icon: Tooth_Implants_1.src },
     { title: 'IVF (ICSI)', img: Ivf_ICSI.src, hover_icon: Ivf_ICSI_1.src },
-    { title: 'Knee Replacement', img: Ivf_ICSI.src, hover_icon: Ivf_ICSI_1.src },
+    { title: 'Knee Replacement', img: Knee.src, hover_icon: Knee_1.src },
     { title: 'Weight Loss Treatments', img: Weight_Loss.src, hover_icon: Weight_Loss_1.src },
     { title: 'Orthopedics', img: Orthopedics.src, hover_icon: Orthopedics_1.src },
     { title: 'Rhinoplasty', img: Rhinoplasty.src, hover_icon: Rhinoplasty_1.src },

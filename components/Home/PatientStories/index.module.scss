@@ -22,15 +22,17 @@ section#patient_stories {
         margin-bottom: 34.04px;
         @media screen and (max-width: 992px) {
           margin-bottom: 22px;
-          h2 {
-            font-size: 24px;
-          }
         }
         h2 {
           font-size: 34px;
           font-family: var(--quickstand-stand);
           font-weight: var(--font-sem-bold);
           color: var(--main-dark-color);
+
+          @media screen and (max-width: 992px) {
+            font-size: 24px;
+            font-weight: var(--font-bold);
+          }
         }
       }
 

@@ -12,10 +12,11 @@
 
         font-weight: var(--font-sem-bold);
         font-family: var(--quickstand-font);
-      }
-
-      @media screen and (max-width: 992px) {
-        display: none;
+        @media screen and (max-width: 992px) {
+          // display: none;
+          font-size: 24px;
+          font-weight: var(--font-bold);
+        }
       }
     }
 
