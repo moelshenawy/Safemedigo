@@ -48,17 +48,6 @@ export default function BolgDetails(props) {
 
   return (
     <>
-      <Box
-        sx={{
-          display: {
-            xs: "none",
-            sm: "none",
-            lg: "block"
-          }
-        }}
-      >
-        <PageHeader />
-      </Box>
 
       <Box
         sx={{

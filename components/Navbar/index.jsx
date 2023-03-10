@@ -48,7 +48,7 @@ const Navbar = (props) => {
   const menuLniks = [
     {
       category: "Procedures & Symptoms",
-      cateLink: '/procedures',
+      cateLink: '/procedures&symptoms',
       links: [
         {
           title: "Patients Reviews",
@@ -108,7 +108,7 @@ const Navbar = (props) => {
   ];
 
   const navbarLinks = [
-    { title: "Procedures & Symptoms", link: "/", menuLink: null },
+    { title: "Procedures & Symptoms", link: "/procedures&symptoms", menuLink: null },
     {
       title: "Reviews & Photos",
       link: "/",
@@ -317,8 +317,10 @@ const Navbar = (props) => {
                         >
                           <CloseIcon />
                         </div>
+
                         <div className={styles.links_container}>
-                          <Link className="link" href="/login">
+
+                          <Link onClick={() => setShowMenu(false)} className="link" href="/login">
                             <div className={styles.icon_container}>
                               <PersonRoundedIcon />
                             </div>
@@ -331,7 +333,7 @@ const Navbar = (props) => {
                             <div className={styles.category}>
                               <div className={styles.title}>
                                 <Typography variant="h4">
-                                  <Link href={menuLniks[0].cateLink}>
+                                  <Link onClick={() => setShowMenu(false)} href={menuLniks[0].cateLink}>
                                     {menuLniks[0].category}
                                   </Link>
                                 </Typography>
@@ -340,13 +342,14 @@ const Navbar = (props) => {
                               <div className={styles.category_links}>
                                 {menuLniks[0].links.map((link, idx) => (
                                   <>
-                                    <a
+                                    <Link
                                       className={window.location.pathname === link.link && styles.active}
                                       key={idx}
                                       href={link.link}
+                                      onClick={() => setShowMenu(false)}
                                     >
                                       {link.title}
-                                    </a>
+                                    </Link>
                                   </>
                                 ))}
 
@@ -415,6 +418,7 @@ const Navbar = (props) => {
                             </div>
                           </div>
                         </div>
+
                       </div>
                     </motion.div>
                   )}
@@ -448,8 +452,13 @@ const Navbar = (props) => {
             {pathname === '/about-us' &&
               <h2>Home / About Us</h2>
             }
+
             {pathname === '/safety-standards' &&
               <h2>Home / Safety Standards</h2>
+            }
+
+            {pathname === '/procedures&symptoms' &&
+              <h2>Home / Procedures & Symptoms</h2>
             }
           </Container>
         </nav>

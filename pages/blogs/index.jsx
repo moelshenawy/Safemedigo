@@ -195,8 +195,6 @@ export default function Blogs({ page }) {
         <title>Blogs</title>
         <meta name="blogs" content="blogs for doctors" />
       </Head>
-      {/* Header Component */}
-      <PageHeader />
 
       <div id={styles.tags_filter}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
