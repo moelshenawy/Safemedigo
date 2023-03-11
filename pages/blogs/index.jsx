@@ -43,7 +43,7 @@ import Pagination from "@mui/material/Pagination";
 //   }
 // }
 
-export default function Blogs() {
+export default function Blogs({ page }) {
   const { post0, post1, post2, post3, post4, post5, author } = imgs;
 
 
@@ -318,14 +318,14 @@ export default function Blogs() {
 // Data is in view Page Source (SSR) Great for SEO but every time user Request this page the server has to call an additional api request ,Up to date data
 
 
-// export async function getServerSideProps(context) {
-//   const { params } = context;
-//   return {
-//     props: {
-//       page: null,
-//     },
-//   };
-// }
+export async function getServerSideProps(context) {
+  const { params } = context;
+  return {
+    props: {
+      page: null,
+    },
+  };
+}
 
 
 // Data is in view Page Source (ISR) => when user Request the page it will render HTML from  the previous  Request in (10 secounds)
