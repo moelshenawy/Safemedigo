@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "next/link";
 import imgs from "../../assets/constants/imgs";
-import { PageHeader, Tags } from "./../../components/";
+import { Tags } from "./../../components/";
 import styles from "./[id].module.scss";
 import { Container, Typography, Rating, Box } from "@mui/material";
 import { BsLink45Deg, BsTwitter } from 'react-icons/bs';
@@ -10,7 +10,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { GoPlus } from 'react-icons/go'
 import Carousel from 'react-elastic-carousel'
 import axios from "axios";
-
 
 
 
@@ -27,7 +26,6 @@ export default function BolgDetails(props) {
     { width: 1450, itemsToShow: 5 },
     { width: 1750, itemsToShow: 6 },
   ])
-
 
 
 

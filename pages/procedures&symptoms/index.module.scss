@@ -1,0 +1,53 @@
+#medical_department {
+  background-color: #fafafa;
+  padding-top: 30px;
+
+  .section_container {
+    .sec_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        margin-bottom: 30px;
+        color: var(--main-dark-color);
+
+        h3 {
+          font-family: var(--quickstand-font);
+          font-weight: var(--font-sem-bold);
+          font-size: 28px;
+        }
+
+        h6 {
+          font-family: var(--quickstand-font);
+          font-weight: var(--font-medium);
+          font-size: 18px;
+        }
+      }
+
+      .procedures_num {
+        p {
+          font-family: var(--quickstand-font);
+          font-weight: var(--font-medium);
+          font-size: 18px;
+          color: var(--main-dark-color);
+        }
+      }
+    }
+    .slider_container {
+      .box {
+        .img_container {
+          .main_img {
+          }
+
+          .sec_img {
+          }
+
+          .box_title {
+            h6 {
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,6 @@ import { HiArrowSmRight } from 'react-icons/hi'
 import { useRouter } from "next/router";
 
 
-import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';

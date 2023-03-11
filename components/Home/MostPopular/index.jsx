@@ -6,9 +6,10 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { FaShieldAlt } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
 import { consts } from 'react-elastic-carousel';
-import { Container, Typography, Rating, } from '@mui/material';
+import { Container, Typography, Rating, Box } from '@mui/material';
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const MostPopular = () => {
   const { post1, post2, post3, post4, post5, } = imgs;
@@ -108,8 +109,14 @@ const MostPopular = () => {
     );
   }
 
+  const router = useRouter();
+  const { pathname } = router;
+
+
   return (
-    <section id={styles.most_popular}>
+    <Box sx={pathname !== '/procedures&symptoms' && {
+      backgroundColor: '#eef5f5'
+    }} id={styles.most_popular} >
       <div className={styles.section_container}>
         <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
 
@@ -117,29 +124,35 @@ const MostPopular = () => {
             <Typography variant='h2'>Most Popular</Typography>
           </div>
 
-          <div className={styles.navigation}>
-            <div className={styles.header}>
-              <div className={`${styles.treatment} ${treatment && styles.active}`} onClick={handleTreatment}>
-                <Typography variant='h6'>
-                  <button>Treatment</button>
-                </Typography>
-              </div>
-              <div className={`${styles.doctors} ${doctors && styles.active}`} onClick={handleDoctors}>
-                <Typography variant='h6'>
-                  <button>Doctors</button>
-                </Typography>
-              </div>
-              <div className={`${styles.clinic} ${clinic && styles.active}`} onClick={handleClinic}>
-                <Typography variant='h6'>
-                  <button>Clinic</button>
-                </Typography>
 
+          {pathname !== '/procedures&symptoms' &&
+
+            <div className={styles.navigation}>
+              <div className={styles.header}>
+                <div className={`${styles.treatment} ${treatment && styles.active}`} onClick={handleTreatment}>
+                  <Typography variant='h6'>
+                    <button>Treatment</button>
+                  </Typography>
+                </div>
+                <div className={`${styles.doctors} ${doctors && styles.active}`} onClick={handleDoctors}>
+                  <Typography variant='h6'>
+                    <button>Doctors</button>
+                  </Typography>
+                </div>
+                <div className={`${styles.clinic} ${clinic && styles.active}`} onClick={handleClinic}>
+                  <Typography variant='h6'>
+                    <button>Clinic</button>
+                  </Typography>
+
+                </div>
               </div>
+
+              <hr />
+
             </div>
+          }
 
-            <hr />
 
-          </div>
         </Container>
 
         <Container className='mycontainer' sx={{ maxWidth: '1239px', paddingLeft: { sm: "0px", md: "0px" }, }} maxWidth={false}  >
@@ -151,14 +164,19 @@ const MostPopular = () => {
                 <Typography>We Are An Independent Organisation And Only Ever Provide Fully Honest And Unbiased Information About Doctors That Have Been Thoroughly And Professionally Vetted.</Typography>
               </div>
 
-              <div className={styles.btn_container}>
 
-                <Link href='/'>
-                  <button>
-                    Get Started
-                  </button>
-                </Link>
-              </div>
+              {pathname !== '/procedures&symptoms' &&
+                <div className={styles.btn_container}>
+
+                  <Link href='/'>
+                    <button>
+                      Get Started
+                    </button>
+                  </Link>
+                </div>
+              }
+
+
             </div>
 
 
@@ -171,7 +189,16 @@ const MostPopular = () => {
                   transition={{ duration: 0.95, ease: "easeOut" }}
                   className={styles.treatment}>
 
-                  <div className={styles.shadow_box} />
+                  <Box sx={
+                    pathname !== '/procedures&symptoms' ?
+                      {
+                        boxShadow: "inset -20px 0px 12px #eef5f5"
+                      } :
+
+                      {
+                        boxShadow: "inset -20px 0px 12px #ffffff"
+                      }
+                  } className={styles.shadow_box} />
 
                   <Carousel
                     breakPoints={breakPoints}
@@ -228,171 +255,178 @@ const MostPopular = () => {
               }
 
 
-              {doctors &&
-                <motion.div
-                  animate={{ x: [300, 0] }}
-                  transition={{ duration: 0.95, ease: "easeOut" }}
 
-                  className={styles.doctors}
-                >
-                  <div className={styles.shadow_box} />
+              {pathname !== '/procedures&symptoms' &&
+                <>
+                  {doctors &&
+                    <motion.div
+                      animate={{ x: [300, 0] }}
+                      transition={{ duration: 0.95, ease: "easeOut" }}
 
-                  <Carousel
-                    breakPoints={breakPoints}
-                    itemsToScroll={1}
-                    renderArrow={myArrow}
+                      className={styles.doctors}
+                    >
+                      <div className={styles.shadow_box} />
+
+                      <Carousel
+                        breakPoints={breakPoints}
+                        itemsToScroll={1}
+                        renderArrow={myArrow}
 
 
 
-                  >
-                    {doctorsData.map((doc, index) => (
-                      <div className={styles.box} key={index}>
-                        <div className={styles.img_container}>
-                          <img src={doc.img} alt={doc.name} />
-                          <div className={styles.verified}>
-                            <FaShieldAlt />
-                            <Typography >
-                              Safemedigo verified
-                            </Typography>
+                      >
+                        {doctorsData.map((doc, index) => (
+                          <div className={styles.box} key={index}>
+                            <div className={styles.img_container}>
+                              <img src={doc.img} alt={doc.name} />
+                              <div className={styles.verified}>
+                                <FaShieldAlt />
+                                <Typography >
+                                  Safemedigo verified
+                                </Typography>
+                              </div>
+                            </div>
+
+                            <div className={styles.box_text_container}>
+
+                              <div className={styles.name}>
+                                <Typography variant='h5'>
+                                  {doc.name}
+                                </Typography>
+                              </div>
+
+                              <div className={styles.job_title}>
+                                <Typography variant='h6'>
+                                  {doc.job_title}
+                                </Typography>
+                              </div>
+
+                              <div className={styles.rating}>
+                                <Rating name="size-small" defaultValue={4} size="small" />
+                                <span className={styles.reviews_num}>90 Reviews</span>
+                              </div>
+
+                              <div className={styles.location}>
+                                <MdLocationOn />
+                                <Typography >
+                                  Istanbul, Turkey
+                                </Typography>
+                              </div>
+
+                              <div className={styles.patient_num}>
+                                <span>{doc.patients_num}</span>
+                                <Typography>Patients Treated Last Year</Typography>
+                              </div>
+
+                              <div className={styles.experience}>
+                                <span>{doc.experience}</span>
+                                <Typography> Years Of Experience</Typography>
+                              </div>
+
+                              <div id={styles.price}>
+                                <Typography>Knee Replacement Starting From </Typography>
+                                <span>{doc.price}$</span>
+                              </div>
+
+                              <div className={styles.btn_container}>
+                                <Link href='/'>See Doctor Profile</Link>
+                              </div>
+
+                            </div>
                           </div>
-                        </div>
+                        ))}
+                      </Carousel>
+                    </motion.div>
+                  }
 
-                        <div className={styles.box_text_container}>
+                  {clinic &&
+                    <motion.div
+                      animate={{ x: [300, 0] }}
+                      transition={{ duration: 0.95, ease: "easeOut" }}
 
-                          <div className={styles.name}>
-                            <Typography variant='h5'>
-                              {doc.name}
-                            </Typography>
+                      className={styles.clinic}>
+                      <div className={styles.shadow_box} />
+
+                      <Carousel
+                        breakPoints={breakPoints}
+                        itemsToScroll={1}
+                        renderArrow={myArrow}
+
+
+                      >
+                        {clinicData.map((clinic, index) => (
+                          <div className={styles.box} key={index}>
+                            <div className={styles.img_container}>
+                              <img src={clinic.img} alt={clinic.title} />
+                              <div className={styles.verified}>
+                                <FaShieldAlt />
+                                <Typography >
+                                  Safemedigo verified
+                                </Typography>
+                              </div>
+                            </div>
+
+                            <div className={styles.box_text_container}>
+
+                              <div className={styles.name}>
+                                <Typography variant='h5'>
+                                  {clinic.title}
+                                </Typography>
+                              </div>
+
+                              <div className={styles.type}>
+                                <Typography variant='h6'>
+                                  {clinic.type}
+                                </Typography>
+                              </div>
+
+                              <div className={styles.rating}>
+                                <Rating name="size-small" defaultValue={4} size="small" />
+                                <span className={styles.reviews_num}>90 Reviews</span>
+                              </div>
+
+                              <div className={styles.location}>
+                                <MdLocationOn />
+                                <Typography >
+                                  Istanbul, Turkey
+                                </Typography>
+                              </div>
+
+                              <div className={styles.founded}>
+                                <span>{clinic.founded}</span>
+                                <Typography>Founded Year</Typography>
+                              </div>
+
+                              <div className={styles.employess}>
+                                <span>{clinic.employess}</span>
+                                <Typography> Doctors & Employees</Typography>
+                              </div>
+
+                              <div className={styles.yearly_patient}>
+                                <span>{clinic.yearly_patient}</span>
+                                <Typography>Yearly Patient</Typography>
+                              </div>
+
+                              <div className={styles.btn_container}>
+                                <Link href='/'>See Hospital Profile</Link>
+                              </div>
+
+                            </div>
+
+
+
                           </div>
+                        ))}
 
-                          <div className={styles.job_title}>
-                            <Typography variant='h6'>
-                              {doc.job_title}
-                            </Typography>
-                          </div>
 
-                          <div className={styles.rating}>
-                            <Rating name="size-small" defaultValue={4} size="small" />
-                            <span className={styles.reviews_num}>90 Reviews</span>
-                          </div>
+                      </Carousel>
+                    </motion.div>
+                  }
+                </>
 
-                          <div className={styles.location}>
-                            <MdLocationOn />
-                            <Typography >
-                              Istanbul, Turkey
-                            </Typography>
-                          </div>
 
-                          <div className={styles.patient_num}>
-                            <span>{doc.patients_num}</span>
-                            <Typography>Patients Treated Last Year</Typography>
-                          </div>
 
-                          <div className={styles.experience}>
-                            <span>{doc.experience}</span>
-                            <Typography> Years Of Experience</Typography>
-                          </div>
-
-                          <div id={styles.price}>
-                            <Typography>Knee Replacement Starting From </Typography>
-                            <span>{doc.price}$</span>
-                          </div>
-
-                          <div className={styles.btn_container}>
-                            <Link href='/'>See Doctor Profile</Link>
-                          </div>
-
-                        </div>
-                      </div>
-                    ))}
-                  </Carousel>
-                </motion.div>
               }
-
-              {clinic &&
-                <motion.div
-                  animate={{ x: [300, 0] }}
-                  transition={{ duration: 0.95, ease: "easeOut" }}
-
-                  className={styles.clinic}>
-                  <div className={styles.shadow_box} />
-
-                  <Carousel
-                    breakPoints={breakPoints}
-                    itemsToScroll={1}
-                    renderArrow={myArrow}
-
-
-                  >
-                    {clinicData.map((clinic, index) => (
-                      <div className={styles.box} key={index}>
-                        <div className={styles.img_container}>
-                          <img src={clinic.img} alt={clinic.title} />
-                          <div className={styles.verified}>
-                            <FaShieldAlt />
-                            <Typography >
-                              Safemedigo verified
-                            </Typography>
-                          </div>
-                        </div>
-
-                        <div className={styles.box_text_container}>
-
-                          <div className={styles.name}>
-                            <Typography variant='h5'>
-                              {clinic.title}
-                            </Typography>
-                          </div>
-
-                          <div className={styles.type}>
-                            <Typography variant='h6'>
-                              {clinic.type}
-                            </Typography>
-                          </div>
-
-                          <div className={styles.rating}>
-                            <Rating name="size-small" defaultValue={4} size="small" />
-                            <span className={styles.reviews_num}>90 Reviews</span>
-                          </div>
-
-                          <div className={styles.location}>
-                            <MdLocationOn />
-                            <Typography >
-                              Istanbul, Turkey
-                            </Typography>
-                          </div>
-
-                          <div className={styles.founded}>
-                            <span>{clinic.founded}</span>
-                            <Typography>Founded Year</Typography>
-                          </div>
-
-                          <div className={styles.employess}>
-                            <span>{clinic.employess}</span>
-                            <Typography> Doctors & Employees</Typography>
-                          </div>
-
-                          <div className={styles.yearly_patient}>
-                            <span>{clinic.yearly_patient}</span>
-                            <Typography>Yearly Patient</Typography>
-                          </div>
-
-                          <div className={styles.btn_container}>
-                            <Link href='/'>See Hospital Profile</Link>
-                          </div>
-
-                        </div>
-
-
-
-                      </div>
-                    ))}
-
-
-                  </Carousel>
-                </motion.div>
-              }
-
 
             </div>
 
@@ -404,7 +438,7 @@ const MostPopular = () => {
 
       </div>
 
-    </section >
+    </Box >
   )
 }
 
