@@ -120,9 +120,11 @@ const MostPopular = () => {
       <div className={styles.section_container}>
         <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
 
-          <div className={styles.title}>
-            <Typography variant='h2'>Most Popular</Typography>
-          </div>
+          {pathname !== '/procedures&symptoms' &&
+            <div className={styles.title}>
+              <Typography variant='h2'>Most Popular</Typography>
+            </div>
+          }
 
 
           {pathname !== '/procedures&symptoms' &&
@@ -160,6 +162,13 @@ const MostPopular = () => {
           <div className={styles.content}>
 
             <div className={styles.text_container}>
+
+              {pathname === '/procedures&symptoms' &&
+                <div className={styles.title}>
+                  <Typography variant='h2'>Most Popular</Typography>
+                </div>
+              }
+
               <div className={styles.desc}>
                 <Typography>We Are An Independent Organisation And Only Ever Provide Fully Honest And Unbiased Information About Doctors That Have Been Thoroughly And Professionally Vetted.</Typography>
               </div>
@@ -436,7 +445,7 @@ const MostPopular = () => {
           </div>
         </Container>
 
-      </div>
+      </div >
 
     </Box >
   )
