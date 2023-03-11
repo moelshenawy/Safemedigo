@@ -15,6 +15,7 @@
           font-family: var(--quickstand-font);
           font-weight: var(--font-sem-bold);
           font-size: 28px;
+          margin-bottom: 10px;
         }
 
         h6 {
@@ -34,18 +35,126 @@
       }
     }
     .slider_container {
+      padding-bottom: 30px;
       .box {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .img_container {
+          width: 87.12px;
+          height: 87.12px;
+
           .main_img {
+            width: 100%;
+            height: 100%;
           }
 
           .sec_img {
+            width: 100%;
+            height: 100%;
           }
 
-          .box_title {
-            h6 {
-            }
+          // &:hover {
+          //   .main_img {
+          //     display: none;
+          //   }
+
+          //   .sec_img {
+          //     display: block;
+          //   }
+          // }
+        }
+
+        .box_title {
+          text-align: center;
+          h6 {
           }
+        }
+      }
+    }
+  }
+}
+
+section#proceduresSymptoms {
+  background-color: #fafafa;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .section_container {
+    display: flex;
+    align-items: flex-start;
+
+    .filter_section {
+      width: 701px;
+      margin-right: 55px;
+      .car_title {
+        margin-bottom: 25px;
+        h3 {
+          font-size: 28px;
+          font-weight: var(--font-sem-bold);
+          font-family: var(--quickstand-font);
+        }
+      }
+
+      .btn_container {
+        margin-top: 40px;
+        button {
+          cursor: pointer;
+          width: 204px;
+          height: 56px;
+
+          background-color: var(--main-green-color);
+          color: var(--main-white-color);
+
+          border-radius: 5px;
+          border: 1px solid var(--main-green-color);
+
+          font-size: 18px;
+          font-weight: var(--font-bold);
+          font-family: var(--quickstand-font);
+        }
+      }
+    }
+
+    .info {
+      .info_inner {
+        width: 452px;
+        padding: 24px;
+        background-color: var(--main-white-color);
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 10px;
+      }
+
+      .info_header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        .img_container {
+          width: 87px;
+          height: 87px;
+          margin-right: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .title {
+          h3 {
+            font-size: 18px;
+            font-weight: var(--font-bold);
+            font-family: var(--quickstand-font);
+            color: var(--main-dark-colo);
+          }
+        }
+      }
+
+      .desc {
+        p {
+          font-size: 18px;
+          font-weight: var(--font-medium);
+          font-family: var(--quickstand-font);
         }
       }
     }

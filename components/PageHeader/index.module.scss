@@ -2,7 +2,7 @@
   .header_container {
     background-color: var(--sec-green-color);
     padding-top: 60px;
-    padding-bottom: 29px;
+    padding-bottom: 56px;
 
     @media screen and (max-width: 992px) {
       // padding-top: 57px;
@@ -37,7 +37,7 @@
           h2 {
             color: var(--main-dark-color);
             letter-spacing: 0px;
-            margin-bottom: 56px;
+            margin-bottom: 15px;
 
             font-size: 22px;
             font-weight: var(--font-medium);
