@@ -186,6 +186,11 @@ const ProceduresSymptoms = () => {
 
       <section id={styles.proceduresSymptoms}>
         <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+          <div className={styles.card_title}>
+            <Typography variant='h3'>
+              Procedures & Symptoms
+            </Typography>
+          </div>
           {result !== null &&
             <motion.div
               animate={{
@@ -195,12 +200,8 @@ const ProceduresSymptoms = () => {
               transition={{ duration: 0.80, ease: "easeOut" }}
 
               className={styles.section_container}>
+
               <div className={styles.filter_section}>
-                <div className={styles.car_title}>
-                  <Typography variant='h3'>
-                    Procedures & Symptoms
-                  </Typography>
-                </div>
 
 
                 <Accordion elevation={0}

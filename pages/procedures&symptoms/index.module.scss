@@ -143,6 +143,20 @@ section#proceduresSymptoms {
     padding-top: 0px;
   }
 
+  .card_title {
+    margin-bottom: 25px;
+    h3 {
+      font-size: 28px;
+      font-weight: var(--font-sem-bold);
+      font-family: var(--quickstand-font);
+
+      @media screen and (max-width: 992px) {
+        font-size: 23px;
+        font-weight: bold;
+      }
+    }
+  }
+
   .section_container {
     display: flex;
     align-items: flex-start;
@@ -156,20 +170,6 @@ section#proceduresSymptoms {
       margin-right: 55px;
       @media screen and (max-width: 992px) {
         width: 100%;
-      }
-
-      .car_title {
-        margin-bottom: 25px;
-        h3 {
-          font-size: 28px;
-          font-weight: var(--font-sem-bold);
-          font-family: var(--quickstand-font);
-
-          @media screen and (max-width: 992px) {
-            font-size: 23px;
-            font-weight: bold;
-          }
-        }
       }
 
       .btn_container {
