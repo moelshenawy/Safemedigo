@@ -184,14 +184,14 @@ const ProceduresSymptoms = () => {
         </Container>
       </section>
 
-      <section id={styles.proceduresSymptoms}>
-        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-          <div className={styles.card_title}>
-            <Typography variant='h3'>
-              Procedures & Symptoms
-            </Typography>
-          </div>
-          {result !== null &&
+      {result !== null &&
+        <section id={styles.proceduresSymptoms}>
+          <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+            <div className={styles.card_title}>
+              <Typography variant='h3'>
+                Procedures & Symptoms
+              </Typography>
+            </div>
             <motion.div
               animate={{
                 y: [-40, 0],
@@ -418,10 +418,10 @@ const ProceduresSymptoms = () => {
                 </div>
               </div>
             </motion.div >
-          }
-        </Container >
+          </Container >
 
-      </section >
+        </section >
+      }
     </>
   )
 }
