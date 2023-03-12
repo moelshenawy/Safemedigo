@@ -30,11 +30,11 @@ const ProceduresSymptoms = () => {
   const { Dermatology, Dermatology_1 } = imgs;
 
   const cards = [
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 1 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 1 },
     { title: 'Treatment', img: Dermatology.src, sec_img: Dermatology_1.src, id: 2 },
     { title: 'Hair Transplant', img: Dermatology.src, sec_img: Dermatology_1.src, id: 3 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 4 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 5 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 4 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 5 },
     { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 6 },
     { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 7 },
     { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 8 },
