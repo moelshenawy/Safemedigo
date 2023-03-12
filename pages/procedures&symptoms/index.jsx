@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 
 const ProceduresSymptoms = () => {
   const [result, setResult] = useState(null)
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState('panel1');
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -93,10 +93,25 @@ const ProceduresSymptoms = () => {
           <div className={styles.section_container}>
             <div className={styles.sec_header}>
               <div className={styles.title}>
-                <Typography variant='h3'>All Medical Department</Typography>
+                <div className="header">
+                  <Typography variant='h3'>All Medical Department</Typography>
+                  <Typography sx={{
+                    display: {
+                      sx: 'none',
+                      sm: 'none',
+                      lg: 'block'
+                    }
+                  }} variant='h6'>Sorted By Popularity</Typography>
+                </div>
 
                 <div className={styles.procedures_num}>
-                  <Typography variant='h6'>Sorted By Popularity</Typography>
+                  <Typography sx={{
+                    display: {
+                      sx: 'block',
+                      sm: 'block',
+                      lg: 'none'
+                    }
+                  }} variant='h6'>Sorted By Popularity</Typography>
                   <Typography>10.500 Procedures</Typography>
                 </div>
               </div>
@@ -119,7 +134,7 @@ const ProceduresSymptoms = () => {
 
                         {
                           result !== null &&
-                            result.id === card.id ? <img className={styles.sec_img} src={card.sec_img} alt="" /> : <img className={styles.main_img} src={card.img} alt="" />
+                            result?.id === card.id ? <img className={styles.sec_img} src={card.sec_img} alt="" /> : <img className={styles.main_img} src={card.img} alt="" />
 
                         }
 
@@ -184,244 +199,246 @@ const ProceduresSymptoms = () => {
         </Container>
       </section>
 
-      {result !== null &&
-        <section id={styles.proceduresSymptoms}>
-          <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
-            <div className={styles.card_title}>
-              <Typography variant='h3'>
-                Procedures & Symptoms
-              </Typography>
-            </div>
-            <motion.div
-              animate={{
-                y: [-40, 0],
-                opacity: 1
-              }}
-              transition={{ duration: 0.80, ease: "easeOut" }}
+      <section id={styles.proceduresSymptoms}>
+        <Container sx={{ maxWidth: "1239px" }} maxWidth={false}>
+          <Box sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }} className={styles.card_title}>
+            <Typography variant='h3'>
+              Procedures & Symptoms
+            </Typography>
+          </Box>
 
-              className={styles.section_container}>
+          <motion.div
+            animate={{
+              y: [-40, 0],
+              opacity: 1
+            }}
+            transition={{ duration: 0.80, ease: "easeOut" }}
 
-              <div className={styles.filter_section}>
+            className={styles.section_container}>
+
+            <div className={styles.filter_section}>
+
+              <div className={styles.card_title}>
+                <Typography sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none' } }} variant='h3'>
+                  Procedures & Symptoms
+                </Typography>
+              </div>
+              <Accordion elevation={0}
+                square={false} sx={{
+                  '&:before': {
+                    display: 'none',
+                  }
+                }}
+                expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                <AccordionSummary
+
+                  sx={expanded === 'panel1' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  }
+                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel1' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  aria-controls="panel1d-content" id="panel1d-header"                >
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    All {result?.title}
+
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    All Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    6 Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Sorted By Popularity
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                elevation={0}
+                square={false} sx={{
+                  '&:before': {
+                    display: 'none',
+                  },
+                  marginTop: "20px"
+                }}
+                expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                <AccordionSummary
+
+                  sx={expanded === 'panel2' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  }
+                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel2' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  aria-controls="panel2bh-content"
+                  id="panel2bh-header"
+                >
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    Hair Loss
+                    <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    All Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    6 Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Sorted By Popularity
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
 
 
-                <Accordion elevation={0}
-                  square={false} sx={{
-                    '&:before': {
-                      display: 'none',
-                    }
-                  }}
-                  expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                  <AccordionSummary
+              <Accordion
+                elevation={0}
+                square={false} sx={{
+                  '&:before': {
+                    display: 'none',
+                  },
+                  marginTop: "20px"
+                }}
+                expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                <AccordionSummary
 
-                    sx={expanded === 'panel1' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                      : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
-                    }
-                    expandIcon={<ExpandMoreIcon sx={expanded === 'panel1' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
-                    aria-controls="panel1bh-content"
-                    id="panel1bh-header"
-                  >
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss
+                  sx={expanded === 'panel3' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  }
+                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel3' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  aria-controls="panel3bh-content"
+                  id="panel3bh-header"
+                >
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    Hair Loss
+                    <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    All Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    6 Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Sorted By Popularity
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+
+              <Accordion
+                elevation={0}
+                square={false} sx={{
+                  '&:before': {
+                    display: 'none',
+                  },
+                  marginTop: "20px"
+                }}
+                expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                <AccordionSummary
+
+                  sx={expanded === 'panel4' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  }
+                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel4' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  aria-controls="panel4bh-content"
+                  id="panel4bh-header"
+                >
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    Hair Loss
+                    <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    All Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    6 Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Sorted By Popularity
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+
+              <Accordion
+                elevation={0}
+                square={false} sx={{
+                  '&:before': {
+                    display: 'none',
+                  },
+                  marginTop: "20px"
+                }}
+                expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                <AccordionSummary
+
+                  sx={expanded === 'panel5' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  }
+                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel5' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  aria-controls="panel5bh-content"
+                  id="panel5bh-header"
+                >
+                  <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    Hair Loss2
+                    <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    All Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    6 Procedures
+                  </Typography>
+                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Sorted By Popularity
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <div className={styles.btn_container}>
+                <button>Load More</button>
+              </div>
+
+            </div >
+
+            <div className={styles.info}>
+              <div className={styles.info_inner}>
+                <div className={styles.info_header}>
+                  <div className={styles.img_container}>
+                    <img src={result?.img} alt="" />
+                  </div>
+
+                  <div className={styles.title}>
+                    <Typography variant='h3'>
+                      {result?.title}
                     </Typography>
-                  </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      All Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      6 Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      Sorted By Popularity
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-                <Accordion
-                  elevation={0}
-                  square={false} sx={{
-                    '&:before': {
-                      display: 'none',
-                    },
-                    marginTop: "20px"
-                  }}
-                  expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                  <AccordionSummary
-
-                    sx={expanded === 'panel2' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                      : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
-                    }
-                    expandIcon={<ExpandMoreIcon sx={expanded === 'panel2' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
-                    aria-controls="panel2bh-content"
-                    id="panel2bh-header"
-                  >
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss
-                      <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
-                    </Typography>
-                  </AccordionSummary>
-
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      All Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      6 Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      Sorted By Popularity
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-
-                <Accordion
-                  elevation={0}
-                  square={false} sx={{
-                    '&:before': {
-                      display: 'none',
-                    },
-                    marginTop: "20px"
-                  }}
-                  expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                  <AccordionSummary
-
-                    sx={expanded === 'panel3' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                      : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
-                    }
-                    expandIcon={<ExpandMoreIcon sx={expanded === 'panel3' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
-                    aria-controls="panel3bh-content"
-                    id="panel3bh-header"
-                  >
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss
-                      <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
-                    </Typography>
-                  </AccordionSummary>
-
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      All Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      6 Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      Sorted By Popularity
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-
-                <Accordion
-                  elevation={0}
-                  square={false} sx={{
-                    '&:before': {
-                      display: 'none',
-                    },
-                    marginTop: "20px"
-                  }}
-                  expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                  <AccordionSummary
-
-                    sx={expanded === 'panel4' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                      : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
-                    }
-                    expandIcon={<ExpandMoreIcon sx={expanded === 'panel4' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
-                    aria-controls="panel4bh-content"
-                    id="panel4bh-header"
-                  >
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss
-                      <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
-                    </Typography>
-                  </AccordionSummary>
-
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      All Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      6 Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      Sorted By Popularity
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-
-                <Accordion
-                  elevation={0}
-                  square={false} sx={{
-                    '&:before': {
-                      display: 'none',
-                    },
-                    marginTop: "20px"
-                  }}
-                  expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                  <AccordionSummary
-
-                    sx={expanded === 'panel5' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                      : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
-                    }
-                    expandIcon={<ExpandMoreIcon sx={expanded === 'panel5' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
-                    aria-controls="panel5bh-content"
-                    id="panel5bh-header"
-                  >
-                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss2
-                      <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
-                    </Typography>
-                  </AccordionSummary>
-
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      All Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      6 Procedures
-                    </Typography>
-                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                      Sorted By Popularity
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-
-                <div className={styles.btn_container}>
-                  <button>Load More</button>
+                  </div>
                 </div>
+                <div className={styles.desc}>
+                  <Typography>
 
-              </div >
-
-              <div className={styles.info}>
-                <div className={styles.info_inner}>
-                  <div className={styles.info_header}>
-                    <div className={styles.img_container}>
-                      <img src={result.img} alt="" />
-                    </div>
-
-                    <div className={styles.title}>
-                      <Typography variant='h3'>
-                        {result.title}
-                      </Typography>
-
-                    </div>
-                  </div>
-                  <div className={styles.desc}>
-                    <Typography>
-
-                      Dermatology Is The Branch Of Medicine Dealing With The Skin. It Is A Speciality With Both Medical And Surgical Aspects Related To Skin, Hair, Nails, And Some Cosmetic Problems.
-                    </Typography>
-                  </div>
+                    Dermatology Is The Branch Of Medicine Dealing With The Skin. It Is A Speciality With Both Medical And Surgical Aspects Related To Skin, Hair, Nails, And Some Cosmetic Problems.
+                  </Typography>
                 </div>
               </div>
-            </motion.div >
-          </Container >
+            </div>
+          </motion.div >
+        </Container >
 
-        </section >
-      }
+      </section >
     </>
   )
 }
