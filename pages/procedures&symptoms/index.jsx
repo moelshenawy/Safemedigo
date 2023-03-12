@@ -111,7 +111,7 @@ const ProceduresSymptoms = () => {
 
               >
                 {cards.map((card, index) => (
-                  <Box sx={{ display: 'flex', flexDirection: 'column', height: { xs: '450px', sm: '450px', md: '450px', lg: '100%' }, justifyContent: 'space-between' }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', height: { xs: '100%', sm: '100%', md: '100%', lg: '100%' }, justifyContent: 'space-between' }}>
                     <div onClick={() => handleResult(card)} className={styles.box} key={index}>
 
                       <div className={styles.img_container}>

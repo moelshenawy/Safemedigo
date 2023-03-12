@@ -70,9 +70,10 @@
         justify-content: center;
 
         @media screen and (max-width: 992px) {
-          height: 160px;
           flex-direction: row;
           width: 160px;
+          align-items: flex-start;
+          margin-bottom: 12px;
         }
 
         .img_container {
