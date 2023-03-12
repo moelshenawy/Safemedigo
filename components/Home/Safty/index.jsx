@@ -90,7 +90,7 @@ const Safty = () => {
             </div>
 
             <div className={styles.btn_container}>
-              <Link href='/safty'>
+              <Link href='/safety-standards'>
                 <button>Explore Our Safety Standards</button>
               </Link>
             </div>
