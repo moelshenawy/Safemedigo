@@ -94,11 +94,11 @@ const ProceduresSymptoms = () => {
             <div className={styles.sec_header}>
               <div className={styles.title}>
                 <Typography variant='h3'>All Medical Department</Typography>
-                <Typography variant='h6'>Sorted By Popularity</Typography>
-              </div>
 
-              <div className={styles.procedures_num}>
-                <Typography>10.500 Procedures</Typography>
+                <div className={styles.procedures_num}>
+                  <Typography variant='h6'>Sorted By Popularity</Typography>
+                  <Typography>10.500 Procedures</Typography>
+                </div>
               </div>
 
 

@@ -18,8 +18,11 @@
         margin-bottom: 30px;
         color: var(--main-dark-color);
         @media screen and (max-width: 992px) {
-          width: 56%;
+          // width: 56%;
+          display: flex;
+          flex-direction: column;
           margin-bottom: 15px;
+          width: 100%;
         }
 
         h3 {
@@ -33,6 +36,14 @@
             font-weight: bold;
           }
         }
+      }
+
+      .procedures_num {
+        @media screen and (max-width: 992px) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
 
         h6 {
           font-family: var(--quickstand-font);
@@ -43,12 +54,6 @@
             font-size: 16px;
           }
         }
-      }
-
-      .procedures_num {
-        @media screen and (max-width: 992px) {
-          width: 42%;
-        }
         p {
           font-family: var(--quickstand-font);
           font-weight: var(--font-medium);
@@ -57,7 +62,6 @@
 
           @media screen and (max-width: 992px) {
             font-size: 16px;
-            margin-bottom: 18px;
             line-height: 1rem;
             letter-spacing: 0;
           }
