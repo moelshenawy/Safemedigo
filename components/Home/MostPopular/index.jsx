@@ -159,7 +159,13 @@ const MostPopular = () => {
 
         <Container className='mycontainer' sx={{ maxWidth: '1239px', paddingLeft: { sm: "0px", md: "0px" }, }} maxWidth={false}  >
 
+          {pathname === '/procedures&symptoms' &&
+            <div className={styles.title_mobile}>
+              <Typography variant='h2'>Most Popular Treatments</Typography>
+            </div>
+          }
           <div className={styles.content}>
+
 
             <div className={styles.text_container}>
 

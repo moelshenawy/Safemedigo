@@ -1,5 +1,5 @@
 import { MostPopular } from '@/components/Home'
-import { Container, Typography, Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
+import { Container, Typography, Accordion, AccordionDetails, AccordionSummary, Box } from '@mui/material'
 import React, { useState } from 'react'
 import Carousel from 'react-elastic-carousel';
 import { consts } from 'react-elastic-carousel';
@@ -19,9 +19,11 @@ const ProceduresSymptoms = () => {
 
 
   const [breakPoints] = useState([
-    { width: 1, pagination: true, showArrows: false },
-    { width: 300, pagination: true, showArrows: false },
-    { width: 400, pagination: false, itemsToShow: 8 },
+    { width: 1, pagination: false, itemsToShow: 2, },
+    { width: 300, pagination: false, itemsToShow: 2, },
+    { width: 400, pagination: false, itemsToShow: 2, },
+    { width: 800, pagination: false, itemsToShow: 8, itemsToScroll: 1, transitionMs: 1000 },
+
 
   ])
 
@@ -33,11 +35,11 @@ const ProceduresSymptoms = () => {
     { title: 'Hair Transplant', img: Dermatology.src, sec_img: Dermatology_1.src, id: 3 },
     { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 4 },
     { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 5 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 6 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 7 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 8 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 9 },
-    { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 10 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 6 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 7 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 8 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 9 },
+    { title: 'Pulmonary & Thoracic Surgery Lung Surgeries', img: Dermatology.src, sec_img: Dermatology_1.src, id: 10 },
     { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 11 },
     { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 12 },
     { title: 'Dermatology', img: Dermatology.src, sec_img: Dermatology_1.src, id: 13 },
@@ -106,10 +108,12 @@ const ProceduresSymptoms = () => {
               <Carousel breakPoints={breakPoints}
                 itemsToScroll={1}
                 renderArrow={myArrow}
+
               >
                 {cards.map((card, index) => (
-                  <>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', height: { sm: '400px', md: '400px' }, justifyContent: 'space-between' }}>
                     <div onClick={() => handleResult(card)} className={styles.box} key={index}>
+
                       <div className={styles.img_container}>
 
                         {
@@ -126,12 +130,55 @@ const ProceduresSymptoms = () => {
 
                     </div>
 
-                  </>
+                    <div className={styles.mobile_slider}>
+                      <div onClick={() => handleResult(card)} className={styles.box} key={index}>
+
+                        <div className={styles.img_container}>
+
+                          {
+                            result !== null &&
+                              result.id === card.id ? <img className={styles.sec_img} src={card.sec_img} alt="" /> : <img className={styles.main_img} src={card.img} alt="" />
+
+                          }
+
+                        </div>
+
+                        <div className={styles.box_title}>
+                          <Typography variant="h6">{card.title}</Typography>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div className={styles.mobile_slider}>
+                      <div onClick={() => handleResult(card)} className={styles.box} key={index}>
+
+                        <div className={styles.img_container}>
+
+                          {
+                            result !== null &&
+                              result.id === card.id ? <img className={styles.sec_img} src={card.sec_img} alt="" /> : <img className={styles.main_img} src={card.img} alt="" />
+
+                          }
+
+                        </div>
+
+                        <div className={styles.box_title}>
+                          <Typography variant="h6">{card.title}</Typography>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </Box>
                 ))}
+
+
 
               </Carousel>
 
             </div>
+
 
           </div>
         </Container>

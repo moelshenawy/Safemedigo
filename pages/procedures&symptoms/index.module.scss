@@ -8,21 +8,40 @@
       align-items: center;
       justify-content: space-between;
 
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .title {
         margin-bottom: 30px;
         color: var(--main-dark-color);
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
 
         h3 {
           font-family: var(--quickstand-font);
           font-weight: var(--font-sem-bold);
           font-size: 28px;
           margin-bottom: 10px;
+
+          @media screen and (max-width: 992px) {
+            font-size: 23px;
+            font-weight: bold;
+          }
         }
 
         h6 {
           font-family: var(--quickstand-font);
           font-weight: var(--font-medium);
           font-size: 18px;
+
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+          }
         }
       }
 
@@ -32,6 +51,11 @@
           font-weight: var(--font-medium);
           font-size: 18px;
           color: var(--main-dark-color);
+
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+            margin-bottom: 30px;
+          }
         }
       }
     }
@@ -44,9 +68,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width: 992px) {
+          height: 150px;
+        }
+
         .img_container {
           width: 87.12px;
           height: 87.12px;
+
+          @media screen and (max-width: 992px) {
+            width: 70px;
+            height: 70px;
+          }
 
           .main_img {
             width: 100%;
@@ -72,8 +106,22 @@
         .box_title {
           text-align: center;
           h6 {
+            font-size: 16px;
+            font-weight: var(--font-sem-bold);
+            font-family: var(--quickstand-font);
+
+            @media screen and (max-width: 992px) {
+              font-size: 15px;
+            }
           }
         }
+      }
+    }
+
+    .mobile_slider {
+      // margin-top: 50px;
+      @media screen and (min-width: 992px) {
+        display: none;
       }
     }
   }
@@ -88,9 +136,17 @@ section#proceduresSymptoms {
     display: flex;
     align-items: flex-start;
 
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
+
     .filter_section {
       width: 701px;
       margin-right: 55px;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
+
       .car_title {
         margin-bottom: 25px;
         h3 {
@@ -116,6 +172,9 @@ section#proceduresSymptoms {
           font-size: 18px;
           font-weight: var(--font-bold);
           font-family: var(--quickstand-font);
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -127,6 +186,10 @@ section#proceduresSymptoms {
         background-color: var(--main-white-color);
         box-shadow: 0px 3px 6px #00000029;
         border-radius: 10px;
+        @media screen and (max-width: 992px) {
+          margin-bottom: 30px;
+          width: 100%;
+        }
       }
 
       .info_header {
