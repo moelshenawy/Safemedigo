@@ -13,10 +13,6 @@
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 992px) {
-      height: 792px;
-    }
-
     .title {
       margin-bottom: 15px;
 

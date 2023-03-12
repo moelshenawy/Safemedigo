@@ -109,6 +109,7 @@ const ProceduresSymptoms = () => {
                 itemsToScroll={1}
                 renderArrow={myArrow}
 
+
               >
                 {cards.map((card, index) => (
                   <Box sx={{ display: 'flex', flexDirection: 'column', height: { xs: '100%', sm: '100%', md: '100%', lg: '100%' }, justifyContent: 'center' }}>

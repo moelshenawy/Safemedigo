@@ -49,7 +49,6 @@ const Hero = () => {
     );
   }
 
-
   return (
     <section id={styles.hero}>
       <Container sx={{ maxWidth: '1239px' }} maxWidth={false} >

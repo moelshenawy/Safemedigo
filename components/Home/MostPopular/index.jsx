@@ -117,7 +117,8 @@ const MostPopular = () => {
     <Box sx={pathname !== '/procedures&symptoms' && {
       backgroundColor: '#eef5f5'
     }} id={styles.most_popular} >
-      <div className={styles.section_container}>
+
+      <Box sx={pathname !== '/procedures&symptoms' && { height: '792px' }} className={styles.section_container}>
         <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
 
           {pathname !== '/procedures&symptoms' &&
@@ -451,7 +452,7 @@ const MostPopular = () => {
           </div>
         </Container>
 
-      </div >
+      </Box >
 
     </Box >
   )
