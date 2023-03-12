@@ -19,9 +19,9 @@ const ProceduresSymptoms = () => {
 
 
   const [breakPoints] = useState([
-    { width: 1, pagination: false, itemsToShow: 2, },
-    { width: 300, pagination: false, itemsToShow: 2, },
-    { width: 400, pagination: false, itemsToShow: 2, },
+    { width: 1, pagination: true, showArrows: false, itemsToShow: 2, },
+    { width: 300, pagination: true, showArrows: false, itemsToShow: 2, },
+    { width: 400, pagination: true, showArrows: false, itemsToShow: 2, },
     { width: 800, pagination: false, itemsToShow: 8, itemsToScroll: 1, transitionMs: 1000 },
 
 
@@ -111,7 +111,7 @@ const ProceduresSymptoms = () => {
 
               >
                 {cards.map((card, index) => (
-                  <Box sx={{ display: 'flex', flexDirection: 'column', height: { sm: '400px', md: '400px' }, justifyContent: 'space-between' }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', height: { sm: '400px', md: '400px', lg: '100%' }, justifyContent: 'space-between' }}>
                     <div onClick={() => handleResult(card)} className={styles.box} key={index}>
 
                       <div className={styles.img_container}>
@@ -219,19 +219,19 @@ const ProceduresSymptoms = () => {
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                   >
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
                       Hair Loss
                     </Typography>
                   </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       All Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       6 Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       Sorted By Popularity
                     </Typography>
                   </AccordionDetails>
@@ -255,20 +255,20 @@ const ProceduresSymptoms = () => {
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                   >
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
                       Hair Loss
                       <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
                     </Typography>
                   </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       All Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       6 Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       Sorted By Popularity
                     </Typography>
                   </AccordionDetails>
@@ -293,20 +293,20 @@ const ProceduresSymptoms = () => {
                     aria-controls="panel3bh-content"
                     id="panel3bh-header"
                   >
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
                       Hair Loss
                       <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
                     </Typography>
                   </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       All Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       6 Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       Sorted By Popularity
                     </Typography>
                   </AccordionDetails>
@@ -331,20 +331,20 @@ const ProceduresSymptoms = () => {
                     aria-controls="panel4bh-content"
                     id="panel4bh-header"
                   >
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
                       Hair Loss
                       <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
                     </Typography>
                   </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       All Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       6 Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       Sorted By Popularity
                     </Typography>
                   </AccordionDetails>
@@ -369,20 +369,20 @@ const ProceduresSymptoms = () => {
                     aria-controls="panel5bh-content"
                     id="panel5bh-header"
                   >
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
-                      Hair Loss
+                    <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
+                      Hair Loss2
                       <Typography sx={{ fontSize: '14px' }}>80% success rate • cost starts: $6,525</Typography>
                     </Typography>
                   </AccordionSummary>
 
-                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       All Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       6 Procedures
                     </Typography>
-                    <Typography sx={{ fontSize: '18px', fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
                       Sorted By Popularity
                     </Typography>
                   </AccordionDetails>

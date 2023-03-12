@@ -130,6 +130,9 @@
     }
 
     .title_mobile {
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
       h2 {
         font-size: 34px;
 
