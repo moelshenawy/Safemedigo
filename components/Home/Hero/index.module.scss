@@ -83,7 +83,7 @@ section#hero {
             background: transparent;
             border: none;
             color: var(--sec-cyan-color);
-
+            text-decoration: underline;
             font-size: 24px;
             font-family: var(--quickstand-font);
             font-weight: var(--font-bold);
@@ -149,7 +149,7 @@ section#hero {
       // overflow-x: visible;
       @media screen and (max-width: 992px) {
         position: absolute;
-        bottom: -150px;
+        bottom: -114px;
         left: 50%;
         transform: translateX(-50%);
         width: 378px;

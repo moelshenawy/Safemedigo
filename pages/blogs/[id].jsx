@@ -13,7 +13,7 @@ import axios from "axios";
 
 
 
-export default function BolgDetails() {
+export default function BolgDetails({ post }) {
   const [breakPoints] = useState([
     { width: 1, itemsToShow: 1, },
     // { width: 1, itemsToShow: 2, pagination: false },

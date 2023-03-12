@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: center;
     @media screen and (max-width: 992px) {
-      align-items: flex-start;
+      // align-items: flex-start;
+      background: #eef5f5;
+      padding: 23px;
     }
     .title {
       margin-bottom: 32px;
@@ -79,7 +81,7 @@
             .left1,
             .left2 {
               position: absolute;
-              z-index: 1;
+              z-index: 99;
             }
 
             .left1 {
@@ -111,6 +113,7 @@
             @media screen and (max-width: 992px) {
               width: 89.21px;
               height: 100.2px;
+              z-index: 1;
             }
           }
 
@@ -127,15 +130,15 @@
               top: 142px;
               width: 336px;
               height: 412px;
+              z-index: 0;
             }
           }
 
           .hovered {
             display: none;
-            width: 163.44px;
-            height: 183.57px;
 
             margin-bottom: 65px;
+            z-index: 1;
 
             img {
               width: 163.44px;
@@ -144,6 +147,7 @@
               @media screen and (max-width: 992px) {
                 width: 89.21px;
                 height: 100.2px;
+                z-index: 1;
               }
             }
           }
