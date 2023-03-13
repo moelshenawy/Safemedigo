@@ -78,7 +78,7 @@ const PageHeader = () => {
 
                   {pathname === '/procedures&symptoms' &&
                     <>
-                      <Typography variant='h2'>All Medical Department,</Typography>
+                      <Typography variant='h2'>All Medical Department</Typography>
                       <Typography variant='h4'>Procedures & Symptoms</Typography>
                     </>
                   }

@@ -236,8 +236,8 @@ const ProceduresSymptoms = () => {
                 expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
 
-                  sx={expanded !== 'panel1' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
-                    : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
+                  sx={expanded !== 'panel1' ? { height: '55px', backgroundColor: '#004747', borderRadius: '5px', color: '#FFFFFF' }
+                    : { backgroundColor: '#E7EDEC', color: '#000000', height: '55px', borderRadius: '5px' }
                   }
                   expandIcon={<ExpandMoreIcon sx={expanded !== 'panel1' ? { color: '#FFFFFF', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", }} />}
                   aria-controls="panel1d-content" id="panel1d-header"                >

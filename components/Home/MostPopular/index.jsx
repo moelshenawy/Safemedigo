@@ -202,10 +202,10 @@ const MostPopular = () => {
               {treatment &&
                 <motion.div
 
-                  animate={{ x: [100, 0], opacity: 1 }}
+                  animate={{ x: [50, 0], opacity: 1 }}
                   initial={{ opacity: 0 }}
 
-                  transition={{ duration: 0.95, ease: "easeOut" }}
+                  transition={{ duration: 0.80, ease: "easeOut" }}
                   className={styles.treatment}>
 
                   <Box sx={
@@ -279,9 +279,9 @@ const MostPopular = () => {
                 <>
                   {doctors &&
                     <motion.div
-                      animate={{ x: [100, 0], opacity: 1 }}
+                      animate={{ x: [50, 0], opacity: 1 }}
                       initial={{ opacity: 0 }}
-                      transition={{ duration: 0.95, ease: "easeOut" }}
+                      transition={{ duration: 0.80, ease: "easeOut" }}
 
                       className={styles.doctors}
                     >
@@ -361,10 +361,10 @@ const MostPopular = () => {
 
                   {clinic &&
                     <motion.div
-                      animate={{ x: [100, 0], opacity: 1 }}
+                      animate={{ x: [50, 0], opacity: 1 }}
                       initial={{ opacity: 0 }}
 
-                      transition={{ duration: 0.95, ease: "easeOut" }}
+                      transition={{ duration: 0.80, ease: "easeOut" }}
 
                       className={styles.clinic}>
                       <Box sx={{ boxShadow: "inset -20px 0px 12px #eef5f5" }} />
