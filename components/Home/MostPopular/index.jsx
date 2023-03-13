@@ -118,7 +118,7 @@ const MostPopular = () => {
       backgroundColor: '#eef5f5'
     }} id={styles.most_popular} >
 
-      <Box sx={pathname !== '/procedures&symptoms' && { height: '792px' }} className={styles.section_container}>
+      <Box sx={pathname !== '/procedures&symptoms' && { height: '660px' }} className={styles.section_container}>
         <Container sx={{ maxWidth: '1239px', }} maxWidth={false}  >
 
           {pathname !== '/procedures&symptoms' &&
@@ -201,7 +201,10 @@ const MostPopular = () => {
 
               {treatment &&
                 <motion.div
-                  animate={{ x: [300, 0] }}
+
+                  animate={{ x: [100, 0], opacity: 1 }}
+                  initial={{ opacity: 0 }}
+
                   transition={{ duration: 0.95, ease: "easeOut" }}
                   className={styles.treatment}>
 
@@ -276,12 +279,13 @@ const MostPopular = () => {
                 <>
                   {doctors &&
                     <motion.div
-                      animate={{ x: [300, 0] }}
+                      animate={{ x: [100, 0], opacity: 1 }}
+                      initial={{ opacity: 0 }}
                       transition={{ duration: 0.95, ease: "easeOut" }}
 
                       className={styles.doctors}
                     >
-                      <div className={styles.shadow_box} />
+                      <Box sx={{ boxShadow: "inset -20px 0px 12px #eef5f5" }} className={styles.shadow_box} />
 
                       <Carousel
                         breakPoints={breakPoints}
@@ -357,11 +361,13 @@ const MostPopular = () => {
 
                   {clinic &&
                     <motion.div
-                      animate={{ x: [300, 0] }}
+                      animate={{ x: [100, 0], opacity: 1 }}
+                      initial={{ opacity: 0 }}
+
                       transition={{ duration: 0.95, ease: "easeOut" }}
 
                       className={styles.clinic}>
-                      <div className={styles.shadow_box} />
+                      <Box sx={{ boxShadow: "inset -20px 0px 12px #eef5f5" }} />
 
                       <Carousel
                         breakPoints={breakPoints}

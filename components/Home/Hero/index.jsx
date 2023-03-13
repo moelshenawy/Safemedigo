@@ -95,7 +95,7 @@ const Hero = () => {
               </div>
 
               <div className={styles.explore_btn}>
-                <Link href='/'>
+                <Link href='/procedures&symptoms'>
                   <button>Explore Our Procedures</button>
                 </Link>
 

@@ -73,10 +73,6 @@ section#hero {
             margin-right: 13.56px;
             color: var(--sec-cyan-color);
             font-size: 35px;
-
-            @media screen and (max-width: 992px) {
-              color: var(--main-white-color);
-            }
           }
 
           button {
@@ -91,9 +87,8 @@ section#hero {
             cursor: pointer;
 
             @media screen and (max-width: 992px) {
-              color: var(--main-white-color);
-              text-decoration: underline;
               font-size: 18px;
+              font-weight: var(--font-medium);
             }
           }
         }
