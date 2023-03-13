@@ -21,6 +21,7 @@
 
         @media screen and (max-width: 992px) {
           // width: 56%;
+          align-items: flex-start;
           flex-direction: column;
           margin-bottom: 15px;
         }
@@ -32,7 +33,7 @@
           margin-bottom: 10px;
 
           @media screen and (max-width: 992px) {
-            font-size: 18px;
+            font-size: 23px;
             font-weight: bold;
           }
         }
@@ -41,6 +42,7 @@
       .procedures_num {
         @media screen and (max-width: 992px) {
           display: flex;
+          width: 100%;
           align-items: center;
           justify-content: space-between;
         }

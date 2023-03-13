@@ -97,8 +97,9 @@ const ProceduresSymptoms = () => {
                   <Typography variant='h3'>All Medical Department</Typography>
                   <Typography sx={{
                     display: {
-                      sx: 'none',
+                      xs: 'none',
                       sm: 'none',
+                      md: 'none',
                       lg: 'block'
                     }
                   }} variant='h6'>Sorted By Popularity</Typography>
@@ -107,8 +108,9 @@ const ProceduresSymptoms = () => {
                 <div className={styles.procedures_num}>
                   <Typography sx={{
                     display: {
-                      sx: 'block',
+                      xs: 'block',
                       sm: 'block',
+                      md: 'block',
                       lg: 'none'
                     }
                   }} variant='h6'>Sorted By Popularity</Typography>
@@ -223,6 +225,7 @@ const ProceduresSymptoms = () => {
                   Procedures & Symptoms
                 </Typography>
               </div>
+
               <Accordion elevation={0}
                 square={false} sx={{
                   '&:before': {
@@ -232,29 +235,43 @@ const ProceduresSymptoms = () => {
                 expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
 
-                  sx={expanded === 'panel1' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
+                  sx={expanded !== 'panel1' ? { height: '55px', backgroundColor: '#004747', color: '#FFFFFF' }
                     : { backgroundColor: '#E7EDEC', color: '#000000', borderRadius: '5px', height: '55px' }
                   }
-                  expandIcon={<ExpandMoreIcon sx={expanded === 'panel1' ? { color: '#FFFFFF', transform: 'rotate(180deg)', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", transform: 'rotate(270deg)' }} />}
+                  expandIcon={<ExpandMoreIcon sx={expanded !== 'panel1' ? { color: '#FFFFFF', width: '30px', height: "30px" } : { color: '#000000', width: '30px', height: "30px", }} />}
                   aria-controls="panel1d-content" id="panel1d-header"                >
                   <Typography sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'bold', fontFamily: 'var(--quickstand-font)' }}>
                     All {result?.title}
 
                   </Typography>
                 </AccordionSummary>
-
-                <AccordionDetails sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                    All Procedures
-                  </Typography>
-                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                    6 Procedures
-                  </Typography>
-                  <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
-                    Sorted By Popularity
-                  </Typography>
+                <AccordionDetails sx={{}}>
+                  <Typography variamt='li' sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Hair Transplant
+                  </Typography >
+                  <Typography variamt='li' sx={{ fontSize: { sm: '16px', md: '16px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    PRP Injections
+                  </Typography >
+                  <Typography variamt='li' sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Beard Transplany
+                  </Typography >
+                  <Typography variamt='li' sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                    Ozon Therapy
+                  </Typography >
                 </AccordionDetails>
               </Accordion>
+
+              <Box sx={{ marginTop: '10px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  All Procedures
+                </Typography>
+                <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  6 Procedures
+                </Typography>
+                <Typography sx={{ fontSize: { xs: '13px', sm: '13px', md: '13px', lg: '18px' }, fontWeight: 'var(--font-medium)', fontFamily: 'var(--quickstand-font)' }}>
+                  Sorted By Popularity
+                </Typography>
+              </Box>
 
               <Accordion
                 elevation={0}
