@@ -102,11 +102,11 @@ section#hero {
       .start {
         display: flex;
         align-items: center;
-        @media screen and (max-width: 992px) {
-          display: none;
-        }
         .get_started_btn {
           margin-right: 34px;
+          @media screen and (max-width: 992px) {
+            margin-right: 8px;
+          }
           a {
             button {
               width: 204px;
@@ -121,6 +121,12 @@ section#hero {
 
               font-family: var(--quickstand-font);
               font-weight: var(--font-bold);
+
+              @media screen and (max-width: 992px) {
+                width: 155px;
+                height: 48px;
+                font-size: 16px;
+              }
             }
           }
         }
@@ -136,6 +142,10 @@ section#hero {
               font-size: 18px;
               font-family: var(--quickstand-font);
               font-weight: var(--font-sem-bold);
+
+              @media screen and (max-width: 992px) {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -149,7 +159,7 @@ section#hero {
       // overflow-x: visible;
       @media screen and (max-width: 992px) {
         position: absolute;
-        bottom: -114px;
+        bottom: -155px;
         left: 50%;
         transform: translateX(-50%);
         width: 378px;

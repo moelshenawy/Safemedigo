@@ -22,7 +22,7 @@ const ProceduresSymptoms = () => {
     { width: 1, pagination: true, showArrows: false, itemsToShow: 2, },
     { width: 300, pagination: true, showArrows: false, itemsToShow: 2, },
     { width: 400, pagination: true, showArrows: false, itemsToShow: 2, },
-    { width: 800, pagination: false, itemsToShow: 8, itemsToScroll: 1, transitionMs: 1000 },
+    { width: 800, pagination: false, itemsToShow: 9, itemsToScroll: 8, transitionMs: 1000 },
 
 
   ])
